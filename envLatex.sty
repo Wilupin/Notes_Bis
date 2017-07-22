@@ -1,0 +1,67 @@
+%% Informations générales
+\NeedsTeXFormat{LaTeX2e}[1999/01/01]
+\ProvidesPackage{envLatex}[2016/10/02 1.0]
+
+
+%% Special package for theorem environment 
+\RequirePackage{amsthm}
+
+
+% Theorem style
+\newtheoremstyle{theoremstyle} 
+  	{\topsep}                   % Space above
+    {\topsep}                   % Space below
+    {\itshape}                  % Body font
+    {6pt}                          % Indent amount
+    {\bfseries}                % Theorem head font
+    {}                         % Punctuation after theorem head
+    {\newline}                  % Space after theorem head
+    {}                          % Théorème name
+
+\newtheoremstyle{lemmestyle} 
+  	{\topsep}                   % Space above
+    {\topsep}                   % Space below
+    {\itshape}                  % Body font
+    {6pt}                          % Indent amount
+    {\bfseries}                 % Theorem head font
+    {}                         % Punctuation after theorem head
+    {\newline}                  % Space after theorem head
+    {}                          % Théorème name
+
+
+
+
+    \renewenvironment{proof}[1][\proofname]{\par
+      \pushQED{\qed}%
+      \footnotesize \topsep6\p@\@plus6\p@\relax
+      \trivlist
+    \item[\hskip\labelsep
+      \itshape
+      #1\@addpunct{ :}]%\ignorespaces
+    }{%
+      \popQED\endtrivlist\@endpefalse
+    }
+    \makeatother
+
+
+%% Definition of my own environments
+\theoremstyle{theoremstyle}
+\newtheorem{theorem}{Théorème}[section]
+
+\theoremstyle{lemmestyle}
+\newtheorem{lemme}{Lemme}
+
+\theoremstyle{lemmestyle}
+\newtheorem{corol}{Corollaire}[section]
+
+\newtheorem{definition}{Définition}[section]
+\newtheorem{proposition}{Proposition}[section]
+
+
+
+
+% Changing the QED symbol 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+%% Fin du package
+\endinput

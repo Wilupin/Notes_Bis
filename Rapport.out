@@ -1,0 +1,89 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Physique statistique}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Transitions de phases}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Int\351r\352t du groupe de renormalisation et des \351quations BMW}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Origine du mod\350le}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Concepts de physique statistique}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{La sym\351trie O\(N\)}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Le groupe de renormalisation \(RG\)}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Transform\351e de Fourier}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Id\351e g\351n\351rale}{subsection.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.4}{Le groupe de renormalisation non perturbatif \(NPRG\)}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.4.1}{G\351n\351ralit\351s}{subsection.2.4}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Choix du r\351gulateur}{subsection.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.3}{Potentiels}{subsection.2.4}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Equation de flot}{subsection.2.4}% 15
+\BOOKMARK [3][-]{subsubsection.2.4.5}{La dimension anormale}{subsection.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.6}{La recherche de points fixes}{subsection.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.5}{Approximation BMW pour O\(1\)}{section.2}% 18
+\BOOKMARK [1][-]{section.3}{Le mod\350le continu O\(N\)}{}% 19
+\BOOKMARK [2][-]{subsection.3.1}{Th\351orie bold0mu mumu \040 Blaizot \040 \0404}{section.3}% 20
+\BOOKMARK [2][-]{subsection.3.2}{Approximation BMW continu}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.3}{R\351gulateur pour BMW continu}{section.3}% 22
+\BOOKMARK [1][-]{section.4}{M\351thodes num\351riques pour la r\351solution de ces \351quations}{}% 23
+\BOOKMARK [2][-]{subsection.4.1}{Travail r\351alis\351 sur ces \351quations}{section.4}% 24
+\BOOKMARK [2][-]{subsection.4.2}{Structure de l'algorithme}{section.4}% 25
+\BOOKMARK [2][-]{subsection.4.3}{Discr\351tisation en champ}{section.4}% 26
+\BOOKMARK [2][-]{subsection.4.4}{Discr\351tisation en impulsion}{section.4}% 27
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Expression des coefficients}{subsection.4.4}% 28
+\BOOKMARK [2][-]{subsection.4.5}{Calcul des int\351grales}{section.4}% 29
+\BOOKMARK [3][-]{subsubsection.4.5.1}{M\351thode de Clenshaw}{subsection.4.5}% 30
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Calcul des d\351riv\351es}{subsection.4.5}% 31
+\BOOKMARK [2][-]{subsection.4.6}{Parall\351lisation}{section.4}% 32
+\BOOKMARK [1][-]{section.5}{Resulats : O\(N\) continu}{}% 33
+\BOOKMARK [2][-]{subsection.5.1}{Pour N = 1, d=2}{section.5}% 34
+\BOOKMARK [2][-]{subsection.5.2}{Pour N = 2 ou 3, d=2}{section.5}% 35
+\BOOKMARK [1][-]{section.6}{Le mod\350le d'Ising en dimension 2}{}% 36
+\BOOKMARK [2][-]{subsection.6.1}{Pr\351sentation du mod\350le d'Ising}{section.6}% 37
+\BOOKMARK [2][-]{subsection.6.2}{Mod\351lisation avec des champs}{section.6}% 38
+\BOOKMARK [2][-]{subsection.6.3}{R\351gulateur}{section.6}% 39
+\BOOKMARK [2][-]{subsection.6.4}{\311tapes de la r\351solution}{section.6}% 40
+\BOOKMARK [3][-]{subsubsection.6.4.1}{Premi\350re \351tape}{subsection.6.4}% 41
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Deuxi\350me \351tape}{subsection.6.4}% 42
+\BOOKMARK [3][-]{subsubsection.6.4.3}{Troisi\350me \351tape}{subsection.6.4}% 43
+\BOOKMARK [1][-]{section.7}{M\351thodes et outils num\351riques pour la r\351solution d'Ising 2D}{}% 44
+\BOOKMARK [2][-]{subsection.7.1}{Structure du code}{section.7}% 45
+\BOOKMARK [2][-]{subsection.7.2}{Probl\350mes rencontr\351s}{section.7}% 46
+\BOOKMARK [2][-]{subsection.7.3}{Sym\351tries et p\351riodicit\351 des fonctions}{section.7}% 47
+\BOOKMARK [2][-]{subsection.7.4}{Interpolation de Tchebytchev}{section.7}% 48
+\BOOKMARK [3][-]{subsubsection.7.4.1}{D\351composition}{subsection.7.4}% 49
+\BOOKMARK [3][-]{subsubsection.7.4.2}{D\351composition m\351thode 1}{subsection.7.4}% 50
+\BOOKMARK [3][-]{subsubsection.7.4.3}{D\351composition m\351thode 2}{subsection.7.4}% 51
+\BOOKMARK [2][-]{subsection.7.5}{Le calcul des int\351grales}{section.7}% 52
+\BOOKMARK [3][-]{subsubsection.7.5.1}{Le choix de la quadrature}{subsection.7.5}% 53
+\BOOKMARK [3][-]{subsubsection.7.5.2}{Calcul des int\351grales I, , }{subsection.7.5}% 54
+\BOOKMARK [3][-]{subsubsection.7.5.3}{Calcul des int\351grales J,, }{subsection.7.5}% 55
+\BOOKMARK [2][-]{subsection.7.6}{D\351riv\351es num\351riques en champ }{section.7}% 56
+\BOOKMARK [1][-]{section.8}{Resultats : Ising 2D}{}% 57
+\BOOKMARK [2][-]{subsection.8.1}{Complexit\351 algorithmique et parall\351lisation - probl\350me de rapidit\351}{section.8}% 58
+\BOOKMARK [2][-]{subsection.8.2}{Probl\350me de pr\351cision des int\351grales}{section.8}% 59
+\BOOKMARK [2][-]{subsection.8.3}{Estimation de la temp\351rature critique et de l'exposant critique }{section.8}% 60
+\BOOKMARK [1][-]{section.9}{Conclusion}{}% 61
+\BOOKMARK [1][-]{appendix.A}{Outils pour le d\351veloppement des \351quations}{}% 62
+\BOOKMARK [2][-]{subsection.A.1}{Transform\351e de Fourier}{appendix.A}% 63
+\BOOKMARK [2][-]{subsection.A.2}{Transform\351e de Fourier Semi-Discr\350te \(TFSD\)}{appendix.A}% 64
+\BOOKMARK [2][-]{subsection.A.3}{Derivation fonctionnelle}{appendix.A}% 65
+\BOOKMARK [3][-]{subsubsection.A.3.1}{D\351finition}{subsection.A.3}% 66
+\BOOKMARK [3][-]{subsubsection.A.3.2}{Transform\351e de Fourier d'une d\351riv\351e fonctionnelle}{subsection.A.3}% 67
+\BOOKMARK [2][-]{subsection.A.4}{Op\351rateurs \340 noyaux}{appendix.A}% 68
+\BOOKMARK [3][-]{subsubsection.A.4.1}{D\351finition}{subsection.A.4}% 69
+\BOOKMARK [3][-]{subsubsection.A.4.2}{TF d'un op\351rateur \340 noyau}{subsection.A.4}% 70
+\BOOKMARK [3][-]{subsubsection.A.4.3}{Composition de deux op\351rateurs}{subsection.A.4}% 71
+\BOOKMARK [3][-]{subsubsection.A.4.4}{Trace d'un op\351rateur \340 noyau}{subsection.A.4}% 72
+\BOOKMARK [3][-]{subsubsection.A.4.5}{Inverse d'un op\351rateur \340 noyau}{subsection.A.4}% 73
+\BOOKMARK [1][-]{appendix.B}{Propri\351t\351s des fonctions \340 discr\351tiser}{}% 74
+\BOOKMARK [2][-]{subsection.B.1}{Sym\351tries et p\351riodicit\351 des fonctions inconnues}{appendix.B}% 75
+\BOOKMARK [2][-]{subsection.B.2}{R\351gularit\351}{appendix.B}% 76
+\BOOKMARK [1][-]{appendix.C}{Complement des algorithmes}{}% 77
+\BOOKMARK [2][-]{subsection.C.1}{Formules de d\351rivation \340 5 points}{appendix.C}% 78
+\BOOKMARK [2][-]{subsection.C.2}{Propri\351t\351s \351l\351mentaires des polyn\364mes de Tchebytchev}{appendix.C}% 79
+\BOOKMARK [2][-]{subsection.C.3}{Quadratures pour le calcul des int\351grales \340 une dimension}{appendix.C}% 80
+\BOOKMARK [3][-]{subsubsection.C.3.1}{Quadrature de Gauss-Legendre}{subsection.C.3}% 81
+\BOOKMARK [3][-]{subsubsection.C.3.2}{Premi\350re r\350gle de Fejer}{subsection.C.3}% 82
+\BOOKMARK [1][-]{appendix.D}{Equations du mod\350le d'Ising 2D}{}% 83
+\BOOKMARK [2][-]{subsection.D.1}{Introduction}{appendix.D}% 84
+\BOOKMARK [2][-]{subsection.D.2}{Les \351quations BMW en \040dimensionn\351es}{appendix.D}% 85
+\BOOKMARK [2][-]{subsection.D.3}{Les \351quations BMW en }{appendix.D}% 86
+\BOOKMARK [3][-]{subsubsection.D.3.1}{Les \351quations BMW en \040dimensionn\351es}{subsection.D.3}% 87
+\BOOKMARK [3][-]{subsubsection.D.3.2}{Les \351quations BMW en \040adimensionn\351es en impulsion}{subsection.D.3}% 88
+\BOOKMARK [3][-]{subsubsection.D.3.3}{Les \351quations BMW en \040totalement adimensionn\351es}{subsection.D.3}% 89

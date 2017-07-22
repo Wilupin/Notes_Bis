@@ -1,0 +1,42 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.3)  31 MAY 2017 16:47
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input shortcutLatex.sty
+(./shortcutLatex.sty
+
+LaTeX Warning: You have requested package `',
+               but the package provides `shortcutLatex'.
+
+Package: shortcutLatex 2016/10/02 1.0
+
+./shortcutLatex.sty:59: LaTeX Error: Command \tpv already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \newcommand{\tpv}{\tilde{\qv}}
+                                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> \input shortcutLatex.sty
+                            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 96 strings out of 494885
+ 454 string characters out of 6179188
+ 45946 words of memory out of 5000000
+ 3504 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 7i,0n,8p,101b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{bellac2012}
+M.L. Bellac.
+\newblock {\em Des ph{\'e}nom{\`e}nes critiques aux champs de jauge - Une
+  introduction aux m{\'e}thodes et aux applications de la th{\'e}orie quantique
+  des champs}.
+\newblock \cbc{}Savoirs Actuels\cfc. \cbc{}EDP Sciences\cfc, \cbc{}2012\cfc.
+
+\bibitem{Blaizot}
+Jean-Paul Blaizot, Ramón Méndez-Galain, and Nicolás Wschebor.
+\newblock A new method to solve the non-perturbative renormalization group
+  equations.
+\newblock {\em \cbc{}Physics Letters B \cfc},
+  \cbc{}632\cfc(\cbc{}4\cfc):\cbc{}571 -- 578\cfc, \cbc2006\cfc.
+
+\bibitem{Delamotte2012}
+Bertrand Delamotte.
+\newblock {\em An Introduction to the Nonperturbative Renormalization Group},
+  pages 49--132.
+\newblock \cbc{}Springer Berlin Heidelberg \cfc, Berlin, Heidelberg,
+  \cbc{}2012\cfc.
+
+\bibitem{Dupuis2008}
+N.~Dupuis and K.~Sengupta.
+\newblock Non-perturbative renormalization-group approach to lattice models.
+\newblock {\em \cbc{}The European Physical Journal B\cfc},
+  \cbc{}66\cfc(\cbc{}2\cfc):\cbc{}271--278\cfc, \cbc{}2008\cfc.
+
+\bibitem{LeonardThesis}
+Frédéric Léonard.
+\newblock {\em Criticalité et phase de brisée de modèles avec symétrie
+  discrète}.
+\newblock PhD thesis, Université Pierre et Marie Curie, \cbc{}2016\cfc.
+
+\bibitem{Ising2DNPRG}
+T.~Machado and N.~Dupuis.
+\newblock From local to critical fluctuations in lattice models: A
+  nonperturbative renormalization-group approach.
+\newblock {\em \cbc{}Phys. Rev. E\cfc}, \cbc{}82\cfc:\cbc{}041128\cfc,
+  \cbc{}Oct\cfc \cbc{}2010\cfc.
+
+\bibitem{Tchebychev}
+J.~C. Mason and D.~C. Handscomb.
+\newblock {\em Chebyshev Polynomials}.
+\newblock \cbc{}CRC Press \cfc, Florida, \cbc{}2003 \cfc.
+
+\bibitem{Onsager}
+Lars Onsager.
+\newblock Crystal statistics. i. a two-dimensional model with an order-disorder
+  transition.
+\newblock {\em \cbc{}Phys. Rev.\cfc}, \cbc{}65\cfc:\cbc{}117--149\cfc,
+  \cbc{}Feb\cfc \cbc{}1944\cfc.
+
+\bibitem{Clenshaw}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes in C (2Nd Ed.): The Art of Scientific
+  Computing}.
+\newblock \cbc{}Cambridge University Press\cfc, New York, NY, USA,
+  \cbc{}1992\cfc.
+
+\bibitem{TownsendThesis}
+Alex Townsend.
+\newblock {\em Computing with functions in two dimensions}.
+\newblock PhD thesis, University of Oxford, \cbc{}2014\cfc.
+
+\bibitem{Wetterich}
+Christof Wetterich.
+\newblock Exact evolution equation for the effective potential.
+\newblock {\em \cbc{}Physics Letters B\cfc},
+  \cbc{}301\cfc(\cbc{}1\cfc):\cbc{}94\cfc, \cbc{}1993\cfc.
+
+\end{thebibliography}

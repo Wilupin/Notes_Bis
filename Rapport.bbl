@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+
+\bibitem{bellac2012}
+M.L. Bellac.
+\newblock {\em Des ph{\'e}nom{\`e}nes critiques aux champs de jauge - Une
+  introduction aux m{\'e}thodes et aux applications de la th{\'e}orie quantique
+  des champs}.
+\newblock Savoirs Actuels. EDP Sciences, 2012.
+
+\bibitem{Blaizot}
+Jean-Paul Blaizot, Ramón Méndez-Galain, and Nicolás Wschebor.
+\newblock A new method to solve the non-perturbative renormalization group
+  equations.
+\newblock {\em Physics Letters B}, 632(4):571 -- 578, 2006.
+
+\bibitem{Delamotte2012}
+Bertrand Delamotte.
+\newblock {\em An Introduction to the Nonperturbative Renormalization Group},
+  pages 49--132.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
+
+\bibitem{Dupuis2008}
+N.~Dupuis and K.~Sengupta.
+\newblock Non-perturbative renormalization-group approach to lattice models.
+\newblock {\em The European Physical Journal B}, 66(2):271--278, 2008.
+
+\bibitem{LeonardThesis}
+Frédéric Léonard.
+\newblock {\em Criticalité et phase de brisée de modèles avec symétrie
+  discrète}.
+\newblock PhD thesis, Université Pierre et Marie Curie, 2016.
+
+\bibitem{Ising2DNPRG}
+T.~Machado and N.~Dupuis.
+\newblock From local to critical fluctuations in lattice models: A
+  nonperturbative renormalization-group approach.
+\newblock {\em Phys. Rev. E}, 82:041128, Oct 2010.
+
+\bibitem{Tchebychev}
+J.~C. Mason and D.~C. Handscomb.
+\newblock {\em Chebyshev Polynomials}.
+\newblock CRC Press, Florida, 2003.
+
+\bibitem{Onsager}
+Lars Onsager.
+\newblock Crystal statistics. i. a two-dimensional model with an order-disorder
+  transition.
+\newblock {\em Phys. Rev.}, 65:117--149, Feb 1944.
+
+\bibitem{Clenshaw}
+William~H. Press, Saul~A. Teukolsky, William~T. Vetterling, and Brian~P.
+  Flannery.
+\newblock {\em Numerical Recipes in C (2Nd Ed.): The Art of Scientific
+  Computing}.
+\newblock Cambridge University Press, New York, NY, USA, 1992.
+
+\bibitem{TownsendThesis}
+Alex Townsend.
+\newblock {\em Computing with functions in two dimensions}.
+\newblock PhD thesis, University of Oxford, 2014.
+
+\bibitem{Wetterich}
+Christof Wetterich.
+\newblock Exact evolution equation for the effective potential.
+\newblock {\em Physics Letters B}, 301(1):94, 1993.
+
+\end{thebibliography}

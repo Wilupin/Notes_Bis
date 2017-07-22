@@ -1,0 +1,98 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.5.3)  9 MAY 2017 17:43
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**\input envLatex.sty
+(./envLatex.sty
+
+LaTeX Warning: You have requested package `',
+               but the package provides `envLatex'.
+
+Package: envLatex 2016/10/02 1.0
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip41
+\thm@postskip=\skip42
+\thm@headsep=\skip43
+\dth@everypar=\toks19
+)
+\c@theorem=\count79
+
+
+./envLatex.sty:49: LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \newtheorem{theorem}{Théorème}[section]
+                                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@lemme=\count80
+\c@corol=\count81
+
+./envLatex.sty:55: LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.55 \newtheorem{corol}{Corollaire}[section]
+                                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@definition=\count82
+
+./envLatex.sty:57: LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 \newtheorem{definition}{Définition}[section]
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@proposition=\count83
+
+./envLatex.sty:58: LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...theorem{proposition}{Proposition}[section]
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> \input envLatex.sty
+                       
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 142 strings out of 494885
+ 1622 string characters out of 6179188
+ 46343 words of memory out of 5000000
+ 3546 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 16i,0n,17p,97b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,499 @@
+\documentclass[10pt]{article}
+
+
+% Tous les packages prédéfinis
+\usepackage{introLatex}
+\usepackage{headfootLatex}
+\usepackage{shortcutLatex}
+\usepackage{envLatex}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{algpseudocode}
+
+\graphicspath{{logos/}{figures/}}
+
+\newcommand{\gam}[2]{\ensuremath{\Gamma^{(#1)}_{#2}}}
+\newcommand{\gamc}[3]{\ensuremath{\Gamma^{(#1)}_{#2}\[#3\]}}
+\newcommand{\gamp}[3]{\ensuremath{\Gamma^{(#1)}_{#2}\(#3\)}}
+\newcommand{\gamcf}[3]{\ensuremath{\hat{\Gamma}^{(#1)}_{#2}\[#3\]}}
+\newcommand{\gampf}[3]{\ensuremath{\hat{\Gamma}^{(#1)}_{#2}\(#3\)}}
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+
+
+
+
+
+\begin{document}
+
+
+% Titre du document
+\vspace*{-22pt}
+\begin{center}
+\textbf{\Large Etude mathématique et numérique \\ du groupe de renormalisation non perturbatif}\\
+\vspace*{4pt}
+Gaétan Facchinetti \\
+{\small 27 février - 28 juillet 2017\\
+\vspace*{5pt}
+\textit{Laboratoire de Physique Théorique de la Matièe Condensée},\\
+\textit{Université Paris-Saclay}, \textit{Ecole Normale Supérieure de Cachan}, \\
+\textit{Ecole Nationale Supérieure des Techniques Avancées}}\\
+\end{center}
+
+
+\begin{center}
+\rule{10cm}{1pt}
+\end{center}
+
+\vspace*{11pt}
+
+\begin{center}
+{\LARGE \textbf{Modèle d'Ising 2D par BMW}}
+\end{center}
+
+\section{Introduction}
+
+On part de la fonction de partition 
+\begin{equation}
+  \Zc  \propto \int_\R \prod_{\rv} \, \dd \varphi_\rv \, e^{-S_\mu[\varphi] } \\
+\end{equation}
+Avec l'action $S$ s'écrivant :
+\begin{equation}
+  S_\mu[\varphi] = \frac{1}{2} \int_\qv \varphi(\qv) \frac{1}{\lambda_\mu(\qv)} \varphi(-\qv) - \sum\limits_\rv \ln\(\cosh(\varphi_\rv)\)
+\end{equation}
+Par le théorème de Parseval, nous réecrivons $S$ sous la forme 
+\begin{equation}
+  \begin{split}
+    S_\mu[\varphi] & = \frac{1}{2} \int_\qv \varphi(\qv) \[\frac{1}{\lambda_\mu(\qv)} - \frac{1}{\lambda_\mu(0)}\] \varphi(-\qv) \\
+    &+ \sum\limits_\rv \[\frac{1}{2\lambda_\mu(0)}\varphi_\rv^2 - \ln\(\cosh(\varphi_\rv)\) \]
+  \end{split}
+\end{equation}
+Enfin, soit $\delta \in \R^+_*$, on pose le changement de variable, 
+\begin{equation}
+  \varphi \rightarrow \delta\sqrt{2 \beta J d} \, \varphi 
+\end{equation}
+On obtient alors 
+\begin{equation}
+S_\mu[\varphi] = \frac{1}{2} \int_\qv \hat{\varphi}(\qv)\eo(\qv)\hat{\varphi}(-\qv) + \sum_\rv V_0(\varphi(\rv))
+\end{equation}
+Avec, en posant $\tilde{\mu} = \mu/(Jd)$ et $\tilde{\beta} = \beta Jd$,
+\begin{equation}
+  \eo(\qv) = \delta^2\frac{1 - \gamma(\qv)}{(\gamma(\qv) + \tilde{\mu})(1+\tilde{\mu})}
+\end{equation}
+\begin{equation}
+  V_0(\rho) = \delta^2 \frac{1}{1+\tilde{\mu}} \rho - \ln\(\cosh\(2\delta\sqrt{\tilde{\beta}\rho}\)\)
+\end{equation}
+
+De plus, on note $\tilde{\beta}_c^{\text{MF}}$ la valeur de $\tilde{\beta}$ en champ moyen à la temperature critique. En faisant un développement limité à l'ordre 1 en $\rho$ nous avons
+\begin{equation}
+V_0(\rho) = \delta^2\( \frac{1}{1+\tilde{\mu}} - 2\tilde{\beta}\)\rho + \mathcal{O}(\rho^2)
+\end{equation}
+Ainsi, nous obtenons 
+\begin{equation}
+\tilde{\beta}_c^{\text{MF}} \simeq \frac{1}{2(1+\tilde{\mu})}
+\end{equation}
+
+\commentout{
+Enfin, nous avons besoin, dans les équations, de la dérivée du potentiel et non pas vraiment du potentiel. Or la fonction $V_0$ est dérivable sur $]0, +\infty[$. Ainsi, pour $\rho \neq 0$ 
+\begin{equation}
+  W_0(\rho) = \partial_\rho V_0 (\rho) = \frac{\delta^2}{1+\tilde{\mu}}-\delta\sqrt{\frac{\tilde{\beta}}{\rho}}\tanh{\(2\delta\sqrt{\tilde{\beta\rho}}\)}
+\end{equation}
+Et par un développement limitée en 0, en prolongeant $W_0$ par continuité
+\begin{equation}
+  W_0(0) \equiv \delta^2\( \frac{1}{1+\tilde{\mu}} - 2\tilde{\beta}\)
+\end{equation}
+}
+
+\vspace*{11pt}
+
+\newpage
+
+\section{Les équations BMW en $\rho$ dimensionnées}
+
+On pose 
+\begin{equation}
+\Gamma^{(2)}_{k}(p_x, p_y, \rho) = \eo(p_x, p_y) + \Delta_k(p_x, p_y, \rho) + \partial^2_{\phi} V(\phi)
+\end{equation}
+\begin{equation}
+  W(\phi) = \partial_{\phi} V(\phi) \quad \text{et} \quad X(\phi) = \partial^2_{\phi} V(\phi)
+\end{equation}
+Les équations à résoudre numériquement sont
+\begin{equation}
+\begin{split}
+\partial_t  \Delta_k(p_x, p_y, \rho)  = & - 2\rho I_3(\rho) u_k^2(\rho)  + 2\rho J_3(p_x, p_y, \rho) {\[ u_k(\rho) + \partial_\rho \Delta_k(p_x, p_y, \rho) \]}^{2} \\
+& - \frac{1}{2}I_2(\rho)\[\partial_\rho \Delta_k(p_x, p_y, \rho) + 2\rho\partial_\rho^2 \Delta_k(p_x, p_y, \rho) \]
+\end{split} 
+\end{equation}
+\begin{equation}
+\partial_t W_k(\rho) = \frac{1}{2} \partial_\rho I_1 (\rho)
+\end{equation}
+Avec les notations
+\begin{equation}
+J_n (p_x, p_y, \rho) = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) \,
+G_k^{n-1}(q_x,q_y,\rho)G_k(p_x+q_x,p_y+q_y,\rho) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+I_n (\rho) = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) \,
+G_k^{n}(q_x,q_y,\rho) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+G_k(q_x,q_y,\rho) = \frac{1}{\eo(q_x, q_y) + \Delta_k(q_x, q_y, \rho) + m^2_k(\rho) + \Rc_k(q_x, q_y) }
+\end{equation}
+\begin{equation}
+\partial_\rho I_n(\rho) = - n \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) G_k^{n+1}(q_x,q_y,\rho)\(\partial_\rho \Delta_k(p_x, p_y, \rho) + u_k(\rho) \) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+m_k^2 (\rho) = \partial_\phi^2 V(\phi) = W(\rho) + 2\rho\partial_\rho W(\rho)
+\end{equation}
+\begin{equation}
+u_k(\rho) = \partial_\rho m_k^2(\rho) = 3\partial_\rho W(\rho) + 2\rho\partial_\rho^2 W(\rho)
+\end{equation}
+On pose la fonction
+\begin{equation}
+  \tau(q_x, q_y) = \frac{\eo(q_x, q_y)}{2k^2 {\|\eo\|}_{\infty}}
+\end{equation}
+On choisit alors le régulateur
+\begin{equation}
+  \Rc_k(q_x, q_y) = \frac{\alpha \eo(q_x, q_y)}{\exp\(2\tau(q_x, q_y)\) -1 }
+\end{equation}
+\begin{equation}
+  \partial_t \Rc_k(q_x, q_y) = \alpha \eo(q_x, q_y) \frac{\tau(q_x, q_y)}{\sinh^2\(\tau(q_x, q_y)\)}
+\end{equation}
+Et nous pouvons calculer
+\begin{equation}
+  {\|\eo\|}_{\infty} = \underset{(p_x, p_y) \in [-\pi,\pi]^2}{\text{sup}} \eo(p_x, p_y) = \frac{2\delta^2}{\mu^2 -1}
+\end{equation} 
+
+
+\vspace*{11pt}
+
+
+\newpage
+
+
+\section{Les équations BMW en $\phi$}
+
+\subsection{Les équations BMW en $\phi$ dimensionnées }
+
+On rappelle les notations : 
+\begin{equation}
+  W(\phi) = \partial_{\phi} V(\phi) \quad \text{et} \quad X(\phi) = \partial^2_{\phi} V(\phi)
+\end{equation}
+On doit alors résoudre
+\begin{equation}
+\begin{split}
+\partial_t  \Delta_k (p_x, p_y, \phi) = &  J_3(p_x, p_y, \phi) {\(\partial_\phi \left\{ \Delta_k (p_x, p_y, \phi) + X(\phi) \right\}\)}^2 \\
+& - I_3(\phi){(\partial_\phi X(\phi))}^2 - \frac{1}{2} I_2(\phi) \partial_\phi^2 \Delta_k(p_x, p_y, \phi) 
+\end{split}
+\end{equation}
+\begin{equation}
+\partial_t X(\phi) = \frac{1}{2} \partial_\phi^2 I_1(\phi)
+\end{equation}
+On garde ici des expressions similaires pour les intégrales que ce que l'on avait en $\rho$,
+
+\begin{equation}
+J_n (p_x, p_y, \phi) = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) \,
+G_k^{n-1}(q_x,q_y,\phi)G_k(p_x+q_x,p_y+q_y,\phi) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+I_n (\phi) = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) \,
+G_k^{n}(q_x,q_y,\phi) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+G_k(q_x,q_y,\phi) = \frac{1}{\eo(q_x, q_y) + \Delta_k(q_x, q_y, \phi) + X(\phi) + \Rc_k(q_x, q_y) }
+\end{equation}
+\begin{equation}
+\partial_\phi I_n(\phi) = - n \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) G_k^{n+1}(q_x,q_y,\phi)\(\partial_\phi \Delta_k(p_x, p_y, \phi) + \partial_\phi X(\phi) \) \, \dd q_x \,\dd q_y
+\end{equation}
+\begin{equation}
+\begin{split}
+\partial_\phi^2 I_n(\phi) = & - n \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) G_k^{n+1}(q_x,q_y,\phi)\(\partial_\phi^2 \Delta_k(p_x, p_y, \phi) + \partial_\phi^2 X(\phi) \) \, \dd q_x \,\dd q_y \\
+& + n(n+1) \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi \partial_t \Rc_k(q_x, q_y) G_k^{n+2}(q_x,q_y,\phi){\(\partial_\phi \Delta_k(p_x, p_y, \phi) + \partial_\phi X(\phi) \)}^2 \, \dd q_x \,\dd q_y
+\end{split}
+\end{equation}
+
+
+
+\vspace*{11pt}
+
+\subsection{Les équations BMW en $\phi$ adimensionnées en impulsion}
+
+On note $\tp_x = k^{-1}p_x$ et $\tp_y = k^{-1}p_y$. Ainsi que
+\begin{center}
+$\bDelta_k(\tp_x, \tp_y,\phi) = \Delta_k(p_x, p_y,\phi)$; $\bJ_n(\tp_x, \tp_y,\phi) = J_n(p_x, p_y,\phi)$ ; $\bRc_k(\tp_x, \tp_y) = \Rc_k(p_x, p_y) $ \\
+$\beo(\tp_x, \tp_y) = \eo(p_x, p_y) $ ; $\btau(\tp_x, \tp_y) = \tau(p_x, p_y) = \beo(\tp_x, \tp_y)/(k^2 {\|\eo\|}_{\infty})$ ; $\bpRc(\tq_x, \tq_y) = \partial_t \Rc_k(q_x, q_y) $ \\
+\end{center}
+Les équations se réécrivent
+\begin{equation}
+\begin{split}
+\partial_t  \bDelta_k (\tp_x, \tp_y, \phi) = & - I_3(\phi){(\partial_\phi X(\phi))}^2 + \bJ_3(\tp_x, \tp_y, \phi) {\(\partial_\phi \left\{ \bDelta_k (\tp_x, \tp_y, \phi) + X(\phi) \right\}\)}^2 \\
+& - \frac{1}{2} I_2(\phi) \partial_\phi^2 \bDelta_k(\tp_x, \tp_y, \phi) + \tp_x \partial_{\tp_x}  \bDelta_k + \tp_y \partial_{\tp_y}  \bDelta_k 
+\end{split}
+\end{equation}
+\begin{equation}
+\partial_t X(\phi) = \frac{1}{2} \partial_\phi^2 I_1(\phi)
+\end{equation}
+En effet, l'expression de la nouvelle derivée par rapport au temps est : 
+\begin{equation}
+  \begin{split}
+    \partial_t \Delta_k (p_x, p_y, \phi){|}_{p_x, p_y, \phi} & = \partial_t \bDelta_k (\tp_x, \tp_y, \phi) {|}_{\tp_x, \tp_y, \phi}   + \partial_t \tp_x  {|}_{p_x} \partial_{\tp_x}  \bDelta_k (\tp_x, \tp_y, \phi) + \partial_t \tp_y  {|}_{p_y} \partial_{\tp_y}  \bDelta_k(\tp_x, \tp_y, \phi) \\
+    \partial_t \Delta_k (p_x, p_y, \phi){|}_{p_x, p_y, \phi} & = \partial_t \bDelta_k  (\tp_x, \tp_y, \phi){|}_{\tp_x, \tp_y, \phi}  -  \tp_x \partial_{\tp_x}  \bDelta_k (\tp_x, \tp_y, \phi) -  \tp_y \partial_{\tp_y}  \bDelta_k (\tp_x, \tp_y, \phi) 
+  \end{split}
+\end{equation}
+De plus nous avons toujours pour dérivée temporelle du régulateur
+\begin{equation}
+  \begin{split}
+    \bpRc(\tq_x, \tq_y)  =  \alpha \beo \frac{\btau}{\sinh^2(\btau)}
+  \end{split}
+\end{equation}
+
+\vspace*{11pt}
+\noindent
+Les intégrales se calculent selon
+\begin{equation}
+\bJ_n (\tp_x, \tp_y, \phi) = \frac{k^2}{(2\pi)^2}  \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}}  \bpRc(\tq_x, \tq_y) \,
+\bG_k^{n-1}(\tq_x,\tq_y,\phi)\bG_k(\tp_x+\tq_x,\tp_y+\tq_y,\phi) \, \dd \tq_x \,\dd \tq_y
+\end{equation}
+\begin{equation}
+I_n (\phi) = \frac{k^2}{(2\pi)^2} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \bpRc(\tq_x, \tq_y)  \,
+\bG_k^{n}(\tq_x,\tq_y,\phi) \, \dd \tq_x \,\dd \tq_y
+\end{equation}
+\begin{equation}
+\bG_k(\tq_x,\tq_y,\phi) = \frac{1}{\beo(\tq_x, \tq_y) + \bDelta_k(\tq_x, \tq_y, \phi) + X(\phi) + \bRc_k(\tq_x, \tq_y) }
+\end{equation}
+\begin{equation}
+\begin{split}
+\partial_\phi^2 I_n(\phi) = & - n \frac{k^2}{(2\pi)^2} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}}  \bpRc(\tq_x, \tq_y) \bG_k^{n+1}(\tq_x,\tq_y,\phi)\(\partial_\phi^2 \bDelta_k(\tp_x, \tp_y, \phi) + \partial_\phi^2 X(\phi) \) \, \dd \tq_x \,\dd \tq_y \\
+& + n(n+1) \frac{k^2}{(2\pi)^2} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}}  \bpRc(\tq_x, \tq_y) \bG_k^{n+2}(\tq_x,\tq_y,\phi){\(\partial_\phi \bDelta_k(\tp_x, \tp_y, \phi) + \partial_\phi X(\phi) \)}^2 \, \dd \tq_x \,\dd \tq_y
+\end{split}
+\end{equation}
+
+
+\vspace*{11pt}
+\subsection{Calcul du $Z_k$}
+
+On commence par définir 
+\begin{equation}
+\eo^0 ={\left. \frac{\partial \eo}{ \partial {{p_x}^2}} \right|}_{p_x = 0, p_y = 0}
+\end{equation}
+On montre alors en faisant un developpement limité que
+\begin{equation}
+\eo(\pv)  \underset{\pv = 0}{\sim} \frac{\delta^2}{4\,(1+\mu)^2} \, \pv^2 \quad \text{avec} \quad \pv^2 = p_x^2 + p_y^2
+\end{equation}
+Pour calculer $Z_k$ on utilise une des définitions équivalentes
+\begin{equation}
+Z_k = 1+\frac{1}{\eo^0}{\left. \frac{\partial \Delta_k}{\partial {p_x}^2} \right|}_{p_x = 0, p_y = 0, \phi = 0}  \quad \text{et} \quad 
+Z_k = 1+\frac{1}{2\eo^0}{\left. \frac{\partial^2 \Delta_k}{\partial {p_x}^2} \right|}_{p_x = 0, p_y = 0, \phi = 0} 
+\end{equation}
+Ce qui donne en pratique
+\begin{equation}
+Z_k = 1+\frac{2\,(1+\mu)^2}{\delta^2}{\left. \frac{\partial^2 \Delta_k}{\partial {p_x}^2} \right|}_{p_x = 0, p_y = 0, \phi = 0} = 1+\frac{2\,(1+\mu)^2}{\delta^2\, k^2}{\left. \frac{\partial^2 \bDelta_k}{\partial {\tp_x}^2} \right|}_{p_x = 0, p_y = 0, \phi = 0}
+\end{equation}
+En outre par définition nous avons aussi
+\begin{equation}
+\eta_k = -\partial_t \ln Z_k 
+\end{equation}
+
+\vspace*{11pt}
+\subsection{Les équations BMW en $\phi$ totalement adimensionnées}
+
+On note $\tphi = \sqrt{Z_k}\phi$. Etant donnée que l'on effectue le changement à des valeurs de $k$ très faibles ($k \simeq \exp(-3)$), on considèrera que $\beo(\tp_x,\tp_y) \simeq \eo^0\,k^2(\tp_x^2+\tp_y^2)$. On adimensionne aussi les fonctions en plus des variables :
+
+\begin{equation*}
+1 + \frac{\bDelta_k(\tp_x, \tp_y,\phi)}{\eo^0 \pv^2} = Z_k(1+\tY_k(\tp_x, \tp_y,\tphi)) \quad \text{et} \quad \tX(\tphi) = \frac{1}{Z_k k^2} X(\phi)
+\end{equation*}
+
+
+\vspace*{11pt}
+\subsubsection{Etude des termes en $\bDelta_k(\tp_x, \tp_y,\phi)$}
+
+La dérivée de $\bDelta_k$ par rapport à $t$ se réécrit :
+\begin{equation}
+\begin{split}
+\partial_t  \bDelta_k (\tp_x, \tp_y, \phi) {|}_{\tp_x, \tp_y, \phi } = & \partial_t (Z_k(1+\tY_k(\tp_x, \tp_y,\tphi)\eo^0\pv^2  - \eo^0\pv^2 ) {|}_{\tp_x, \tp_y, \tphi} \\ 
+& + \partial_t \tphi  {|}_{\phi}\, \partial_{\tphi} (Z_k(1+\tY_k(\tp_x, \tp_y,\tphi)\eo^0 \pv^2 - \eo^0\pv^2 )
+\end{split}
+\end{equation}
+Ceci donne l'expression suivante
+\begin{equation}
+\begin{split}
+\partial_t  \bDelta_k (\tp_x, \tp_y, \phi) {|}_{\tp_x, \tp_y, \phi } = & - \eo^0 \pv^2 \eta_k Z_k (1+\tY_k(\tp_x, \tp_y,\tphi)) + 2 \eo^0 \pv^2 Z_k (1+\tY_k(\tp_x, \tp_y,\tphi)) \\
+& - 2 \eo^0 \pv^2  + \eo^0 \pv^2 Z_k \partial_t \tY_k(\tp_x, \tp_y,\tphi) -  \frac{1}{2} \eo^0 \pv^2 \eta_k Z_k \tphi \partial_{\tphi} \tY_k(\tp_x, \tp_y,\tphi) 
+\end{split}
+\end{equation}
+De plus nous avons aussi concernant les dérivées de  $\bDelta_k$
+\begin{equation}
+\begin{split}
+\tp_x \, \partial_{\tp_x}  \bDelta_k (\tp_x, \tp_y, \phi) = 2\eo^0 p_x^2 Z_k (1+\tY_k(\tp_x, \tp_y,\tphi)) + \eo^0 \tpv^2 Z_k \tp_x \partial_{\tp_x} \tY_k(\tp_x, \tp_y,\tphi) - 2 \eo^0 p_x^2 \\ 
+\tp_y \, \partial_{\tp_y}  \bDelta_k (\tp_x, \tp_y, \phi) = 2\eo^0 p_y^2 Z_k (1+\tY_k(\tp_x, \tp_y,\tphi)) + \eo^0 \tpv^2 Z_k \tp_y \partial_{\tp_y} \tY_k(\tp_x, \tp_y,\tphi) - 2 \eo^0 p_y^2 
+\end{split}
+\end{equation}
+Et nous en déduisons alors
+\begin{equation}
+\begin{split}
+\tp_x \, \partial_{\tp_x}  \bDelta_k (\tp_x, \tp_y, \phi) + \tp_y \, \partial_{\tp_y}  \bDelta_k (\tp_x, \tp_y, \phi)= & 2\eo^0 \pv^2 Z_k (1+\tY_k(\tp_x, \tp_y,\tphi))  - 2 \eo^0 \pv^2 \\ 
+& \eo^0 \tpv^2 Z_k \( \tp_x \partial_{\tp_x} \tY_k(\tp_x, \tp_y,\tphi) + \tp_y \partial_{\tp_y} \tY_k(\tp_x, \tp_y,\tphi) \)
+\end{split}
+\end{equation}
+Ainsi que pour les dérivées par rapport à $\phi$
+\begin{equation}
+\partial_{\phi}  \bDelta_k (\tp_x, \tp_y, \phi) = \eo^0 \pv^2 Z_k^{\frac{3}{2}} \partial_{\tphi} \tY_k(\tp_x, \tp_y,\tphi) \quad \text{et} \quad  \partial_{\phi}^2 \bDelta_k (\tp_x, \tp_y, \phi) = \eo^0 \pv^2 Z_k^2 \partial_{\tphi} \tY_k(\tp_x, \tp_y,\tphi) 
+\end{equation}
+
+
+\vspace*{11pt}
+\subsubsection{Etude des termes en $X(\phi)$}
+La dérivée de $X$ par rapport à $t$ devient de même que pour $\bDelta$
+\begin{equation}
+\begin{split}
+\partial_t  X(\phi) {|}_{\phi} = & \partial_t (Z_k k^2\tX(\tphi)) {|}_{\tphi} + \partial_t \tphi  {|}_{\phi}\, \partial_{\tphi} (Z_k k^2\tX(\tphi)) \\ 
+\partial_t  X(\phi) {|}_{\phi} = & Z_k k^2\partial_t \tX(\tphi) - Z_k k^2 (\eta_k -2)\tX(\tphi) - \frac{1}{2} Z_k k^2  \eta_k\tphi \, \partial_{\tphi}\tX(\tphi)
+\end{split}
+\end{equation}
+Et pour la dérivée en $\phi$ nous avons
+\begin{equation}
+\partial_{\phi} X(\phi) = k^2 Z_k^{\frac{3}{2}} \partial_{\tphi} \tX(\tphi)
+\end{equation}
+
+
+\vspace*{11pt}
+\subsubsection{Adimensionnement du régulateur}
+On remarque qu'avec l'approximations faite sur $\eo$ le régulateur s'écrit
+ \begin{equation*}
+\bRc_k(q_x, q_y) = \Rc_k(q) = \alpha \frac{Z_k \eo^0 k^2 q^2}{\exp\(\frac{\eo^0}{ {\|\eo\|}_{\infty} } \, \frac{q^2}{k^2} \) - 1} 
+\end{equation*} 
+On adimensionne le régulateur en posant
+\begin{equation*}
+r_k(\tq) = \frac{\bRc_k(\tq_x, \tq_y)}{\eo^0 q^2 Z_k} = \alpha \frac{1}{\exp\(\frac{\eo^0}{ {\|\eo\|}_{\infty} } \, \tq^2 \) - 1} 
+\end{equation*} 
+Ainsi on en déduit
+\begin{equation}
+\partial_t \Rc_k(q) {|}_{q} = \partial_t (\eo^0 q^2 Z_k r_k(\tq)) {|}_{\tq} + \partial_t \tq {|}_{q} \, \partial_{\tq} r_k(\tq)
+\end{equation}
+\begin{equation}
+\partial_t \Rc_k(q) {|}_{q} = \eo^0 k^2 Z_k \tq^2 \left\{ -\eta_k r_k(\tq) - \tq \partial_{\tq} r_k(\tq) \right\}
+\end{equation}
+Avec l'expression 
+\begin{equation}
+\partial_{\tq} r_k(\tq) = - \alpha \frac{\eo^0}{2 {\|\eo\|}_{\infty} } \tq \frac{1}{\sinh^2\(\frac{\eo^0}{2 {\|\eo\|}_{\infty}} \tq^2 \)}
+\end{equation}
+Et on remarquera aussi que 
+\begin{equation}
+\frac{\eo^0}{{\|\eo\|}_{\infty} } = \frac{\mu -1}{8(\mu+1)}
+\end{equation}
+
+\vspace*{11pt}
+\subsubsection{Adimensionnement des intégrales et leur expression}
+On adimensionne aussi les intégrales
+\begin{equation*}
+\tJ_n(\tp_x, \tp_y,\tphi) = \frac{Z_k^{n-1}}{k^{2(2-n)}}\bJ_n(\tp_x, \tp_y,\phi) \quad \text{et} \quad \tI_n(\tphi) = \frac{Z_k^{n-1}}{k^{2(2-n)}}I(\phi)
+\end{equation*} 
+Et leurs équations deviennent
+\begin{equation}
+\tJ_n (\tp_x, \tp_y, \tphi) = \frac{1}{(2\pi)^2}  \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \eo^0 \tq^2 \left\{ -\eta_k r_k(\tq) - \tq \partial_{\tq} r_k(\tq) \right\}   \,
+\tG_k^{n-1}(\tq_x,\tq_y,\tphi) \tG_k(\tp_x+\tq_x,\tp_y+\tq_y,\tphi) \, \dd \tq_x \,\dd \tq_y
+\end{equation}
+\begin{equation}
+\tI_n (\tphi) = \frac{1}{(2\pi)^2}  \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \eo^0 \tq^2 \left\{ -\eta_k r_k(\tq) - \tq \partial_{\tq} r_k(\tq) \right\}   \,
+\tG_k^{n}(\tq_x,\tq_y,\tphi) \, \dd \tq_x \,\dd \tq_y
+\end{equation}
+\begin{equation}
+\tG_k(\tq_x,\tq_y,\phi) = \frac{1}{\eo^0 \tq^2 \left\{  1 + \tY_k(\tq_x, \tq_y, \tphi)  + r_k(\tq) \right\} + \tX(\tphi) }
+\end{equation}
+\begin{equation}
+\begin{split}
+\partial_{\tphi}^2 & \tI_n(\tphi) =  - n \frac{1}{(2\pi)^2} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \eo^0 \tq^2 \left\{ -\eta_k r_k(\tq) - \tq \partial_{\tq} r_k(\tq) \right\}  \tG_k^{n+1}(\tq_x,\tq_y,\tphi)\( \eo^0 \tq^2 \partial_{\tphi}^2 \tY_k(\tp_x, \tp_y, \tphi) + \partial_{\tphi}^2 \tX(\tphi) \) \, \dd \tq_x \,\dd \tq_y \\
+& + n(n+1) \frac{1}{(2\pi)^2} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \eo^0 \tq^2 \left\{ -\eta_k r_k(\tq) - \tq \partial_{\tq} r_k(\tq) \right\}   \tG_k^{n+2}(\tq_x,\tq_y,\tphi){\(\eo^0 \tq^2\partial_{\tphi} \tY_k(\tp_x, \tp_y, \tphi) + \partial_{\tphi}   \tX(\tphi)\)}^2 \, \dd \tq_x \,\dd \tq_y
+\end{split}
+\end{equation}
+
+
+
+
+
+\vspace*{11pt}
+\subsubsection{Ecriture des équations finales}
+En rassemblant toute les expressions précédents ceci nous permet d'écrire les équations
+\begin{align}
+\partial_t \tY(\tp_x, \tp_y,\tphi) & = 
+\begin{aligned}[t]
+& \eta_k(1+\tY_k(\tp_x, \tp_y,\tphi)) + \frac{1}{2} \eta_k \tphi \partial_{\tphi} \tY_k(\tp_x, \tp_y,\tphi) - \frac{1}{2} \tI_2(\tphi) \partial_{\tphi}^2 \tY_k(\tp_x, \tp_y, \tphi)\\
+& \quad + \frac{1}{\eo^0\tpv^2}\left\{ {\( \eo^0\tpv^2 \partial_{\tphi} \tY_k(\tp_x, \tp_y,\tphi) + \partial_{\tphi} \tX(\tphi)\)}^2 \tJ_3(\tp_x, \tp_y,\tphi) - {\( \partial_{\tphi} \tX(\tphi) \)}^2 \tI_3(\tphi)\right\} \\
+& \quad + \tp_x \partial_{\tp_x} \tY_k(\tp_x, \tp_y,\tphi) + \tp_y \partial_{\tp_y} \tY_k(\tp_x, \tp_y,\tphi) \\ \\
+\end{aligned}
+\label{eqn} \\
+\partial_t \tX(\tphi) & = 
+\begin{aligned}[t]
+(\eta_k -2)\tX(\tphi) + \frac{1}{2}\eta_k\tphi \, \partial_{\tphi}\tX(\tphi) + \frac{1}{2} \partial_{\tphi}^2 \tI_1(\tphi)
+\end{aligned}
+\end{align}
+On notera aussi l'équation de flot qui permet de récupérer le potentiel directement donnée par
+\begin{equation}
+  \partial_t \tV(\tphi) = -2\tV(\tphi) + \frac{1}{2}\eta_k\tphi \partial_{\tphi}\tV(\tphi) + \frac{1}{2}\tI_1(\tphi)  
+\end{equation}
+
+\vspace*{11pt}
+\subsubsection{Equation sur $\eta_k$}
+Pour obtenir l'équation sur $\eta_k$ on commence par partir du fait que
+\begin{equation}
+\lim\limits_{\pv \rightarrow 0} \left\{ 1 +  \frac{\bDelta_k(\tp_x, \tp_y, 0)}{\eo^0 \pv^2} \right\} = 1 + \frac{1}{\eo^0}\frac{\partial  \bDelta_k(\tp_x, \tp_y, 0) }{\partial \pv^2 } = Z_k
+\end{equation}
+En utilisant la définition de $\tY$ il vient alors le résultat
+\begin{equation}
+Z_k = Z_k(1 + \tY(0,0,0)) \quad \Leftrightarrow \quad \tY_k(0,0,0) = 0 \quad \forall k
+\end{equation}
+Or ce résultat nous donne $\partial_t \tY_k(0,0,0) = 0$. Et on en déduit
+\begin{equation}
+\eta_k = \frac{1}{2} \tI_2(0) \partial_{\tphi}^2 \tY(0,0,0) 
+\end{equation}
+
+
+
+\vspace*{11pt}
+\subsubsection{Les expressions des régulateurs précédents}
+
+Afin d'assurer une compatibilité des équations, et comme maintenant il nous faut avec un un régulateur qui est de la même dimension que la dérivée seconde du potentiel il est nécéssaire de changer légèrement l'expression de $\Rc_k$ que l'on a utilise dans les deux premiers étapes du flot. On prend ici
+\begin{equation}
+\Rc_k(q_x, q_y) = \alpha \frac{Z_k \eo(q_x, q_y)}{\exp(2\tau(q_x, q_y)) -1}
+\end{equation}
+Ainsi on en déduit directement les formules suivantes
+\begin{equation}
+\partial_t \Rc_k(q_x, q_y) = \alpha Z_k \frac{\eo(q_x, q_y)}{\sinh(\tau(q_x, q_y)}   \left\{ \frac{\tau(q_x, q_y)}{\sinh(\tau(q_x, q_y))} - \eta_k \frac{1}{2\exp(\tau(q_x, q_y))} \right\}
+\end{equation}
+\begin{equation}
+\bpRc(\tq_x, \tq_y) = \alpha Z_k \frac{\beo(\tq_x, \tq_y)}{\sinh(\btau(\tq_x, \tq_y))}   \left\{ \frac{\btau(\tq_x, \tq_y)}{\sinh(\tau(\tq_x, \tq_y))} - \eta_k \frac{1}{2\exp(\btau(\tq_x, \tq_y))} \right\}
+\end{equation}
+
+\commentout{
+\begin{equation*}
+\tDelta_k(\tp_x, \tp_y,\tphi) = \frac{1}{Z_k k^2} \bDelta_k(\tp_x, \tp_y,\phi) \quad \text{et} \quad \tX(\tphi) = \frac{1}{Z_k k^2} X(\phi)
+\end{equation*}
+Ainsi que pour les integrales
+\begin{equation*}
+\tJ_n(\tp_x, \tp_y,\tphi) = \frac{Z_k^{n-1}}{k^{2(2-n)}}\bJ_n(\tp_x, \tp_y,\phi) \quad \text{et} \quad \tI_n(\tphi) = \frac{Z_k^{n-1}}{k^{2(2-n)}}I(\phi)
+\end{equation*} 
+Il vient alors les équations
+\begin{equation}
+\begin{split}
+\partial_t  \tDelta_k (\tp_x, \tp_y, \tphi) = & (\eta_k -2)\tDelta_k(\tp_x, \tp_y, \tphi) + \frac{1}{2}\eta_k\tphi \, \partial_{\tphi}\tDelta_k(\tp_x, \tp_y, \tphi) \\
+& - \tI_3(\tphi){(\partial_\phi \tX(\tphi))}^2 + \tJ_3(\tp_x, \tp_y, \tphi) {\(\partial_{\tphi} \left\{ \tDelta_k (\tp_x, \tp_y, \tphi) + \tX(\tphi) \right\}\)}^2 \\
+& - \frac{1}{2} \tI_2(\tphi) \partial_{\tphi}^2 \tDelta_k(\tp_x, \tp_y, \tphi) + \tp_x \partial_{\tp_x}  \tDelta_k(\tp_x, \tp_y, \tphi) + \tp_y \partial_{\tp_y}  \tDelta_k(\tp_x, \tp_y, \tphi) 
+\end{split}
+\end{equation}
+\begin{equation}
+\partial_t \tX(\tphi) =  (\eta_k -2)\tX(\tphi) + \frac{1}{2}\eta_k\tphi \, \partial_{\tphi}\tX(\tphi) + \frac{1}{2} \partial_{\tphi}^2 \tI_1(\tphi)
+\end{equation}
+
+Avec pour expression des integrales
+\begin{equation}
+\tJ_n (\tp_x, \tp_y, \phi) = \frac{1}{(2\pi)^2}  \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}} \int_{-\frac{\pi}{k}}^{\frac{\pi}{k}}  \bpRc(\tq_x, \tq_y) \,
+\tG_k^{n-1}(\tq_x,\tq_y,\phi)\bG_k(\tp_x+\tq_x,\tp_y+\tq_y,\phi) \, \dd \tq_x \,\dd \tq_y
+\end{equation}
+}
+
+\end{document}
