@@ -178,13 +178,24 @@ Nous allons nous intéresser ici plus particulièrement à un domaine particulie
 
 \label{sec:IsingIntro}
 
-Pour donner une image concrète d'un système aux degrés de liberté en interactions nous introduisons le système le plus simple à appréhender que l'on appelle le modèle d'Ising à deux dimensions et qui permet de décrire le magnétisme des matériaux aimantés. 
-On se place dans l'espace à trois dimensions repéré par la base cartésienne $\{\ev_\nu\}_{\nu=x,y,z}$ de $\R^3$. On considère un réseau carré infini dans le plan $(\ev_x, \ev_y)$. Sur chaque noeud du réseau se trouve un spin à une composante qui se représente par un vecteur dont la direction est parallèle à $\ev_z$ et dont l'orientation peut être selon $+\ev_z$ ou $-\ev_z$. On note $\mathscr{R} = \left\{ m \ev_x + n \ev_y \, | \, (m, n) \in \N^2 \right\}$ l'ensemble des positions des noeuds et donc des spins\footnote{Le pas du réseau est pris valant $1$, ou autrement dit, toutes les longueurs sont exprimées en unité du pas du réseau}. Pour représenter le sens du spin à la position $\rv \in \mathscr{R}$, on lui associe le scalaire $S_\rv$ qui vaut $+1$ s'il est selon $+\ev_z$ et $-1$ s'il est selon $-\ev_z$, ce sont les degrés de liberté du système\footnote{Le réseau est de dimensions infinies, de ce fait il s'y trouve une infinité de degré de liberté. Un système macroscopique possédant un nombre gigantesque ($\sim 10^{24}$) de degrés de liberté, cela est une modélisation cohérente de la réalité.}. On appelle \textit{micro état} ou \textit{configuration} du système un ensemble $\Sr = \{ S_\rv \}_{\rv \in \mathscr{R}}$ donné : une représentation en terme de vecteurs en est faite en \refig{schemaIsing}. Pour un micro état $\Sr$ on peut alors définir son énergie $H\(\Sr\)$ associée selon
+Pour donner une image concrète d'un système aux degrés de liberté en interactions nous introduisons le système le plus simple à appréhender que l'on appelle le modèle d'Ising à deux dimensions et qui permet de décrire les matériaux aimantés. \\
+
+On se place dans l'espace à trois dimensions repéré par la base unitaire cartésienne $\{\ev_\nu\}_{\nu=x,y,z}$ de $\R^3$. On considère un réseau carré de pas $a$ dans le plan $(\ev_x, \ev_y)$. Soit $L \in \N^*$, on note $\mathscr{R} = \left\{ m a \ev_x + n a \ev_y \, | \, (m, n) \in  \bbrac{0,L}^2 \right\}$ l'ensemble des positions des noeuds du réseau dans la surface $[0, aL]^2$.  
+
+Sur chaque noeud dans  $[0, aM]^2$ se trouve un spin à une composante qui se représente par un vecteur dont la direction est parallèle à $\ev_z$ et dont l'orientation peut être selon $+\ev_z$ ou $-\ev_z$. Pour représenter le sens du spin à la position $\rv \in \mathscr{R}$, on lui associe le scalaire $S_\rv$ qui vaut $+1$ s'il est selon $+\ev_z$ et $-1$ s'il est selon $-\ev_z$, ce sont les degrés de liberté du système. Dans un modèle cohérent de la réalité nous avons un nombre $N_s = (L+1)^2 \sim 10^{24}$ de spins, autant dire quasi-infini. 
+
+On appelle \textit{micro état} ou \textit{configuration} du système un ensemble $\Mr = \{ S_\rv \}_{\rv \in \mathscr{R}}$ donné : une représentation en terme de vecteurs en est faite en \refig{schemaIsing}. Il existe alors $2^{N_s} \sim 2^{10^{24}}$ micro-états possible différents. Pour un micro état $\Mr$ on peut définir son énergie $H\(\Mr\)$ associée 
 \begin{equation}
-H\(\Sr = \{ S_\rv \}_{\rv \in \mathscr{R}} \) = -J \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'} \, .
+H\(\Mr = \{ S_\rv \}_{\rv \in \mathscr{R}} \) = -J \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'} \, .
 \label{eq:HamIsing}
 \end{equation}
-La notation $\left<\rv, \rv'\right>$ signifie que l'on somme sur tout $\rv \in \mathscr{R}$ et $\rv' \in \mathscr{R}$  mais que le terme $S_\rv S_{\rv'}$ contribue à la somme si et seulement les neouds $\rv$ et $\rv'$ sont plus proches voisins (i.e si $\rv' = \rv \pm \ev_x$ ou $\rv' = \rv \pm \ev_y$). Le paramètre $J$ représente une énergie, c'est une constante positive.
+La notation $\left<\rv, \rv'\right>$ signifie que l'on somme sur tout $\rv \in \mathscr{R}$ et $\rv' \in \mathscr{R}$  mais que le terme $S_\rv S_{\rv'}$ contribue à la somme si et seulement les noeuds $\rv$ et $\rv'$ sont plus proches voisins (i.e si $\rv' = \rv \pm a \ev_x$ ou $\rv' = \rv \pm a \ev_y$). Le paramètre $J$ représente une énergie, c'est une constante positive.
+
+Supposons maintenant que le système soit soumis à un champ magnétique extérieur $\bv$ stationnaire. Ce champ peut prendre une valeur différente pour chaque noeud. On note $b_\rv \ev_z$ sa valeur au noeud $\rv$ ainsi que  $\mathcal{B} = \{b_\rv\}_{\rv \in \Rr}$. L'énergie du micro-état $\Mr$ s'en trouve alors changée et elle est décrite par une fonction $\mathcal{S}$ que l'on appelle l'action du système selon :
+\begin{equation}
+	\mathcal{S}(\Mr, \mathcal{B}) = H(\Mr) - \sum_\rv b_\rv S_\rv \, ,
+\end{equation}
+La somme sur $\rv$ est une somme sur l'ensemble des $N_s$  spins dans le réseau.
 \setlength{\unitlength}{1cm}
 \begin{figure}[H]
 \begin{center}
@@ -255,38 +266,55 @@ La notation $\left<\rv, \rv'\right>$ signifie que l'on somme sur tout $\rv \in \
 \end{figure}
 
 
-Si le système est placé dans un milieu à température nulle et initialement dans un micro-état quelconque il évolue alors vers le micro-état minimisant son énergie, donc minimisant $H$. Comme $J$ est positif ceci se produit pour $\Sr_1 = \{1,1,1 .., 1\}$ ou $\Sr_{-1} = \{-1,-1,-1 .., -1\}$, micro-états dans lesquels l'ensemble des spins sont tous orientés dans la même direction (notons qu'en fait $\Sr_1 = \Sr_{-1}$ puisque le système est symétrique par l'échange de $\ev_z$ en $-\ev_z$). Ceci permet aussi aussi de montrer ce qu'un système aux degrés de liberté en interactions représente. En effet considérons le système dans le micro-état $\Sr_1$ et on imagine que l'on puisse tourner un spin, i.e. imposer $S_\rv=-1$ pour un $\rv$ donné. Alors, pour minimiser l'énergie, ses quatre spins plus proches voisins vont le "contraindre" à revenir dans la position $S_\rv = 1$ : ils sont en interaction. 
+Si le système est placé dans un milieu à température nulle, sans champ magnétique extérieur ($\mathcal{B} = 0$) et initialement dans un micro-état quelconque il évolue vers le micro-état minimisant son énergie, donc minimisant $H$. Comme $J$ est positif ceci se produit pour $\Mr_1 = \{1,1,1 .., 1\}$ ou $\Mr_{-1} = \{-1,-1,-1 .., -1\}$, micro-états dans lesquels l'ensemble des spins sont tous orientés dans la même direction (notons qu'en fait $\Mr_1 = \Mr_{-1}$ puisque $H$ est invariant par l'échange de $\ev_z$ en $-\ev_z$). En effet, dans le micro état $\Mr_1$ nous avons $S_\rv S_{\rv'} = 1$ pour tout site en $\rv$ et $\rv'$ dans $\mathscr{R}$ plus proches voisins et $H$ est alors bien minimisé. Ceci permet aussi aussi de montrer ce qu'un système aux degrés de liberté en interactions représente. En effet considérons le système dans le micro-état $\Mr_1$ et on imagine que l'on puisse tourner un spin, i.e. imposer $S_\rv=-1$ pour un $\rv$ donné. Alors, pour minimiser l'énergie, par la forme même du hamiltonien, ses quatre spins plus proches voisins vont  interagir avec lui  et le "contraindre" à revenir dans la position $S_\rv = 1$. 
 
-Lorsque l'on soumet maintenant le système à une température $T$ non nulle, il reçoit de l'énergie thermique de l'extérieur qui tend à favoriser la désorganisation : son état d'équilibre n'est plus un micro-état particulier. En revanche on peut définir la probabilité qu'a l'équilibre le système soit dans le micro-état $\Sr$ par
+Lorsque l'on soumet maintenant le système à une température $T$ non nulle, il reçoit de l'énergie thermique de l'extérieur qui tend à favoriser la désorganisation des spins : son état d'équilibre n'est plus un micro-état particulier. En revanche, avec un champ magnétique extérieur $\hv_\rv$ on peut définir la probabilité qu'a l'équilibre le système soit dans le micro-état $\Mr$ par
 \begin{equation}
-	p\(\Sr\) = \frac{1}{\Zc}\exp\(-\frac{H\(\Sr\)}{k_B T} \)
+	p\(\Mr, T, \mathcal{B}\) = \frac{1}{\Zc(T, \mathcal{B})}\exp\(-\frac{\mathcal{S}\(\Mr, \Bc\)}{k_B T} \)
 \end{equation}
 avec la notation
 \begin{equation}
-\Zc = \sum_{\Sr'}  \exp\(-\frac{H\(\Sr'\)}{k_B T} \) \, . 
+\Zc(T, \mathcal{B}) = \sum_{\Mr'}  \exp\(-\frac{\mathcal{S}\(\Mr', \Bc\)}{k_B T} \) \, . 
 \end{equation}
-Le scalaire $\Zc$ est appelé la fonction de partition du système, il s'agit d'une somme sur l'ensemble des micro-états possibles. La constante $k_B$ est la constante de Boltzmann. Plus la température est élevée plus l'énergie thermique reçue que l'on peut évaluer par $\sim k_bT$ est grande par rapport à l'énergie $J$. Pour $k_BT \ll J$ seuls $\Sr_1$ et des micro-état proches de $\Sr_1$ ont une probabilité non nulle d'être visité par le système. En revanche, lorsque $k_BT \gg J$ les spins reçoivent suffisamment d'énergie thermique pour que le système puisse être indifféremment dans n'importe quel micro-état à l'équilibre. 
+La fonction $\Zc$ est appelé la fonction de partition du système, il s'agit d'une somme sur l'ensemble  des $2^{N_s}$ micro-états possibles. La constante $k_B$ est la constante de Boltzmann. Plus la température est élevée plus l'énergie thermique reçue que l'on peut évaluer par $\sim k_BT$ est grande par rapport à l'énergie $J$. Pour $k_BT \ll J$ et $\mathcal{B} = 0$ seuls $\Mr_1$ et des micro-état proches de $\Mr_1$ ont une probabilité non nulle d'être visité par le système. En revanche, lorsque $k_BT \gg J$ et $\Bc = 0$ les spins reçoivent suffisamment d'énergie thermique pour que le système puisse être indifféremment dans n'importe quel micro-état à l'équilibre. \\
 
 
  
 
 
 L'ensemble des grandeurs du système sont calculées comme des moyennes statistiques sur les différents micro-états. 
-En particulier une des grandeurs caractéristique du système est son aimantation moyenne définie par
+En particulier une des grandeurs caractéristique du système est son aimantation moyenne. En effet, comme nous l'avons mentionné le modèle d'Ising décrit la physique des matériaux aimantés. Les spins agissent comme de petits aimants individuels et l'aimantation totale du matériau correspond donc à la somme des spins. Ainsi l'aimantation du micro-état $\Mr  = \{ S_\rv \}_{\rv \in \mathscr{R}}$ est
 \begin{equation}
-	m  \equiv \left< S_\rv \right>	\equiv \sum_{\Sr} p\(\Sr\) S_\rv \, .
+	m_\Mr(T, \Bc) = \frac{1}{N_s} \sum_{\rv} S_\rv
 \end{equation}
-Le modèle d'Ising représente le ...
-Nous nous intéressons à cette grandeur car elle va nous permettre d'introduire le concept de transition de phase. En effet, dans le cas où $T=0$ nous savons que $p(\Sr_1) = 1$ et donc $m =1$. En revanche pour $T$ non nul le désordre apporté par l'énergie thermique fait que dans l'ensemble $m \to 0$ quand $T \to 0$.  
-Il se trouve que l'on peut tracer expérimentalement l'évolution de $m$ en fonction de la température extérieure $T$. On obtient alors la courbe bleu de \refig{aimantation} ayant une cassure au niveau d'une température que l'on note $T_c$ (pour température critique) et que l'on définira plus précisément un peu plus loin. L'aimantation ne se comporte donc pas à la manière de la courbe rouge comme il aurait été possible de le penser : on n'a pas seulement $m \to 0$ quand $T \to 0$ mais $m=0$ pour $T>T_c$. Cette évolution marque la présence d'une transition de phase. Pour bien comprendre ce dont il s'agit définissons ensuite ce qu'est de manière générale une transition de phase et comment les étudier. 
+En utilisant la description statistique il est alors possible de déterminer l'aimantation $m$ totale du modèle à une température $T$ donnée selon les formules
+\begin{equation}
+	\begin{split}
+	m(T, \Bc)  &  \equiv \left< m_\Mr(T, \Bc) \right>	\, , \\
+	m(T, \Bc) & \equiv \sum_{\Mr} p\(\Mr, T, \Bc \) \(\frac{1}{N_s} \sum_{\rv} S_\rv\)  \, .
+	\end{split}
+\end{equation}
+On montre alors que l'expression précédente donne
+\begin{equation}
+	m(T, \Bc) = \frac{1}{N_s\beta}\partial_\beta \ln\(\Zc(T, \Bc) \) \, ,
+\end{equation}
+avec $\beta = 1/(k_BT)$. De manière générale la fonction de partition $\Zc$ à une importance particulière car elle permet comme ici avec $m$ de retrouver toutes les grandeurs macroscopiques intéressantes.
+
+Nous nous intéressons à l'aimantation car elle va nous permettre d'introduire le concept de transition de phase. En effet, à champ magnétique extérieur nul ($\Bc = 0$) et dans le cas où $T=0$ nous savons que $p(\Mr_1) = 1$ et donc $m =1$. En revanche pour $T$ non nul le désordre apporté par l'énergie thermique fait que dans l'ensemble $m \to 0$ quand $T \to \infty$. 
+
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=0.95\columnwidth]{aimantation.pdf}
-\caption{Evolution de l'aimantation $m$ du système en fonction la température. (bleu continu) courbe obtenue expérimentalement. (rouge discontinu) ce qui aurait été attendu.}
+\caption{Evolution de l'aimantation $m$ du système en fonction la température à champ magnétique extérieur nul. (bleu continu) courbe obtenue expérimentalement. (rouge discontinu) ce qui aurait été attendu.}
 \label{fig:aimantation}
 \end{center}
 \end{figure}
+
+ 
+Il se trouve que l'on peut tracer expérimentalement l'évolution de $m(T, \Bc = 0)$ en fonction de $T$  sur les systèmes que modélise le système d'Ising 2D. On obtient alors la courbe bleue de \refig{aimantation} ayant une cassure au niveau d'une température que l'on note $T_c$ (pour température critique) et que l'on définira plus précisément un peu plus loin. L'aimantation ne se comporte donc pas à la manière de la courbe rouge comme il aurait été possible de le penser : on n'a pas seulement $m \to 0$ quand $T \to \infty$ mais $m=0$ pour $T>T_c$. Un système aimanté décrit par ce modèle perd son aimantation pour $T>T_c$
+Cette évolution de l'aimantation marque la présence d'une transition de phase. Pour bien comprendre  ce dont il s'agit définissons ensuite ce qu'est de manière générale une transition de phase et comment les étudier. \\
+
 
 
 
@@ -298,9 +326,9 @@ Il se trouve que l'on peut tracer expérimentalement l'évolution de $m$ en fonc
 \subsection{Transitions de phases}
 \subsubsection{Définition et classification}
 
-En thermodynamique on appelle phase un milieu possédant des propriétés physiques et chimiques homogènes. Or, avec la modification de certains paramètres comme la température ou la pression extérieure (dans notre étude on ne considère que les effets de la température), un système peut changer de phase. Il se produit alors une transition de phase. On appelle $T_c$, température critique, la température à laquelle se produit la transition. Ce changement de phase est dû à une réorganisation, au niveau microscopique, des constituants  du système (molécules, atomes, spins ...), ayant un effet macroscopique. Landau a classé ces transitions suivant deux types : celles du premier ordre et celles du second \cite{toledano1987landau}. La distinction se fonde sur la continuité d'une fonction de la température que l'on appelle le paramètre d'ordre, au moment de la transition. \\
+En thermodynamique on appelle phase un milieu possédant des propriétés physiques et chimiques homogènes. Or, avec la modification de certains paramètres comme la température, la pression extérieure ou le champ magnétique extérieur, (dans notre étude on ne considère que les effets de la température), un système peut changer de phase. Il se produit alors une transition de phase. On appelle $T_c$, température critique, la température à laquelle se produit la transition. Ce changement de phase est dû à une réorganisation, au niveau microscopique, des constituants  du système (molécules, atomes, spins ...), ayant un effet macroscopique. Landau a classé ces transitions suivant deux types : celles du premier ordre et celles du second \cite{toledano1987landau}. La distinction se fonde sur la continuité d'une fonction de la température que l'on appelle le paramètre d'ordre, au moment de la transition. \\
 
-Dans l'exemple du modèle d'Ising la température permet de réorganiser la structure microscopique en changer la "quantité de désordre" des spins. A faible $T$, i.e. $T< T_c$, ils ont tendance à rester aligner et ordonnés, le système est dans une phase pour laquelle $m \neq 0$. En revanche pour $T$ grand, i.e. $T>T_c$ les spins ont un comportement désordonné, il s'agit d'une seconde phase où $m = 0$. Le paramètre d'ordre associé à la transition est, en faits, l'aimantation $m$ ; il est donc continu avec la température, il s'agit d'une transition du second ordre. Une transition du premier ordre aurait eu un paramètre d'ordre évoluant comme dans \refig{aimantation2}, le passage de l'eau de l'état liquide à l'état gazeux par augmentation de la température est un exemple d'une telle transition. 
+Dans l'exemple du modèle d'Ising la température permet de réorganiser la structure microscopique en modifiant la "quantité de désordre" des spins. A champ magnétique extérieur nul et à faible $T$, i.e. $T< T_c$, ils ont tendance à rester aligner et ordonnés, le système est dans une phase pour laquelle $m \neq 0$. En revanche pour $T$ grand, i.e. $T>T_c$ les spins ont un comportement désordonné, il s'agit d'une seconde phase où $m = 0$. Le paramètre d'ordre associé à la transition est, en faits, l'aimantation $m$ ; il est donc continu avec la température, il s'agit d'une transition du second ordre. Une transition du premier ordre aurait eu un paramètre d'ordre évoluant comme dans \refig{aimantation2}, le passage de l'eau de l'état liquide à l'état gazeux par augmentation de la température est un exemple d'une telle transition. 
  
  
  \begin{figure}[H]
@@ -320,13 +348,20 @@ D'un autre côté, un métal aimanté à température ambiante qui n'est soumis 
 }
 
 
-\subsubsection{Transitions du second ordre}
+\subsubsection{Transitions du second ordre : définition des exposants critiques}
 
 Il se produit, lors des transitions du second ordre, des phénomènes particuliers, qui sont au centre de l'étude que nous avons réalisé. Pour les expliquer introduisons, pour tout système, une fonction de corrélation $G^{(2)}(r)$ qui décrit quantitativement l'influence que deux degrés de liberté séparés d'une distance $r$ ont l'un sur l'autre. Notons que plus $r$ sera grand moins cette influence sera forte et donc plus  $G^{(2)}(r)$ sera faible. A cette fonction, qu'il est possible de déterminer expérimentalement \cite{Bellac2012}, on y associe une longueur $\xi$ qui définit approximativement la distance à partir de laquelle deux degrés de libertés du système n'ont plus d'influence l'un sur l'autre.\\
 
-Dans le cas du modèle d'Ising cette fonction représente l'influence que deux spins $S_\rv$ et $S_{\rv'}$ ont l'un sur l'autre et elle est plus exactement définie par
+Dans le cas du modèle d'Ising cette fonction représente l'influence que deux spins $S_{\rv_1}$ et $S_{\rv_2}$ ont l'un sur l'autre à $T$ et $\Bc = \{b_\rv\}_\rv$ fixés. Elle est plus exactement définie par
 \begin{equation}
-	G^{(2)}(|\rv - \rv'|) \equiv \left< S_\rv S_{\rv'} \right>  \equiv \sum_{\Sr}  p\(\Sr\) S_\rv S_{\rv'}  \, ,
+\begin{split}
+	G^{(2)}(|\rv_1 - \rv_2|) & \equiv \left< S_{\rv_1} S_{\rv_2} \right>  \, \\
+	G^{(2)}(|\rv_1 - \rv_2|) & \equiv \sum_{\Mr}  p\(\Mr, T, \Bc\) S_{\rv_1} S_{\rv_2}   \, ,
+	\end{split}
+\end{equation}
+et elle se calcule aussi directement en utilisant la fonction de partition avec l'expression 
+\begin{equation}
+	G^{(2)}(|\rv_1 - \rv_2|) = \frac{1}{\Zc(T, \Bc)} \frac{\partial^2 \Zc(T, \Bc)}{\partial h_\rv \partial h_{\rv'}} \, .
 \end{equation}
 
 
@@ -334,7 +369,9 @@ On observe expérimentalement que de manière générale pour toute transition d
 \begin{equation}
 	\xi \widesim{} |T-T_c|^{-\nu} 	\quad \text{et} \quad G^{(2)}(r) \widesim{r \to \infty} |r|^{2-d-\eta},
 \end{equation}
-où $d$ est la dimension physique du système et $\nu$ et $\eta$ sont deux réels positifs appelés les \emph{exposants critiques}. Notons qu'il existe aussi comme cela plusieurs autres grandeurs desquelles ont peut extraire différents exposants critiques. Le point essentiel étant que tous les systèmes ayant les mêmes propriétés de symétrie possèdent les mêmes exposants critiques, on dit qu'ils appartiennent à la même classe d'universalité. En outre, un système possède une certaine symétrie lorsque l'action de celle-ci sur les degrés de liberté n'en change pas l'énergie. Nous détaillons plus en détails en \refsec{ON} à quoi correspond la symétrie $O(N)$ à laquelle nous nous sommes intéressés. 
+où $d$ est la dimension physique du système ($d=2$ pour Ising 2D) et $\nu$ et $\eta$ sont deux réels positifs appelés les \emph{exposants critiques}.  Or il apparait que deux systèmes défini dans une même dimension $d$ qui peuvent être très différents a priori mais qui possèdent des propriétés de symétries communes conserve les mêmes exposants critiques. Dans le modèle d'Ising 2D, nous avons déjà mentionné que l'échange de $\ev_z$ en $-\ev_z$ ne change pas l'hamiltonien du système, on dit alors qu'il possède une symétrie $\mathbb{Z}_2$. Pour tout système ayant la même propriété nous obtiendrons donc un $\eta$ et un $\nu$ identiques. Nous détaillons  en \refsec{ON} à quoi correspond la symétrie $O(N)$ plus générale à laquelle nous nous sommes intéressés. \\
+
+Notre but va être de calculer les exposants critiques $\nu$ et $\eta$ ainsi que $T_c$ pour différents systèmes ayant une symétrie $O(N)$, et une transition de phase du second ordre ; il est donc primordial de connaitre la fonctions de partition de ces systèmes. En effet, de manière générale, la fonction de partition renferme toutes les informations que l'on peut vouloir connaitre sur un système. Nous avons vu qu'elle donne accès par exemple à $m$ ou $G^{(2)}$ qui définit les exposant critiques. Cependant il s'avère qu'il n'est pas toujours possible, dans la grande majorité des cas, de la calculer directement. Cela est possible dans le cas Ising 2D et a été fait par Onsager \cite{Onsager} mais cela reste une exception. Ce pourquoi nous allons à présent développer les points clefs du formalisme général de physique statistique des champs que nous couplerons à la méthode du groupe de renormalisation pour pouvoir en réaliser un calcul avec des approximations contrôlées sur différents systèmes.\\
 
 \commentout{
 L'avantage est qu'il suffit alors d'étudier un système 'jouet' très simple, le plus simple possible, ayant la symétrie souhaitée pour trouver les exposants critiques de tous les autres systèmes physiques plus complexes avec la même symétrie. Notons que la température critique $T_c$ n'est pas une grandeur universelle,elle est propre à chaque système et varie d'un système à l'autre, même s'ils ont les mêmes symétries. Pour la calculer il n'est donc pas possible d'utiliser l'astuce précédente, il faut étudier précisément le système d'intérêt.
@@ -342,52 +379,36 @@ L'avantage est qu'il suffit alors d'étudier un système 'jouet' très simple, l
 
 
 
-\subsection{Approche de mécanique statistique}
+\subsection{Approche de mécanique statistique des champs}
 
-
-
-
-
-\subsection{Intérêt du groupe de renormalisation et des équations BMW}
-
-Le groupe de renormalisation (RG) permet de montrer l'effet d'universalité des exposants critiques et de les calculer. L'approche par le RG a permis d'obtenir déjà d'excellents résultats \cite{kadanoff1967scaling, wilson1971renormalization2} pour différents systèmes étudiés comparé aux expériences et autres méthodes comme les simulations Monte-Carlo. Cependant elle reste limitée dans ces applications car elle se fonde sur des approximations de "théorie des perturbations" qui ne permettent de ne calculer par exemple que les exposants universels critiques mais pas les grandeurs non universelles comme la température critique $T_c$.\\
-
-Le groupe de renormalisation non perturbatif (NPRG) permet de répondre à ce problème en reprenant le principe du RG sous une approche différente permettant d'accéder à des équations exactes. L'inconvénient est qu'alors ces équations exactes n'ont pas de solution a priori. Il faut faire d'autres approximations, comme l'approximation BMW, pour obtenir des équations solubles numériquement. Bien que cela reste compliqué en pratique, ces approximations peuvent alors permettre de récupérer à la fois les exposants critiques et la température critique. \\
-
-Le but de cette étude est d'appliquer l'approximation BMW à des systèmes dont exposants et température critiques sont connus grâces à d'autres méthodes exactes ou numériques, afin de valider la qualité de cette approximation et de la résolution numérique.\\
-\indent
-Nous avons repris une simulation numérique d'équations intégro-différentielles non linéaires obtenues par l'approximation BMW pour des systèmes régis par une certaine symétrie dite $O(N)$ à l'aide du système modèle générique de la "théorie $\varphiv^4$" \cite{LeonardThesis}. Elle a déjà permis de déterminer des exposants critiques avec précision pour certains systèmes, mettant bien en avant la qualité de l'approximation BMW. Cependant elle présente des comportements étranges et des résolutions instables dans d'autres cas. Le but était donc d'en rechercher les causes pour parvenir enfin à calculer avec ce code les exposants $\eta$ et $\nu$ dans toutes les configurations.\\
-\indent
-De plus nous avons aussi réalisé la simulation des équations BMW pour un modèle précis, nommé Ising en deux dimensions (Ising 2D), ayant une symétrie $O(N=1)$, afin d'essayer d'en récupérer la température critique et de la comparer à la valeur théorique connue. L'objectif est alors bien de valider la justesse de l'approximation BMW, en montrant sa capacité à calculer numériquement une grandeur non universelle, $T_c$, d'un système donné. \\
-
-Dans une première partie nous rappelons les origines du modèle du RG et du NPRG puis nous l'utilisons pour expliquer la structure des équations BMW dans le cas de de la théorie $\varphiv^4$ et étudier numériquement leur résolution et la recherche des exposants critiques associés. Enfin nous introduirons le modèle d'Ising à deux dimensions et les simulations numériques que nous avons réalisé dessus. 
-
-
-\vspace*{11pt}
-
-
-
-\section{Origine du modèle}
-\subsection{Concepts de physique statistique}
 
 \label{sec:Origin}
 
-Nous résumons dans cette sections quelques concepts fondamentaux de la thermodynamique et de la physique statistique \cite{diu2007thermodynamique} nécessaires à l'introduction du groupe de renormalisation. \\
+Nous résumons dans cette sections quelques concepts fondamentaux de la thermodynamique et de la physique statistique \cite{diu2007thermodynamique} en généralisant des concepts déjà abordés pour le modèle d'Ising 2D. Ceci est nécessaire pour pouvoir aborder de manière générale l'étude des transitions de phase et des exposants critiques à l'aide de l'outil du groupe de renormalisation (RG).  En effet, le (RG) permet de ne travailler qu'avec des systèmes définis par des champs, il nous faut donc introduire ce concept.  \\
 
-Considérons un système à $P$ corps dans un ouvert à $d$ dimensions $\Omega$ de volume $|\Omega|$. Chacun de ces $P$ corps possèdent $N$ degrés de liberté. On considère que l'ensemble des $N$ degrés de liberté de chacun de ces $P$ corps peuvent être décrit suivant leur position $\rv$ grâce à une fonction $\varphiv : \rv \in \Omega \rightarrow \varphiv(\rv) \in \R^N$, telle que $\varphiv \in \( \Cc^{0}(\Omega)\)^N$. Si un corps se situe en $\rv$ les $N$ composantes du vecteur $\varphiv(\rv)$ représentent alors chacune la valeur de l'un de ces degrés de liberté. \\
+Considérons un système à $P$ corps (atomes, molécules, spins  ...) dans un ouvert à $d$ dimensions $\Omega$ de volume $|\Omega|$. On suppose que chacun de ces $P$ corps possèdent $N$ degrés de liberté. Dans le modèle d'Ising 2D, $d=2$, $P=N_s$ , $\Omega = [0, aM^2]$ où $a$ est le pas du réseau et $N=1$. En effet on ne dispose que d'un degré de liberté par spin dans le sens ou une seule variable scalaire $S_\rv$ pour le spins à la position $\rv$ suffit pour décrire le système. Un modèle équivalent avec $N=2$ serait un modèle avec des spins à deux composantes sur chaque noeuds nécessitant d'être représentées par deux variables scalaires. \\
+
+On introduit maintenant une fonction $\varphiv$ définie par
+\begin{equation}
+	\varphiv \in \varphiv \in \( \Cc^{0}(\Omega)\)^N : \rv \in \Omega \rightarrow \varphiv(\rv) \in \R^N \, ,
+\end{equation}
+et on suppose que $\varphiv$ décrit, au même titre que l'ensemble $\Mr = \{S_\rv\}_\rv$ dans le modèle d'Ising, un micro-état du système.  On l'appelle alors le \textit{champ} du système. L'hamiltonien devient donc de façon équivalent une fonctionnelle de $\varphiv$ et on le note $H[\varphiv]$ ; il représente l'énergie du système décrit par le champ $\varphiv$. On peut aussi considérer qu'un champ magnétique externe défini par $\bv : \rv \to \bv(\rv) \in \R^N$ agisse sur le système. Dans ce cas la on introduit l'action $\mathcal{S}$ définissant l'énergie par
+\begin{equation}
+	\mathcal{S}[\varphiv, \bv] \equiv H[\varphiv] -  \int_{\Omega} \bv(\rv) \varphiv(\rv) \dd \, \rv  \;
+\end{equation}
+Avec le formalisme canonique de la physique statistique \cite{rohtuA} nous savons que nous pouvons connaitre toutes l'information sur les propriétés macroscopiques du système soumis à une température $T$ et champ magnétique $\hv$ en étudiant sa fonction de partition $\Zc$ définie par l'expression 
+\begin{equation}
+\Zc[T; \bv] \equiv \int \Dc \varphiv \, \exp\(- \frac{\mathcal{S}[\varphiv, \bv]}{k_BT}\), 
+\end{equation} 
+Cette intégrale avec une notation $\Dc \varphiv$ est une intégrale dite fonctionnelle sur l'ensemble des champs $\varphiv$ pouvant décrire le système. Il s'agit d'une somme "continue" équivalente à la somme sur tous les $\Mr$ micro-états possibles. En outre, elle ne peut être calculée exactement que pour quelques cas particuliers. Ceci revient à dire que comme nous l'avions déjà mentionné les fonction de partitions ne sont généralement pas calculables directement sans approximations. \\
+
+Ce formalisme consiste donc à travailler avec des fonctions continues et non plus des micro-états définis par des ensembles de variables discrètes. Il ne permet donc pas de décrire le modèle d'Ising 2D, a priori. Son utilité réside en fait dans l'universalité des exposants critiques. En effet, si un système dont l'état est défini par des champs possède les même symétries qu'un autre système quelconque, alors ils auront les mêmes exposants critiques. Le calcul des exposants critiques en théorie des champs que va permettre le RG s'appliquera donc à tous les systèmes possédant la même symétrie. Introduisons donc maintenant les possibilités qu'offre le RG et des équations BMW pour calculer avec des approximations contrôlées la fonction de partition $\Zc$ (ou des fonctions dérivées de $\Zc$ contenant toujours l'information que l'on souhaite). \\
+
 
 \commentout{
- ensemble de vecteurs $\{{\varphiv_\rv}\}_\rv$. Le vecteur $\varphiv_\rv$ possède $N$ composantes représentant chacune la valeur d'un degré de liberté du corps situé en $\rv$. Cependant comme nous en avons déjà discuté, nous étudions des systèmes macroscopique, ou autrement dit, des systèmes dans la limite thermodynamique où le nombre $P$ de corps est très élevé. Suffisamment élevé pour considérer que l'ensemble de valeurs ${\{{\varphiv_\rv}\}}_\rv$ discrètes peut en réalité s'exprimer comme une fonction $\varphiv : \rv \in \Omega \rightarrow \varphiv(\rv) \in \R^N$, telle que $\varphiv \in \( \Cc^{0}(\Omega)\)^N$. }
-
-La dynamique du système est alors régie par un une fonctionnelle de $\varphiv$ : l'hamiltonien $H[\varphiv]$\footnote{Pour être plus précis ici $H = \beta H_\text{stat}$, où $\beta = 1/(k_b)T$ et $H_\text{stat}$ est classiquement le hamiltonien de la physique statistique}. Avec le formalisme canonique de la physique statistique \cite{rohtuA} nous savons que nous pouvons connaitre toutes l'information sur les propriétés macroscopiques du système en étudiant sa fonction de partition $\Zc$ définie par l'expression 
-\begin{equation}
-\Zc \equiv \int \Dc \varphiv \, \exp\left\{- H[\varphiv]\right\}, 
-\end{equation} 
-Cette intégrale est une intégrale fonctionnelle \cite{} sur l'ensemble des champs $\varphiv$ permis par le système (i.e. une somme continue sur l'ensemble des configurations possibles des $P\times N$ degrés de liberté du système). Cependant elle ne peut pas être, de manière générale, calculée pour un $H$ quelconque.\\
-
 Considérons l'hypothèse physique selon laquelle $H$ peut se décomposer en deux parties distinctes,
 \begin{equation}
-H[\varphiv] = S[\varphiv] - \int_{\Omega} \hv \varphiv,
+H[\varphiv] = S[\varphiv] - \int_{\Omega} \bv (\rv)\varphiv(\rv) \dd \, \rv,
 \end{equation} 
 où $S$ est l'hamiltonien du système non excité et le deuxième terme correspond à l'excitation du système par un champ $\hv$ extérieur. Ainsi $\Zc$ devient une fonctionnelle de $\hv$ et nous définissons l'énergie libre du système selon 
 \begin{equation}
@@ -434,22 +455,33 @@ En outre la connaissance de $\Gamma[\phiv]$ a aussi un autre avantage important 
 et la position du minimum global de $V$ noté $\phiv_m$ est lié à la nature de la phase dans laquelle se trouve le système. Si jamais $\phiv_m \neq 0$ alors la température du système est inférieure à la température critique : on dit qu'il est dans la phase basse température. En revanche si  $\phiv_m = 0$ la température est au dessus de la température critique et le système est dans la phase haute température.\\
 
 
+}
 
-\subsection{La symétrie $O(N)$}
 
-\label{sec:ON}
+\subsection{Intérêt du groupe de renormalisation et des équations BMW}
 
-On dit qu'un système est symétrique selon $O(N)$ s'il est invariant par l'action du groupe de rotation $O(N)$ sur ces degrés de libertés. Plus précisément, soit $J \in O(N)$, et on note $J.V$ l'action de $J$ sur un vecteur $V$ de $\R^N$. Le modèle est dit $O(N)$ si 
-\begin{equation}
-	H[J .\varphiv] = H[\varphiv]	
-\end{equation}
-Dans la suite nous utiliserons alors une autre grandeurs scalaire invariante sous $O(N)$ pour caractériser les champs $\phiv$ uniformes 
-\begin{equation}
-	\rho = \frac{1}{2}  \phiv^2  
-\end{equation}
-Ainsi, pris en $\phiv$ uniforme le potentiel effectif $\Gamma^{(2)}$ par exemple devient une fonction de $\rho$ qui est un salaire et plus un vecteur comme $\phiv \text{ unif.}$ l'est. Il en est pour $V$ ou tout autre grandeur fonction de $\phiv$. Notre étude porte uniquement sur des systèmes possédant cette symétrie.\\
+Le groupe de renormalisation (RG) permet de calculer la fonction de partition $\Zc$ que l'on a défini dans le formalise de physique statistique des champs pour les systèmes définis par des champs. Cette méthode a permis de calculer déjà différents exposants critiques pour différents systèmes. Les calculs ont donné  d'excellents résultats \cite{kadanoff1967scaling, wilson1971renormalization2} par rapports à ce qui avait pu être obtenu par expérience ou par  d'autres méthodes comme les simulations Monte-Carlo. De plus c'est une méthode qui permet d'expliquer pourquoi les exposants critiques restent identiques au sein d'une même classe d'universalité. Cependant elle reste limitée dans ces applications car elle se fonde sur des approximations de "théorie des perturbations" qui ne permettent de ne calculer par exemple que les exposants universels critiques mais pas les grandeurs qui restent non universelles  comme la température critique $T_c$.\\
 
-Développons à présent les concepts du RG et du NPRG avec lesquels nous avons travaillés.
+Le groupe de renormalisation non perturbatif (NPRG) permet de répondre à ce problème en reprenant le principe du RG sous une approche différente permettant d'accéder à des équations exactes qui sont solubles si on leur applique l'approximation BMW. Cette approche permet  plus de précision et de flexibilité que les approximations de "théorie des perturbations".  \\
+
+
+\subsection{Objectif de l'étude}
+Le but de cette étude est d'appliquer l'approximation BMW à des systèmes dont exposants et température critiques sont connus grâces à d'autres méthodes exactes ou numériques, afin de valider la qualité de cette approximation et de la résolution numérique.\\
+\indent
+Nous avons repris une simulation numérique d'équations intégro-différentielles non linéaires obtenues par l'approximation BMW pour des systèmes régis par une certaine symétrie dite $O(N)$ à l'aide du système modèle générique de la "théorie $\varphiv^4$" \cite{LeonardThesis}. Elle a déjà permis de déterminer des exposants critiques avec précision pour certains systèmes, mettant bien en avant la qualité de l'approximation BMW. Cependant elle présente des comportements étranges et des résolutions instables dans d'autres cas. Le but était donc d'en rechercher les causes pour parvenir enfin à calculer avec ce code les exposants $\eta$ et $\nu$ dans toutes les configurations.\\
+\indent
+De plus nous avons aussi réalisé la simulation des équations BMW pour un modèle précis, nommé Ising en deux dimensions (Ising 2D), ayant une symétrie $O(N=1)$, afin d'essayer d'en récupérer la température critique et de la comparer à la valeur théorique connue. L'objectif est alors bien de valider la justesse de l'approximation BMW, en montrant sa capacité à calculer numériquement une grandeur non universelle, $T_c$, d'un système donné. \\
+
+Dans une première partie nous rappelons les origines du modèle du RG et du NPRG puis nous l'utilisons pour expliquer la structure des équations BMW dans le cas de de la théorie $\varphiv^4$ et étudier numériquement leur résolution et la recherche des exposants critiques associés. Enfin nous introduirons le modèle d'Ising à deux dimensions et les simulations numériques que nous avons réalisé dessus. 
+
+
+\vspace*{11pt}
+
+
+
+\section{Les formalismes du RG et NPRG}
+
+Nous détaillons dans les grandes lignes ci-après comment nous aurions pu utiliser  le RG pour parvenir à calculer la fonction de partition de systèmes décrits avec des champs. Nous définissons ensuite les systèmes possédant une symétrie $O(N)$ afin de leur appliquer le NPRG et l'approximation BMW que nous avons utilisé pour faire des calculs numériques.
 
 
 
@@ -461,14 +493,14 @@ Développons à présent les concepts du RG et du NPRG avec lesquels nous avons 
 
 \label{sec:TF}
 
-Nous rappelons ici de manière synthétiques les principales idées du RG développé par Wilson \cite{wilson1971renormalization, wilson1971renormalization2,fisher1998renormalization}. Commençons pour cela par définir la transformée de Fourier du champ $\varphiv$ appartenant à $L^2(\Omega)$ par 
+Nous rappelons de manière synthétiques les principales idées du RG développé par Wilson \cite{wilson1971renormalization, wilson1971renormalization2,fisher1998renormalization}. Commençons pour cela par définir la transformée de Fourier du champ $\varphiv$ appartenant à $L^2(\Omega)$ par 
 \begin{equation}
 \begin{split}
 \hat{\varphiv}_\pv = \frac{1}{\sqrt{|\Omega|}}\int_\Omega \varphiv(\rv) \, e^{-i \pv . \rv} \dd \, \rv, \\
 \varphiv(\rv) = \frac{1}{\sqrt{|\Omega|}}\sum_\pv \hat{\varphiv}_\pv \, e^{i \pv  .\rv}
 \end{split} 	
 \end{equation}
-On fait l'hypothèse qu'il existe un réel $\Lambda$ tel que pour $\|\pv\|_{\infty} > \Lambda$, $\hat{\varphiv}(\pv) \simeq 0$. On considère donc $\pv \in [0, \Lambda]^d$. Ceci signifie que $\varphiv$ est une fonction suffisamment régulière et cette valeur $\Lambda$ correspond physiquement à l'inverse de la plus petite longueur caractéristique du système, qui est classiquement la distance moyenne entre les corps par exemple. En pratique on suppose que comme dans la limite thermodynamique on étudie des systèmes macroscopiques tels que $|\Omega|\gg 1/\Lambda^d$. Ainsi on fait l'approximation physique selon laquelle les impulsions ne sont plus des variables discrètes mais continues avec les équivalences  
+On fait l'hypothèse qu'il existe un réel $\Lambda$ tel que pour $\|\pv\|_{\infty} > \Lambda$, $\hat{\varphiv}(\pv) \simeq 0$. On considère donc $\pv \in [0, \Lambda]^d$. Ceci signifie que $\varphiv$ est une fonction suffisamment régulière et cette valeur $\Lambda$ correspond physiquement à l'inverse de la plus petite longueur caractéristique du système (comme le pas du réseau par exemple). En pratique on suppose que dans la limite thermodynamique on étudie des systèmes macroscopiques tels que $|\Omega|\gg 1/\Lambda^d$. Ainsi on fait l'approximation physique selon laquelle les impulsions ne sont plus des variables discrètes mais continues avec les équivalences  
 
 \begin{equation}
 \begin{split}
@@ -488,7 +520,7 @@ Dès lors qu'il n'y aura pas d'ambiguïté possible, nous pourrons donc oublier 
 
 \label{sec:RG}
 
-L'idée du RG est alors de ne pas considérer tous les degrés de liberté sur le même pied d'égalité. En effet, on commence d'abord, pour calculer $\Zc$, par intégrer les degrés de libertés de haute impulsion $\pv$ entre $k = \Lambda/s$ et $\Lambda$ où $k \in [0,\Lambda]$. En pratique on sépare $\varphiv$ en deux fonctions $\varphiv_>$ et $\varphiv_<$ telles que $\varphiv(\pv) = \varphiv_{k,>}(\pv) + \varphiv_{k,<}(\pv)$ et
+L'idée du RG est de ne pas considérer tous les degrés de liberté sur le même pied d'égalité. En effet, on commence d'abord, pour calculer $\Zc$, par intégrer les degrés de libertés de haute impulsion $\pv$ entre $k = \Lambda/s$ et $\Lambda$ où $k \in [0,\Lambda]$. En pratique on sépare $\varphiv$ en deux fonctions $\varphiv_>$ et $\varphiv_<$ telles que $\varphiv(\pv) = \varphiv_{k,>}(\pv) + \varphiv_{k,<}(\pv)$ et
 \begin{align}
 	\varphiv_{k,>}(\pv)  = \quad & \varphiv(\pv) \quad \text{si} \quad \pv \in   [k,\Lambda] \\
 	 & 0 \quad \text{sinon}
@@ -521,6 +553,9 @@ Ce changement est purement technique cependant il a un fondement physique puisqu
 
  Pour réaliser l'intégration complète sur $[0, \Lambda]$ on peut donc ensuite itérer ce processus de transformations infinitésimales en repartant de l'expression de $\Zc$ en fonction de $\tilde{H}_{k_1}[\tilde{\varphiv}_{k_1,<}, \{\tilde{g}_{k_1, i}\}_i ]$. On reproduit le même procédé, par exemple au deuxième pas de l'itération, en calculant l'intégration infinitésimale entre $[\Lambda - 2d\Lambda, \Lambda - d\Lambda]$ avec $k_2 = \Lambda - 2d\Lambda$. A la fin de cette deuxième itération nous avons donc intégré sur $[\Lambda - 2d\Lambda, \Lambda]$.  \\
  
+ 
+ \subsubsection{Notion de point fixe}
+ 
  On introduit alors à l'itération $p \in \N$ - itération à laquelle on a intégré sur $[k_p, \Lambda]$ - l'opérateur $O_p$ qui envoie $\{\tilde{g}_i\}_i$ sur $\{\tilde{g}_{k_p,i}\}_i$. L'hypothèse fondamentale du RG, qui n'est pas prouvée mais toujours vérifiée, est qu'il existe un point fixe de $O_p$ pour $p \to \infty$, si l'on est à la température critique (et/ou pression critique, ...). Ceci signifie plus exactement qu'il existe $\{\tilde{g}^*_i\}_i$ tel que 
  \begin{equation}
  	\lim\limits_{k \rightarrow \infty}  \tilde{g}_{k,i} = \lim\limits_{\substack{p \to \infty \\ d\Lambda \to 0 }}  \tilde{g}_{k_p,i} =  \tilde{g}^*_i
@@ -530,6 +565,28 @@ Sans entrer plus en profondeur dans les calculs du RG on admet que l'on peut mon
 Dans un calcul de RG on prend classiquement un nombre fini de constantes de couplage et on considère qu'elles sont suffisamment faibles pour faire des développement du hamiltonien en puissance de ces constantes adimensionnées à chaque itération. Ce sont ces approximations qui permettent de faire des calcul mais elles limitent les applications possibles. Le NPRG développe alors une technique reprenant la même idée de calcul mais sans faire ces approximations, grâce à une astuce.
 
 \vspace*{11pt}
+
+
+
+
+
+\subsection{La symétrie $O(N)$}
+
+\label{sec:ON}
+
+On dit qu'un système est symétrique selon $O(N)$ pour $N>2$ s'il est invariant par l'action du groupe de rotation $O(N)$ sur ces degrés de libertés. Dans le cas où $N=1$ on fera référence à la symétrie $\mathbb{Z}_2$ qui est équivalente. Par exemple, dans le formalisme de la théorie des champs, soit $J \in O(N)$, et on note $J.V$ l'action de $J$ sur un vecteur $V$ de $\R^N$. Le modèle est dit $O(N)$ si 
+\begin{equation}
+	H[J .\varphiv] = H[\varphiv]	 
+\end{equation}
+et il est dit $\mathbb{Z}_2$ si $H[-\varphiv] = H[\varphiv]$. Le modèle d'Ising 2D est un exemple aussi de modèle $\mathbb{Z}_2$ puisque rappelons que
+\begin{equation}
+	H_{\text{Ising 2D}}( \{-S_\rv\}_\rv) = H_{\text{Ising 2D}}( \{S_\rv\}_\rv) 
+\end{equation}
+
+
+
+
+
 \subsection{Le groupe de renormalisation non perturbatif (NPRG)}
 \subsubsection{Généralités}
 
@@ -760,7 +817,7 @@ Ainsi c'est ce hamiltonien qui est injectée dans les équations du RG permettan
 
 \vspace*{11pt}
 
-\subsection{Approximation BMW continu}
+\subsection{Equations BMW continu}
 
 
 \vspace*{11pt}
@@ -868,17 +925,12 @@ Pour chercher un point fixe on résout le système différentiel précédent pou
 
 \subsection{Régulateur pour BMW continu}
 
-Il semble naturel, pour satisfaire à toutes les conditions  du régulateur, d'utiliser dans le régulateur une fonction de Heaviside (c.f. courbe en pointillés rouges \refig{RegDerReg} (a)) en écrivant 
-\begin{equation}
-	\forall q \in [0, \Lambda] \quad \Rc_k(q) = \alpha (k^2 - q^2) \Theta(k^2 - q^2)
-	\label{eq:RegHeav}
-\end{equation}
-Avec $\alpha$ un réel positif que l'on prend de l'ordre de l'unité et que l'on peut faire varier mais qui n'est pas supposer changer les résultats des calculs. Cependant, dans l'approximation BMW les régulateurs de Heaviside ne sont pas assez régulier et donnent des schéma numériques instables. On prend donc une expression (c.f. courbe en bleue continue \refig{RegDerReg} (a)) infiniment dérivable à décroissance exponentielle définie par (et implicitement prolongée par continuité en $q = 0$)
+Pour satisfaire à toutes les conditions d'un régulateur on utilise une expression (c.f. courbe en bleue continue \refig{RegDerReg} (a)) infiniment dérivable à décroissance exponentielle définie par (et implicitement prolongée par continuité en $q = 0$)
 \begin{equation}
 	\forall q \in [0, \Lambda] \quad \Rc_k(q) = \alpha \frac{q^2}{\exp{(q^2/k^2)}-1}
 	\label{eq:RegExp}
 \end{equation}
-Remarquons que l'on satisfait bien aux conditions aux limites imposées sur le régulateur car 
+Avec $\alpha$ un réel positif que l'on prend de l'ordre de l'unité et que l'on peut faire varier mais qui n'est pas supposer changer les résultats des calculs. Le caractère régulier (au sens infiniment dérivable) de ce régulateur est nécessaire pour assurer des résolutions numériques stables dans des équations BMW.  Remarquons que l'on satisfait bien aux conditions aux limites imposées sur le régulateur car 
 \begin{equation}
 	\forall k \in ]0,\Lambda],  \quad \underset{q \in [0, \Lambda]}{ \text{Sup}} \left\{ \Rc_k(q) \right\} = \alpha k^2
 \end{equation}
@@ -890,9 +942,9 @@ donc $\Rc_k$ converge même uniformément vers 0 quand $k$ tend vers 0, (C1) dé
 
 \vspace*{11pt}
 
-\section{Méthodes numériques pour la résolution de ces équations}
+\section{Méthodes numériques pour la résolution de BMW continu}
 
-\subsection{Travail réalisé sur ces équations}
+\subsection{Travail réalisé}
 
 
 
@@ -956,7 +1008,7 @@ De plus si $f$ est $\Cc^{1}$ alors
 \begin{equation}
 \lim\limits_{n \to \infty}  \|f - S_n[f] \|_\infty = 0
 \end{equation}
-On considère alors, pour $n$ suffisamment grand, $f \simeq S_n[f]$. \\
+On écrit, pour $n$ suffisamment grand, $f \simeq S_n[f]$. \\
 }
 
 \commentout{
@@ -1107,89 +1159,19 @@ Nous en avons déduit qu'il s'agissaient d'un problème de précisions sur les
 \newpage
 
 
-\section{Le modèle d'Ising en dimension 2}
-
-\subsection{Présentation du modèle d'Ising}
-
-\label{sec:IsingIntro}
+\section{Retour sur le modèle d'Ising en dimension 2}
 
 
-On considère le modèle d'Ising classique sur un réseau hypercubique de dimension $d$ (nous avons uniquement travaillé numériquement dans le cas $d=2$ mais nous exposons le formalisme pour une dimension $d$ quelconque). Les longueurs sont exprimées en unité du pas du réseau. On note $\{\ev_\nu\}_{\nu\in\bbrac{1,d}}$ la base cartésienne associée. L'hamiltonien du système non excité, en contact seulement avec le milieu extérieur qui a une température fixe et dans lequel ne se trouve aucun champ magnétique, est donné par\footnote{Nous avions jusqu'à présent noté $H$ le hamiltonien du système total prenant en compte les excitations extérieures et $S$ celui du système non excité. Ici nous utilisons la notation $H$ pour le système non excité pour ne pas confondre hamiltonien et spin $S_\rv$.}
+Nous abordons maintenant une nouvelle étude. En effet, après nous être intéresser au calcul des exposants critiques du modèle continu $O(N)$ nous avons voulu montre que le NPRG couplé à l'approximation BMW était une méthode suffisamment précise pour calculer des grandeurs non universelles comme la température critique de la transition de phase d'un système donné. Pour cela nous avons entrepris de calculer la température critique du modèle d'Ising 2D présenté dans l'introduction à l'aide des équations BMW. En effet il nous était facile par la suite de vérifier la qualité de l'approximation en comparant la valeur numérique obtenue à la valeur théorique calculée par Onsager \cite{Onsager}. \\
+
+Cependant, comme nous l'avons mentionné en décrivant le formalise de la théorie des champs pour la mécanique statistique, le modèle d'Ising 2D ne satisfait pas à une description par des champs qui puisse premettre de lui appliquer le NPRG. En effet le système est décrit par des micro-états $\Mr = \{ S_\rv\}_\rv$ . Ces micro-états sont des ensembles de variables discrètes qui ne peuvent prendre que les valeurs $-1$ et $1$.  On rappelle que le hamiltonien pour $\Mr$ est défini par
+
 \begin{equation}
-H = -J\beta \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'}
-\label{eq:HamIsing}
+	 H(\Mr) = -J \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'} 
 \end{equation}
-Où $S_\rv \in \{-1,1\}$ représente la valeur du spin (i.e. sa direction selon l'axe $z$, c.f. \refig{schemaIsing}) à la position $\rv$. La notation $\left<\rv, \rv'\right>$ signifie que le terme $S_\rv S_{\rv'}$ contribue à la somme si et seulement si ce sont deux spins plus proches voisins du réseau (i.e s'il existe $\nu \in \bbrac{1,d}$ tel que $\rv' = \rv \pm \ev_\nu$). Le paramètre $J$ représentant une énergie est une constante positive. La variable $\beta = 1/(k_BT)$ où $k_B$ est la constante de Boltzmann représentant l'influence de la température $T$ à laquelle est soumis le système.
-\setlength{\unitlength}{1cm}
-\begin{figure}[H]
-\begin{center}
-\begin{picture}(6,3.8)
-
-\put(-0.5,1){\vector(0,1){2}}
-\put(-0.8,2){$z$}
-
-\color{cyan}
-\put(0,0){\line(1,3){1.2}}
-\put(1,0){\line(1,3){1.2}}
-\put(2,0){\line(1,3){1.2}}
-\put(3,0){\line(1,3){1.2}}
-\put(4,0){\line(1,3){1.2}}
-\put(5,0){\line(1,3){1.2}}
-
-\put(-0.25,0.45){\line(1,0){5.7}}
-\put(0.05,1.25){\line(1,0){5.7}}
-\put(0.25,2.0){\line(1,0){5.7}}
-\put(0.45,2.70){\line(1,0){5.7}}
-\put(0.65,3.35){\line(1,0){5.7}}
-\color{red}
-\linethickness{0.35mm}
-
-\put(0.15,0.85){\vector(0,-1){0.8}}
-\put(1.15,0.05){\vector(0,1){0.8}}
-\put(2.15,0.85){\vector(0,-1){0.8}}
-\put(3.15,0.05){\vector(0,1){0.8}}
-\put(4.15,0.05){\vector(0,1){0.8}}
-\put(5.15,0.85){\vector(0,-1){0.8}}
-
-\put(0.4167,1.6){\vector(0,-1){0.7}}
-\put(1.4167,0.9){\vector(0,1){0.7}}
-\put(2.4167,0.9){\vector(0,1){0.7}}
-\put(3.4167,0.9){\vector(0,1){0.7}}
-\put(4.4167,1.6){\vector(0,-1){0.7}}
-\put(5.4167,0.9){\vector(0,1){0.7}}
-
-\put(0.667,1.7){\vector(0,1){0.6}}
-\put(1.667,1.7){\vector(0,1){0.6}}
-\put(2.667,2.3){\vector(0,-1){0.6}}
-\put(3.667,1.7){\vector(0,1){0.6}}
-\put(4.667,1.7){\vector(0,1){0.6}}
-\put(5.667,1.7){\vector(0,1){0.6}}
-
-\put(0.9,2.45){\vector(0,1){0.5}}
-\put(1.9,2.95){\vector(0,-1){0.5}}
-\put(2.9,2.45){\vector(0,1){0.5}}
-\put(3.9,2.45){\vector(0,1){0.5}}
-\put(4.9,2.95){\vector(0,-1){0.5}}
-\put(5.9,2.45){\vector(0,1){0.5}}
-
-\put(1.1167,3.55){\vector(0,-1){0.4}}
-\put(2.1167,3.15){\vector(0,1){0.4}}
-\put(3.1167,3.15){\vector(0,1){0.4}}
-\put(4.1167,3.55){\vector(0,-1){0.4}}
-\put(5.1167,3.55){\vector(0,-1){0.4}}
-\put(6.1167,3.15){\vector(0,1){0.4}}
-
-\end{picture}
-\end{center}
-\caption{Exemple de réseau d'Ising en dimension $d=2$. On traite dans le modèle d'Ising des spins avec une seule composante, ce sont donc des vecteurs dont seule la direction peut changer mais pas l'orientation qui est fixé ici selon $z$, perpendiculairement au plan). On décrit donc un spin à la position $\rv$ du plan (xy) par une valeur $1$ (quand il pointe vers le haut) ou $-1$ (vers le bas). Le système est dans la phase haute température ($T>T_c$) car les spins ont des directions aléatoire. Le nombre de spins représenté est faible, mais comme nous ferons une étude à la limite thermodynamique il est bien plus élevé dans le système étudié.}
-	\label{fig:schemaIsing}
-\end{figure}
-Sur un tel système nous observons une transition de phase du second ordre. En effet il existe une phase (dite de symétrie brisée, ou encore basse température) dans laquelle les spins tendent tous à s'aligner dans une direction privilégiée lorsque la température et faible et que les fluctuations thermiques ne jouent pas un rôle important\footnote{En effet à température faible la configuration du système la plus stable et qui se produit expérimentalement est celle pour laquelle l'hamiltonien est minimal. Comme $J>0$ ceci se produit lorsque tous les $\S_\rv$ possède la même valeur, i.e.lorsque tous les spins sont alignés.}. Lorsque l'on dépasse la température critique $T_c$ l'énergie thermique que reçoit le système est suffisamment importante pour que les spins prennent une direction plus ou moins aléatoire le système est alors dans une nouvelle phase (dite symétrique). C'est ce modèle qui explique la perte d'aimantation d'un métal à haute température que nous avions mentionné dans l'introduction. \\
 
 
-Si l'on change l'axe $z$ en $-z$ alors l'hamltonien du système ne change pas. Ainsi ce système possède une symétrie $O(1)$. Il est donc possible de calculer ces exposants critiques en utilisant les équations BMW de la \refsec{} développée avec l'hamiltonien la théorie $\varphiv^4$. La température critique n'étant pas une quantité universelle, elle dépend entièrement du système et prendre un hamiltonien tronqué ne suffit pas, la forme même du réseau est importante, la forme exacte du hamiltonien doit être prise en compte.
-
-Or comme \refeq{HamIsing} ne correspond pas aux hamiltoniens dépendants d'un champ étudiés dans toute la première partie de cette étude, il ne semble donc pas possible a priori de lui appliquer le NPRG. En revanche il est tout de même possible de définir une nouvel hamiltonien exactement équivalent à $H$ en réécrivant avec des champ la fonction de partition du système à l'aide d'une transformée de Hubbard-Stratanovitch comme détaillé dans le paragraphe suivant. \\ 
+Nous allons donc utilisé une astuce mathématique nous permettant de 
 
 La particularité de ce modèle est aussi qu'il a déjà été complètement résolu analytiquement par Onsager \cite{Onsager} en 1944. Tout est donc déjà connu et notamment la température critique de la transition de phase. Avec l'approche BMW nous avons essayé de la retrouver pour valider la qualité de l'approximation et la possibilité de calculer la température critique $T_c$ par les équations du NPRG. 
 
@@ -1197,7 +1179,8 @@ La particularité de ce modèle est aussi qu'il a déjà été complètement ré
 
 \subsection{Modélisation avec des champs}
 
-Pour des raisons pratiques on définit maintenant un hamiltonien légèrement modifié
+Commençons alors la transformation pour obtenir un hamiltonien s'exprimant avec des champs et décrivant le modèle d'Ising 2D.
+Afin d'écarter un problème qui apparaitrait dans la suite des calculs nous commençons par définir un hamiltonien du modèle d'Ising légèrement modifié
 \begin{align}
   H_\mu &= -J\beta \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'} - \mu \beta N_S \\
   H_\mu  &= -J\beta \sum_{\left<\rv, \rv'\right>}S_\rv S_{\rv'} - \mu \beta \sum_\rv S_\rv^2 
@@ -1211,8 +1194,10 @@ Où $N_\nu$ est le nombre de spins dans la direction $\ev_\nu$, et $\rv \equiv (
   H_\mu  = -\frac{1}{2} \sum_{\rv, \rv'} S_\rv A_{\rv, \rv'}^{(\mu)}S_{\rv'}
 \end{equation}
 
-Il est alors possible de choisir $\mu$ suffisamment grand pour que $A_{\rv, \rv'}^{(\mu)}$ soit à diagonale strictement dominante et donc inversible. Il suffit de prendre $\mu > dJ$. \\
+Il est alors possible de choisir $\mu$ suffisamment grand pour que $A_{\rv, \rv'}^{(\mu)}$ soit à diagonale strictement dominante et donc inversible. Il suffit de prendre $\mu > dJ$. Cette condition d'inversibilité sera primordiale pour pouvoir aboutir.\\
 
+
+Maintenant que cette première étape a été réalisé commençons par
 On peut alors réaliser une transformée de Hubbard-Stratanovitch. Pour cela commençons par écrire la fonction de partition du système modèle
 \begin{equation}
   \Zc = \sum_{\{S_\rv\}} e^{-H_{\mu}} =\sum_{\{S_\rv\}}  \exp\(\frac{1}{2} \sum_{\rv, \rv'} S_\rv A_{\rv, \rv'}^{(\mu)}S_{\rv'}\)
