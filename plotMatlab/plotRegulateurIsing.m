@@ -30,7 +30,7 @@ ylim([-pi-0.1, pi+0.1]);
 
 journal_plot_params;
 
-l_fsz = 10;
+l_fsz = 11;
 
 set(gca, 'Units', 'normalized');
 set(gca, 'LineWidth', alw);

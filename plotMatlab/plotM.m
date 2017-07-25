@@ -19,9 +19,9 @@ T  = linspace(0, 2.5, 100);
 m  = sqrt(1-T.^2).*(T<=1) + 0;
 m2 = 1.4*T.^2./(exp(1.4*T.^(2))-1);
 
-plot(T,m, 'color', line_color_6)
+plot(T,m, 'color', line_color_6, 'LineWidth', 1.5)
 hold on
-plot(T,m2, '--', 'color',line_color_2)
+plot(T,m2, '--', 'color',line_color_2, 'LineWidth', 1.5)
 journal_axis(gca, 'Temperature : $T$', 'Aimantation : $m$')
 
 ylim([0, 1.2]);
@@ -46,9 +46,9 @@ set(h_fig2,'PaperPositionMode','manual');
 set(h_fig2,'PaperPosition',[0 0 width_1 height_1_1_bis]);
 
 m3  = sqrt(1-T.^2).*(T<=0.8) + 0;
-plot(T(1:32), m3(1:32), 'color', line_color_6);
+plot(T(1:32), m3(1:32), 'color', line_color_6, 'LineWidth', 1.5);
 hold on
-plot([T(32), T(end)], [0,0], 'color', line_color_6);
+plot([T(32), T(end)], [0,0], 'color', line_color_6, 'LineWidth', 1.5);
 
 journal_axis(gca, 'Temperature : $T$', 'Parametre d''ordre')
 

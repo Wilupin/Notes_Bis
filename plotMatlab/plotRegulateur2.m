@@ -16,15 +16,15 @@ Rlim = [0, 0.55];
 
 
 
-plot(hAx2,[0 0.85], [0.5 0.5], '--', 'LineWidth', 1.5, 'COLOR', line_color_2);
-hold(hAx2, 'on')
-plot(hAx2,[0.85 0.85], [0 0.5], '--','LineWidth', 1.5, 'COLOR', line_color_2);
-plot(hAx2,[0.85 3], [0 0], '--','LineWidth', 1.5, 'COLOR', line_color_2);
+%plot(hAx2,[0 0.85], [0.5 0.5], '--', 'LineWidth', 1.5, 'COLOR', line_color_2);
+%hold(hAx2, 'on')
+%plot(hAx2,[0.85 0.85], [0 0.5], '--','LineWidth', 1.5, 'COLOR', line_color_2);
+%plot(hAx2,[0.85 3], [0 0], '--','LineWidth', 1.5, 'COLOR', line_color_2);
 
-plot(hAx2, x, y,'LineWidth', 1.5);
+plot(hAx2, x, y,'LineWidth', 1.5, 'color', line_color_6);
 
-xlabel(hAx2, '$q$', 'Interpreter', 'latex','FontSize', t_fsz )
-ylabel(hAx2,  '$\mathcal{R}_k(q)$', 'Interpreter', 'latex','FontSize', t_fsz );
+xlabel(hAx2, '$q$', 'Interpreter', 'latex','FontSize', t_fsz)
+ylabel(hAx2,  '$\mathcal{R}_k(q)$', 'Interpreter', 'latex','FontSize', t_fsz);
 xticks(hAx2, 0);
 yticks(hAx2, {});
 ylim(hAx2, Rlim); 
@@ -35,6 +35,7 @@ set(xlabh,'Position',get(xlabh,'Position') + [+1.2 +0.125 0])
 
 ylabh = get(hAx2,'YLabel');
 set(ylabh,'Position',get(ylabh,'Position') + [+0 0 0])
+
 
 
 dim = [0.2 0.2 0.3 0.3];
@@ -76,7 +77,7 @@ p = patch(hAx1, 'vertices', [0, 0; 0, 0.55; 3, 0.55; 3, 0], ...
           'FaceAlpha', 0.2);
 set(p, 'EdgeColor', 'none');
 hold on 
-plot(hAx1, x1, y1,'LineWidth', 1.5);
+plot(hAx1, x1, y1,'LineWidth', 1.5, 'color', line_color_6);
 
 xlabel(hAx1, '$q$', 'Interpreter', 'latex', 'FontSize', t_fsz)
 ylabel(hAx1,  '$\partial_t \mathcal{R}_k(q)$', 'Interpreter', 'latex','FontSize', t_fsz );
@@ -99,3 +100,5 @@ set(h_ann_b, 'EdgeColor', 'none');
 set(h_ann_b, 'FontSize', t_fsz);
 set(h_ann_b, 'Interpreter', 'latex');
 set(h_ann_b, 'Position', [0.655 0.25 0 0]);
+
+set(hAx1, 'box', 'on');

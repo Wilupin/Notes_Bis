@@ -4,45 +4,45 @@ The top-level auxiliary file: Rapport.aux
 The style file: plain.bst
 Database file #1: Rapport.bib
 Warning--can't use both author and editor fields in Delamotte2012
-You've used 11 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            579 strings with 5803 characters,
-and the built_in function-call counts, 3148 in all, are:
-= -- 311
-> -- 122
-< -- 1
-+ -- 51
-- -- 38
-* -- 204
-:= -- 550
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 46
+            667 strings with 7988 characters,
+and the built_in function-call counts, 7315 in all, are:
+= -- 715
+> -- 286
+< -- 2
++ -- 120
+- -- 90
+* -- 468
+:= -- 1252
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 116
 chr.to.int$ -- 0
-cite$ -- 12
-duplicate$ -- 129
-empty$ -- 260
-format.name$ -- 38
-if$ -- 651
+cite$ -- 27
+duplicate$ -- 289
+empty$ -- 628
+format.name$ -- 90
+if$ -- 1523
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 13
-newline$ -- 58
-num.names$ -- 22
-pop$ -- 51
+int.to.str$ -- 26
+missing$ -- 25
+newline$ -- 130
+num.names$ -- 52
+pop$ -- 134
 preamble$ -- 1
-purify$ -- 41
+purify$ -- 97
 quote$ -- 0
-skip$ -- 82
+skip$ -- 195
 stack$ -- 0
-substring$ -- 185
-swap$ -- 19
-text.length$ -- 1
+substring$ -- 425
+swap$ -- 42
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 94
 warning$ -- 1
-while$ -- 32
-width$ -- 13
-write$ -- 124
+while$ -- 75
+width$ -- 28
+write$ -- 278
 (There was 1 warning)
