@@ -21,15 +21,15 @@ m2 = 1.4*T.^2./(exp(1.4*T.^(2))-1);
 
 plot(T,m, 'color', line_color_6, 'LineWidth', 1.5)
 hold on
-plot(T,m2, '--', 'color',line_color_2, 'LineWidth', 1.5)
-journal_axis(gca, 'Temperature : $T$', 'Aimantation : $m$')
+plot(T,-m, '--', 'color',line_color_2, 'LineWidth', 1.5)
+journal_axis(gca, 'Temperature : $T$', '$m(T,b \sim 0)$')
 
-ylim([0, 1.2]);
+ylim([-1.2, 1.2]);
 xlim([0, 2.5]);
 
 xticks(gca, [0, 1]);
 xticklabels(gca, {0, 'T_c'});
-yticks(gca, [0, 1]);
+yticks(gca, [-1, 0, 1]);
 
 
 h_fig2 = figure;

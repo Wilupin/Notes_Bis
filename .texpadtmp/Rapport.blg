@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.aux
+The style file: plain.bst
+Database file #1: ../Rapport.bib
+Warning--can't use both author and editor fields in Delamotte2012
+You've used 26 entries,
+            2118 wiz_defined-function locations,
+            668 strings with 8192 characters,
+and the built_in function-call counts, 7315 in all, are:
+= -- 715
+> -- 286
+< -- 2
++ -- 120
+- -- 90
+* -- 468
+:= -- 1252
+add.period$ -- 78
+call.type$ -- 26
+change.case$ -- 116
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 289
+empty$ -- 628
+format.name$ -- 90
+if$ -- 1523
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 25
+newline$ -- 130
+num.names$ -- 52
+pop$ -- 134
+preamble$ -- 1
+purify$ -- 97
+quote$ -- 0
+skip$ -- 195
+stack$ -- 0
+substring$ -- 425
+swap$ -- 42
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 94
+warning$ -- 1
+while$ -- 75
+width$ -- 28
+write$ -- 278
+(There was 1 warning)

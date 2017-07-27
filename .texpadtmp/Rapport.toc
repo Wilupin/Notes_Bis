@@ -1,0 +1,96 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Le mod\IeC {\`e}le d'Ising 2D}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Transitions de phase}{6}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}D\IeC {\'e}finition et classification}{6}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Transitions du second ordre : d\IeC {\'e}finition des exposants critiques}{6}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Objectif g\IeC {\'e}n\IeC {\'e}ral : importance de la fonction de partition}{6}{subsubsection.1.2.3}
+\contentsline {subsection}{\numberline {1.3}Formalisme de m\IeC {\'e}canique statistique des champs}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Int\IeC {\'e}r\IeC {\^e}t de l'approche par la th\IeC {\'e}orie statistique des champs. Int\IeC {\'e}r\IeC {\^e}t du RG et du NPRG}{7}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Les syst\IeC {\`e}mes \IeC {\`a} sym\IeC {\'e}trie $O(N)$}{8}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Objectifs de l'\IeC {\'e}tude}{8}{subsection.1.6}
+\contentsline {section}{\numberline {2}Les formalismes du RG et NPRG}{9}{section.2}
+\contentsline {subsection}{\numberline {2.1}Le groupe de renormalisation (RG)}{9}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Transform\IeC {\'e}e de Fourier}{9}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Id\IeC {\'e}e g\IeC {\'e}n\IeC {\'e}rale}{9}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Notion de point fixe}{10}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {2.2}Le groupe de renormalisation non perturbatif (NPRG)}{10}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Principe de fonctionnement : le r\IeC {\'e}gulateur}{10}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Potentiels}{11}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}\IeC {\'E}quation fondamentale : \IeC {\'e}quation de flot}{11}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}La dimension anormale}{12}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}La recherche de points fixes}{12}{subsubsection.2.2.5}
+\contentsline {subsection}{\numberline {2.3}Approximation BMW pour $\mathbb {Z}_2$}{12}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}R\IeC {\'e}sum\IeC {\'e} de la m\IeC {\'e}thode}{13}{subsection.2.4}
+\contentsline {section}{\numberline {3}Le mod\IeC {\`e}le continu $O(N)$}{14}{section.3}
+\contentsline {subsection}{\numberline {3.1}Hamiltonien de la th\IeC {\'e}orie $\boldsymbol { \varphi }^4$}{14}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Equations BMW continu}{14}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}R\IeC {\'e}gulateur pour BMW continu}{15}{subsection.3.3}
+\contentsline {section}{\numberline {4}M\IeC {\'e}thodes num\IeC {\'e}riques pour la r\IeC {\'e}solution de BMW continu}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Travail r\IeC {\'e}alis\IeC {\'e}}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Structure de l'algorithme}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Discr\IeC {\'e}tisation en champ}{16}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Discr\IeC {\'e}tisation en impulsion}{16}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Expression des coefficients}{16}{subsubsection.4.4.1}
+\contentsline {subsection}{\numberline {4.5}Calcul des int\IeC {\'e}grales}{17}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}M\IeC {\'e}thode de Clenshaw}{17}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}Calcul des d\IeC {\'e}riv\IeC {\'e}es}{17}{subsubsection.4.5.2}
+\contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{18}{subsection.4.6}
+\contentsline {section}{\numberline {5}Resulats : $O(N)$ continu}{18}{section.5}
+\contentsline {subsection}{\numberline {5.1}Pour $N = 1$ ($\mathbb {Z}_2$), $d=2$}{18}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Pour $N = 2$ ou $N=3$, $d=2$}{18}{subsection.5.2}
+\contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
+\contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{22}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}\IeC {\'E}tapes de la r\IeC {\'e}solution}{22}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Premi\IeC {\`e}re \IeC {\'e}tape}{22}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Deuxi\IeC {\`e}me \IeC {\'e}tape}{23}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Troisi\IeC {\`e}me \IeC {\'e}tape}{23}{subsubsection.6.3.3}
+\contentsline {section}{\numberline {7}M\IeC {\'e}thodes et outils num\IeC {\'e}riques pour la r\IeC {\'e}solution d'Ising 2D}{24}{section.7}
+\contentsline {subsection}{\numberline {7.1}Structure du code}{24}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{24}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions}{25}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Interpolation de Tchebytchev}{25}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}D\IeC {\'e}composition}{25}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{26}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.3}D\IeC {\'e}composition m\IeC {\'e}thode 2}{26}{subsubsection.7.4.3}
+\contentsline {subsection}{\numberline {7.5}Le calcul des int\IeC {\'e}grales}{26}{subsection.7.5}
+\contentsline {subsubsection}{\numberline {7.5.1}Le choix de la quadrature}{27}{subsubsection.7.5.1}
+\contentsline {subsubsection}{\numberline {7.5.2}Calcul des int\IeC {\'e}grales $I$, $\mathaccentV {bar}016{I}$, $\mathaccentV {tilde}07E{I}$}{27}{subsubsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.3}Calcul des int\IeC {\'e}grales $J$,$\mathaccentV {bar}016{J}$,$\mathaccentV {tilde}07E{J}$ }{27}{subsubsection.7.5.3}
+\contentsline {subsection}{\numberline {7.6}D\IeC {\'e}riv\IeC {\'e}es num\IeC {\'e}riques en champ }{28}{subsection.7.6}
+\contentsline {section}{\numberline {8}Resultats : Ising 2D}{28}{section.8}
+\contentsline {subsection}{\numberline {8.1}Complexit\IeC {\'e} algorithmique et parall\IeC {\'e}lisation - probl\IeC {\`e}me de rapidit\IeC {\'e}}{28}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Probl\IeC {\`e}me de pr\IeC {\'e}cision des int\IeC {\'e}grales}{29}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Estimation de la temp\IeC {\'e}rature critique et de l'exposant critique $\eta $}{29}{subsection.8.3}
+\contentsline {section}{\numberline {9}Conclusion}{29}{section.9}
+\contentsline {section}{\numberline {A}Outils pour le d\IeC {\'e}veloppement des \IeC {\'e}quations}{31}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Notations des normes}{31}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}Transform\IeC {\'e}e de Fourier}{31}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}Transform\IeC {\'e}e de Fourier Semi-Discr\IeC {\`e}te (TFSD)}{31}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}Derivation fonctionnelle}{31}{subsection.A.4}
+\contentsline {subsubsection}{\numberline {A.4.1}D\IeC {\'e}finition}{31}{subsubsection.A.4.1}
+\contentsline {subsubsection}{\numberline {A.4.2}Transform\IeC {\'e}e de Fourier d'une d\IeC {\'e}riv\IeC {\'e}e fonctionnelle}{31}{subsubsection.A.4.2}
+\contentsline {subsection}{\numberline {A.5}Op\IeC {\'e}rateurs \IeC {\`a} noyaux}{32}{subsection.A.5}
+\contentsline {subsubsection}{\numberline {A.5.1}D\IeC {\'e}finition}{32}{subsubsection.A.5.1}
+\contentsline {subsubsection}{\numberline {A.5.2}TF d'un op\IeC {\'e}rateur \IeC {\`a} noyau}{32}{subsubsection.A.5.2}
+\contentsline {subsubsection}{\numberline {A.5.3}Composition de deux op\IeC {\'e}rateurs}{32}{subsubsection.A.5.3}
+\contentsline {subsubsection}{\numberline {A.5.4}Trace d'un op\IeC {\'e}rateur \IeC {\`a} noyau}{32}{subsubsection.A.5.4}
+\contentsline {subsubsection}{\numberline {A.5.5}Inverse d'un op\IeC {\'e}rateur \IeC {\`a} noyau}{32}{subsubsection.A.5.5}
+\contentsline {section}{\numberline {B}Fonctions de corr\IeC {\'e}lation dans le calcul du NPRG}{33}{appendix.B}
+\contentsline {section}{\numberline {C}Propri\IeC {\'e}t\IeC {\'e}s des fonctions \IeC {\`a} discr\IeC {\'e}tiser}{34}{appendix.C}
+\contentsline {subsection}{\numberline {C.1}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions inconnues}{34}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.2}R\IeC {\'e}gularit\IeC {\'e}}{35}{subsection.C.2}
+\contentsline {section}{\numberline {D}Complement des algorithmes}{37}{appendix.D}
+\contentsline {subsection}{\numberline {D.1}Formules de d\IeC {\'e}rivation \IeC {\`a} 5 points}{37}{subsection.D.1}
+\contentsline {subsection}{\numberline {D.2}Propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires des polyn\IeC {\^o}mes de Tchebytchev}{37}{subsection.D.2}
+\contentsline {subsection}{\numberline {D.3}Quadratures pour le calcul des int\IeC {\'e}grales \IeC {\`a} une dimension}{38}{subsection.D.3}
+\contentsline {subsubsection}{\numberline {D.3.1}Quadrature de Gauss-Legendre}{38}{subsubsection.D.3.1}
+\contentsline {subsubsection}{\numberline {D.3.2}Premi\IeC {\`e}re r\IeC {\`e}gle de Fejer}{38}{subsubsection.D.3.2}
+\contentsline {section}{\numberline {E}Equations du mod\IeC {\`e}le d'Ising 2D}{39}{appendix.E}
+\contentsline {subsection}{\numberline {E.1}Introduction}{39}{subsection.E.1}
+\contentsline {subsection}{\numberline {E.2}Les \IeC {\'e}quations BMW en $\rho $ dimensionn\IeC {\'e}es}{39}{subsection.E.2}
+\contentsline {subsection}{\numberline {E.3}Les \IeC {\'e}quations BMW en $\phi $}{40}{subsection.E.3}
+\contentsline {subsubsection}{\numberline {E.3.1}Les \IeC {\'e}quations BMW en $\phi $ dimensionn\IeC {\'e}es}{40}{subsubsection.E.3.1}
+\contentsline {subsubsection}{\numberline {E.3.2}Les \IeC {\'e}quations BMW en $\phi $ adimensionn\IeC {\'e}es en impulsion}{41}{subsubsection.E.3.2}
+\contentsline {subsubsection}{\numberline {E.3.3}Les \IeC {\'e}quations BMW en $\phi $ totalement adimensionn\IeC {\'e}es}{42}{subsubsection.E.3.3}
