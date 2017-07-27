@@ -54,6 +54,15 @@ temps3   = donnee3(:,1);
 etak3    = donnee3(:,4);
 
 
+fidX4 = fopen('../../ResMesu/IsingBMW_152MesuRes/data/phi0', 'r');
+
+donnee4 = fscanf(fidX4, '%f %f %f %f %f', [5 inf]);
+donnee4 = donnee4';
+
+temps4   = donnee4(:,1);
+etak4    = donnee4(:,4);
+
+
 setFigure_bis('Ma figure');
 
 plot(temps0(1:180) -4, etak0(1:180), '-', 'LineWidth', 1.5);
