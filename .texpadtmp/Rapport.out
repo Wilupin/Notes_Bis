@@ -2,7 +2,7 @@
 \BOOKMARK [2][-]{subsection.1.1}{Le mod\350le d'Ising 2D}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{Transitions de phase}{section.1}% 3
 \BOOKMARK [3][-]{subsubsection.1.2.1}{D\351finition et classification}{subsection.1.2}% 4
-\BOOKMARK [3][-]{subsubsection.1.2.2}{Transitions du second ordre : d\351finition des exposants critiques}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Transitions du second ordre : d\351finition des exposants critiques, universalit\351}{subsection.1.2}% 5
 \BOOKMARK [3][-]{subsubsection.1.2.3}{Objectif g\351n\351ral : importance de la fonction de partition}{subsection.1.2}% 6
 \BOOKMARK [2][-]{subsection.1.3}{Formalisme de m\351canique statistique des champs}{section.1}% 7
 \BOOKMARK [3][-]{subsubsection.1.3.1}{La notion de champ}{subsection.1.3}% 8
@@ -22,14 +22,14 @@
 \BOOKMARK [2][-]{subsection.2.4}{D\351termination de la temp\351rature critique : notion de point fixe}{section.2}% 22
 \BOOKMARK [2][-]{subsection.2.5}{R\351sum\351 de la m\351thode}{section.2}% 23
 \BOOKMARK [1][-]{section.3}{Le mod\350le continu O\(N\)}{}% 24
-\BOOKMARK [2][-]{subsection.3.1}{Hamiltonien de la th\351orie bold0mu mumu \040 Blaizot \040 \0404 : \040mod\350le continu}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.1}{Hamiltonien de la th\351orie bold0mu mumu \040 Delamotte2012 \040 \0404 : \040mod\350le continu}{section.3}% 25
 \BOOKMARK [2][-]{subsection.3.2}{Syst\350me d'\351quations BMW continu}{section.3}% 26
 \BOOKMARK [2][-]{subsection.3.3}{R\351gulateur pour BMW continu}{section.3}% 27
 \BOOKMARK [1][-]{section.4}{M\351thodes num\351riques pour la r\351solution de BMW continu}{}% 28
 \BOOKMARK [2][-]{subsection.4.1}{Travail r\351alis\351}{section.4}% 29
 \BOOKMARK [2][-]{subsection.4.2}{Structure de l'algorithme}{section.4}% 30
 \BOOKMARK [2][-]{subsection.4.3}{Discr\351tisation en champ}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.4}{Discr\351tisation en impulsion}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.4}{Discr\351tisation en moment}{section.4}% 32
 \BOOKMARK [3][-]{subsubsection.4.4.1}{Expression des coefficients}{subsection.4.4}% 33
 \BOOKMARK [3][-]{subsubsection.4.4.2}{M\351thode de Clenshaw}{subsection.4.4}% 34
 \BOOKMARK [2][-]{subsection.4.5}{Calcul des int\351grales}{section.4}% 35

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.6)  29 JUL 2017 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.6)  30 JUL 2017 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,23 +1442,23 @@ Package pdftex.def Info: logos/parisSaclay.jpg used on input line 86.
                    \relax 
 l.95 \newpage
               [1]
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 141.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 139.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 141.
+LaTeX Font Info:    Try loading font information for U+msa on input line 139.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 141.
+LaTeX Font Info:    Try loading font information for U+msb on input line 139.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 141.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 139.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.162 
+l.163 
        [1] (/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.toc
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
@@ -1469,365 +1469,350 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 \openout5 = `Rapport.toc'.
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 173--174
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--195
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
 
-<figures/aimantation.pdf, id=589, 244.915pt x 126.4725pt>
+<figures/aimantation.pdf, id=590, 244.915pt x 126.4725pt>
 File: figures/aimantation.pdf Graphic file (type pdf)
  <use figures/aimantation.pdf>
-Package pdftex.def Info: figures/aimantation.pdf used on input line 321.
+Package pdftex.def Info: figures/aimantation.pdf used on input line 322.
 (pdftex.def)             Requested size: 238.38506pt x 123.10272pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
 
  []
 
-<figures/aimantation2.pdf, id=592, 244.915pt x 126.4725pt>
+<figures/aimantation2.pdf, id=593, 244.915pt x 126.4725pt>
 File: figures/aimantation2.pdf Graphic file (type pdf)
  <use figures/aimantation2.pdf>
-Package pdftex.def Info: figures/aimantation2.pdf used on input line 352.
+Package pdftex.def Info: figures/aimantation2.pdf used on input line 353.
 (pdftex.def)             Requested size: 238.38506pt x 123.10272pt.
  [5 <./figures/aimantation.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--386
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
 [6 <./figures/aimantation2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 420--422
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 424.
+(hyperref)                removing `\begingroup' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 424.
+(hyperref)                removing `\<let>-command' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@nomath' on input line 424.
+(hyperref)                removing `\@nomath' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 424.
+(hyperref)                removing `\begingroup' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 424.
+(hyperref)                removing `\setbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\thinmuskip' on input line 424.
+(hyperref)                removing `\thinmuskip' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\medmuskip' on input line 424.
+(hyperref)                removing `\medmuskip' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\m@ne' on input line 424.
+(hyperref)                removing `\m@ne' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\thickmuskip' on input line 424.
+(hyperref)                removing `\thickmuskip' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ne' on input line 424.
+(hyperref)                removing `\@ne' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 424.
+(hyperref)                removing `\setbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 424.
+(hyperref)                removing `\tw@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 424.
+(hyperref)                removing `\<def>-command' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@tempa' on input line 424.
+(hyperref)                removing `\@tempa' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathchoice' on input line 424.
+(hyperref)                removing `\mathchoice' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\displaystyle' on input line 424.
+(hyperref)                removing `\displaystyle' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\textstyle' on input line 424.
+(hyperref)                removing `\textstyle' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptstyle' on input line 424.
+(hyperref)                removing `\scriptstyle' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 424.
+(hyperref)                removing `\hbox' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 424.
+(hyperref)                removing `\mathsurround' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 424.
+(hyperref)                removing `\z@' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptscriptstyle' on input line 424.
+(hyperref)                removing `\scriptscriptstyle' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 424.
+(hyperref)                removing `\varphi' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 424.
+(hyperref)                removing `\endgroup' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 424.
+(hyperref)                removing `superscript' on input line 425.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 424.
+(hyperref)                removing `math shift' on input line 425.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--439
+Underfull \hbox (badness 10000) in paragraph at lines 438--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 447--449
+Underfull \hbox (badness 10000) in paragraph at lines 448--450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 458--459
+Underfull \hbox (badness 10000) in paragraph at lines 459--462
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 463.
+(hyperref)                removing `math shift' on input line 466.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 463.
+(hyperref)                removing `math shift' on input line 466.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
@@ -1841,357 +1826,342 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--488
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 489--490
 
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 523--526
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--573
+Underfull \hbox (badness 10000) in paragraph at lines 492--495
+
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 533--536
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
+Underfull \hbox (badness 10000) in paragraph at lines 581--583
 
  []
 
-[10] <figures/RegDerReg.pdf, id=695, 244.915pt x 99.37125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+
+ []
+
+[10] <figures/RegDerReg.pdf, id=702, 244.915pt x 99.37125pt>
 File: figures/RegDerReg.pdf Graphic file (type pdf)
  <use figures/RegDerReg.pdf>
-Package pdftex.def Info: figures/RegDerReg.pdf used on input line 603.
+Package pdftex.def Info: figures/RegDerReg.pdf used on input line 614.
 (pdftex.def)             Requested size: 238.38506pt x 96.72357pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+Underfull \hbox (badness 10000) in paragraph at lines 611--619
 
  []
 
 
-LaTeX Warning: Reference `ann:' on page 11 undefined on input line 641.
+LaTeX Warning: Reference `ann:Prop' on page 11 undefined on input line 642.
 
 
-LaTeX Warning: Reference `ann:maths' on page 11 undefined on input line 641.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 647--648
+Underfull \hbox (badness 10000) in paragraph at lines 669--671
 
  []
 
 [11 <./figures/RegDerReg.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 690.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 690.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 690.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--714
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 670--671
+Underfull \hbox (badness 10000) in paragraph at lines 729--730
 
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 688.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 688.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 688.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 690--691
-
- []
-
-
-LaTeX Warning: Reference `eq:' on page 12 undefined on input line 696.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 730--731
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 735--737
+Underfull \hbox (badness 10000) in paragraph at lines 736--738
 
  []
 
 [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 757.
+(hyperref)                removing `math shift' on input line 756.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 757.
+(hyperref)                removing `math shift' on input line 756.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 764.
+(hyperref)                removing `\begingroup' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 764.
+(hyperref)                removing `\<let>-command' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@nomath' on input line 764.
+(hyperref)                removing `\@nomath' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 764.
+(hyperref)                removing `\begingroup' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 764.
+(hyperref)                removing `\setbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\thinmuskip' on input line 764.
+(hyperref)                removing `\thinmuskip' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\medmuskip' on input line 764.
+(hyperref)                removing `\medmuskip' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\m@ne' on input line 764.
+(hyperref)                removing `\m@ne' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\thickmuskip' on input line 764.
+(hyperref)                removing `\thickmuskip' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@ne' on input line 764.
+(hyperref)                removing `\@ne' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\setbox' on input line 764.
+(hyperref)                removing `\setbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\tw@' on input line 764.
+(hyperref)                removing `\tw@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<def>-command' on input line 764.
+(hyperref)                removing `\<def>-command' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@tempa' on input line 764.
+(hyperref)                removing `\@tempa' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathchoice' on input line 764.
+(hyperref)                removing `\mathchoice' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\displaystyle' on input line 764.
+(hyperref)                removing `\displaystyle' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\textstyle' on input line 764.
+(hyperref)                removing `\textstyle' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptstyle' on input line 764.
+(hyperref)                removing `\scriptstyle' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 764.
+(hyperref)                removing `\hbox' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 764.
+(hyperref)                removing `\mathsurround' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 764.
+(hyperref)                removing `\z@' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\scriptscriptstyle' on input line 764.
+(hyperref)                removing `\scriptscriptstyle' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\varphi' on input line 764.
+(hyperref)                removing `\varphi' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\endgroup' on input line 764.
+(hyperref)                removing `\endgroup' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 764.
+(hyperref)                removing `superscript' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 764.
+(hyperref)                removing `math shift' on input line 763.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 764.
+(hyperref)                removing `\\' on input line 763.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--774
+Underfull \hbox (badness 10000) in paragraph at lines 772--775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 775--776
+Underfull \hbox (badness 10000) in paragraph at lines 776--778
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--779
+Underfull \hbox (badness 10000) in paragraph at lines 784--785
 
  []
 
@@ -2201,25 +2171,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 786--787
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
+Underfull \hbox (badness 10000) in paragraph at lines 815--817
 
  []
 
 
-LaTeX Warning: Reference `ann:BMWON' on page 14 undefined on input line 818.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 817--819
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 820--821
+Underfull \hbox (badness 10000) in paragraph at lines 818--819
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 859--860
+Underfull \hbox (badness 10000) in paragraph at lines 862--863
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 
  []
 
@@ -2229,659 +2196,649 @@ Underfull \hbox (badness 10000) in paragraph at lines 866--867
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 868--869
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 870--871
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--875
+Underfull \hbox (badness 10000) in paragraph at lines 879--880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--884
+Underfull \hbox (badness 10000) in paragraph at lines 881--882
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--886
+Underfull \hbox (badness 10000) in paragraph at lines 892--893
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 896--897
+Underfull \hbox (badness 10000) in paragraph at lines 913--916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--920
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 932--933
+LaTeX Warning: Reference `ann:' on page 16 undefined on input line 930.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 939--940
 
  []
 
 
-LaTeX Warning: Reference `ann:' on page 16 undefined on input line 934.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
+Underfull \hbox (badness 10000) in paragraph at lines 963--968
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 967--972
-
- []
-
-
-LaTeX Warning: Reference `ann:' on page 16 undefined on input line 973.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 986--987
+Underfull \hbox (badness 10000) in paragraph at lines 982--983
 
  []
 
 [16]
-
-LaTeX Warning: Reference `ann:' on page 17 undefined on input line 1008.
-
-
-LaTeX Warning: Reference `ann:' on page 17 undefined on input line 1019.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1019--1020
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1018
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1029.
+(hyperref)                removing `math shift' on input line 1027.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1029.
+(hyperref)                removing `math shift' on input line 1027.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1033.
+(hyperref)                removing `subscript' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1033.
+(hyperref)                removing `math shift' on input line 1031.
 
-<figures/etakd2.pdf, id=814, 244.915pt x 154.5775pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1040
+
+ []
+
+<figures/etakd2.pdf, id=829, 244.915pt x 154.5775pt>
 File: figures/etakd2.pdf Graphic file (type pdf)
  <use figures/etakd2.pdf>
-Package pdftex.def Info: figures/etakd2.pdf used on input line 1039.
+Package pdftex.def Info: figures/etakd2.pdf used on input line 1051.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1046--1048
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
+(hyperref)                removing `math shift' on input line 1057.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1058.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1061
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 
  []
 
 [17 <./figures/etakd2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1064--1065
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1064
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1067--1068
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
 
  []
 
-
-LaTeX Warning: Reference `fig:' on page 18 undefined on input line 1069.
-
-File: figures/etakd2.pdf Graphic file (type pdf)
-<use figures/etakd2.pdf>
-Package pdftex.def Info: figures/etakd2.pdf used on input line 1074.
+<figures/etakd21.pdf, id=845, 244.915pt x 154.5775pt>
+File: figures/etakd21.pdf Graphic file (type pdf)
+ <use figures/etakd21.pdf>
+Package pdftex.def Info: figures/etakd21.pdf used on input line 1074.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- [18] <Diagramme_Code_2.pdf, id=835, 1583.53963pt x 859.96777pt>
+ <figures/etakd21Bis.pdf, id=846, 244.915pt x 154.5775pt>
+File: figures/etakd21Bis.pdf Graphic file (type pdf)
+ <use figures/etakd21Bis.pdf>
+Package pdftex.def Info: figures/etakd21Bis.pdf used on input line 1083.
+(pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
+ [18 <./figures/etakd21.pdf> <./figures/etakd21Bis.pdf>] <Diagramme_Code_2.pdf, id=857, 1583.53963pt x 859.96777pt>
 File: Diagramme_Code_2.pdf Graphic file (type pdf)
  <use Diagramme_Code_2.pdf>
-Package pdftex.def Info: Diagramme_Code_2.pdf used on input line 1085.
+Package pdftex.def Info: Diagramme_Code_2.pdf used on input line 1094.
 (pdftex.def)             Requested size: 486.2701pt x 264.06783pt.
  [19 <./Diagramme_Code_2.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1103--1104
+Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1117--1119
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1171
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1186
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1172--1173
+Underfull \hbox (badness 10000) in paragraph at lines 1187--1188
 
  []
 
-<figures/RegIsing.pdf, id=877, 244.915pt x 154.5775pt>
+<figures/RegIsing.pdf, id=900, 244.915pt x 154.5775pt>
 File: figures/RegIsing.pdf Graphic file (type pdf)
  <use figures/RegIsing.pdf>
-Package pdftex.def Info: figures/RegIsing.pdf used on input line 1194.
+Package pdftex.def Info: figures/RegIsing.pdf used on input line 1202.
 (pdftex.def)             Requested size: 200.74672pt x 126.70482pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1212
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1216--1217
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
 
  []
 
 
-LaTeX Warning: Reference `eq:sysDeltaON1' on page 21 undefined on input line 1235.
-
-
-LaTeX Warning: Reference `eq:sysDeltaON2' on page 21 undefined on input line 1235.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1234--1236
+Underfull \hbox (badness 10000) in paragraph at lines 1237--1239
 
  []
 
-[21 <./figures/RegIsing.pdf>] <figures/DerRegIsing.pdf, id=901, 244.915pt x 99.37125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+
+ []
+
+[21 <./figures/RegIsing.pdf>] <figures/DerRegIsing.pdf, id=917, 244.915pt x 99.37125pt>
 File: figures/DerRegIsing.pdf Graphic file (type pdf)
  <use figures/DerRegIsing.pdf>
-Package pdftex.def Info: figures/DerRegIsing.pdf used on input line 1251.
+Package pdftex.def Info: figures/DerRegIsing.pdf used on input line 1256.
 (pdftex.def)             Requested size: 238.38506pt x 96.72357pt.
- <figures/DerRegIsing2.pdf, id=902, 244.915pt x 122.4575pt>
+ <figures/DerRegIsing2.pdf, id=918, 244.915pt x 122.4575pt>
 File: figures/DerRegIsing2.pdf Graphic file (type pdf)
  <use figures/DerRegIsing2.pdf>
-Package pdftex.def Info: figures/DerRegIsing2.pdf used on input line 1252.
+Package pdftex.def Info: figures/DerRegIsing2.pdf used on input line 1257.
 (pdftex.def)             Requested size: 238.3894pt x 100.37468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1256
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1268--1269
-
- []
-
-
-Overfull \hbox (0.13632pt too wide) in paragraph at lines 1288--1288
+Overfull \hbox (0.13632pt too wide) in paragraph at lines 1292--1292
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1301--1302
+Underfull \hbox (badness 10000) in paragraph at lines 1305--1306
 
+ []
+
+
+Overfull \hbox (5.57817pt too wide) in paragraph at lines 1318--1318
+[] 
  []
 
 [22 <./figures/DerRegIsing.pdf> <./figures/DerRegIsing2.pdf>]
-Overfull \hbox (5.57817pt too wide) in paragraph at lines 1314--1314
-[] 
- []
-
-
-LaTeX Warning: Reference `eq:defZk' on page 23 undefined on input line 1325.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1342--1343
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1344--1345
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1348
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
+Underfull \hbox (badness 10000) in paragraph at lines 1353--1354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1365--1366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1368
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
 
- []
+LaTeX Warning: Reference `ann:' on page 24 undefined on input line 1382.
 
-
-LaTeX Warning: Reference `ann:' on page 24 undefined on input line 1376.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1381
-
- []
-
-<figures/SurfUtile.pdf, id=934, 244.915pt x 154.5775pt>
+<figures/SurfUtile.pdf, id=951, 244.915pt x 154.5775pt>
 File: figures/SurfUtile.pdf Graphic file (type pdf)
  <use figures/SurfUtile.pdf>
-Package pdftex.def Info: figures/SurfUtile.pdf used on input line 1388.
+Package pdftex.def Info: figures/SurfUtile.pdf used on input line 1386.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1402--1403
+Underfull \hbox (badness 10000) in paragraph at lines 1394--1397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1411--1413
+Underfull \hbox (badness 10000) in paragraph at lines 1411--1412
 
  []
 
 
-LaTeX Warning: Reference `sec:' on page 24 undefined on input line 1415.
+Underfull \hbox (badness 10000) in paragraph at lines 1420--1422
+
+ []
+
+
+LaTeX Warning: Reference `sec:' on page 24 undefined on input line 1424.
 
 [24 <./figures/SurfUtile.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1486--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1497--1499
 
  []
 
 
-LaTeX Warning: Reference `sec:' on page 25 undefined on input line 1490.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1490--1491
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1502
 
  []
 
 [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1503--1504
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1515
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1513.
+(hyperref)                removing `math shift' on input line 1524.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1553.
+(hyperref)                removing `math shift' on input line 1564.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1583--1584
+
+ []
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 26 might be wrong on input line 1584.
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1572--1573
+Underfull \hbox (badness 10000) in paragraph at lines 1586--1587
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1575--1576
-
- []
-
-<figures/FacAmp.pdf, id=990, 244.915pt x 99.37125pt>
+<figures/FacAmp.pdf, id=1010, 244.915pt x 99.37125pt>
 File: figures/FacAmp.pdf Graphic file (type pdf)
  <use figures/FacAmp.pdf>
-Package pdftex.def Info: figures/FacAmp.pdf used on input line 1581.
+Package pdftex.def Info: figures/FacAmp.pdf used on input line 1592.
 (pdftex.def)             Requested size: 238.38506pt x 96.72357pt.
-
-
-LaTeX Warning: Reference `sec:GE' on page 27 undefined on input line 1592.
-
-<figures/ComplexiteTemps.pdf, id=993, 244.915pt x 154.5775pt>
+ <figures/ComplexiteTemps.pdf, id=1014, 244.915pt x 154.5775pt>
 File: figures/ComplexiteTemps.pdf Graphic file (type pdf)
  <use figures/ComplexiteTemps.pdf>
-Package pdftex.def Info: figures/ComplexiteTemps.pdf used on input line 1597.
+Package pdftex.def Info: figures/ComplexiteTemps.pdf used on input line 1608.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- [27 <./figures/FacAmp.pdf> <./figures/ComplexiteTemps.pdf>] <figures/Scalabilite.pdf, id=1008, 244.915pt x 154.5775pt>
+ <figures/Scalabilite.pdf, id=1015, 244.915pt x 154.5775pt>
 File: figures/Scalabilite.pdf Graphic file (type pdf)
  <use figures/Scalabilite.pdf>
-Package pdftex.def Info: figures/Scalabilite.pdf used on input line 1612.
+Package pdftex.def Info: figures/Scalabilite.pdf used on input line 1617.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- <figures/EtakErrMesu.pdf, id=1011, 244.915pt x 154.5775pt>
+ [27 <./figures/FacAmp.pdf> <./figures/ComplexiteTemps.pdf> <./figures/Scalabilite.pdf>] <figures/EtakErrMesu.pdf, id=1034, 244.915pt x 154.5775pt>
 File: figures/EtakErrMesu.pdf Graphic file (type pdf)
  <use figures/EtakErrMesu.pdf>
-Package pdftex.def Info: figures/EtakErrMesu.pdf used on input line 1627.
+Package pdftex.def Info: figures/EtakErrMesu.pdf used on input line 1641.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1633--1634
+Underfull \hbox (badness 10000) in paragraph at lines 1647--1648
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1637.
+(hyperref)                removing `math shift' on input line 1651.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\eta' on input line 1637.
+(hyperref)                removing `\eta' on input line 1651.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1637.
+(hyperref)                removing `math shift' on input line 1651.
 
-
-LaTeX Warning: Reference `sec:' on page 28 undefined on input line 1652.
-
-<figures/MesuRes.pdf, id=1013, 244.915pt x 154.5775pt>
+<figures/MesuRes.pdf, id=1037, 244.915pt x 154.5775pt>
 File: figures/MesuRes.pdf Graphic file (type pdf)
  <use figures/MesuRes.pdf>
-Package pdftex.def Info: figures/MesuRes.pdf used on input line 1656.
+Package pdftex.def Info: figures/MesuRes.pdf used on input line 1670.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- [28 <./figures/Scalabilite.pdf> <./figures/EtakErrMesu.pdf>] [29 <./figures/MesuRes.pdf>] (/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.bbl) [30]
 
-LaTeX Warning: Reference `sec:' on page 31 undefined on input line 1732.
+Underfull \hbox (badness 10000) in paragraph at lines 1681--1682
+
+ []
+
+[28 <./figures/EtakErrMesu.pdf> <./figures/MesuRes.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1684
+
+ []
+
+[29] (/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.bbl) [30]
+
+LaTeX Warning: Reference `sec:' on page 31 undefined on input line 1750.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1741--1741
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1759
 []\T1/cmr/bx/n/12 Transformée de Fou-rier Semi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1810--1811
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1829
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1899--1900
+Underfull \hbox (badness 10000) in paragraph at lines 1917--1918
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1938
+Underfull \hbox (badness 10000) in paragraph at lines 1955--1956
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1951--1952
+Underfull \hbox (badness 10000) in paragraph at lines 1969--1970
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1953--1954
+Underfull \hbox (badness 10000) in paragraph at lines 1971--1972
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1960--1962
+Underfull \hbox (badness 10000) in paragraph at lines 1978--1980
 
  []
 
 [33]
-Underfull \hbox (badness 6094) in paragraph at lines 1994--1994
+Underfull \hbox (badness 6094) in paragraph at lines 2017--2017
 []\T1/cmr/bx/n/12 Ecriture du sys-tème d'équa-tions
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1994.
+(hyperref)                removing `math shift' on input line 2017.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1994.
+(hyperref)                removing `subscript' on input line 2017.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1994.
+(hyperref)                removing `math shift' on input line 2017.
 
 
-LaTeX Warning: Reference `sec:DimAnorm' on page 34 undefined on input line 2048.
+LaTeX Warning: Reference `sec:DimAnorm' on page 34 undefined on input line 2072.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2064--2065
+Underfull \hbox (badness 10000) in paragraph at lines 2088--2089
 
  []
 
 [34]
 
-LaTeX Warning: Reference `eq:defZk' on page 35 undefined on input line 2086.
+LaTeX Warning: Reference `eq:defZk' on page 35 undefined on input line 2110.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2119
+Underfull \hbox (badness 10000) in paragraph at lines 2140--2141
 
  []
 
 [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 2270--2275
+Underfull \hbox (badness 10000) in paragraph at lines 2292--2297
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2311--2313
+Underfull \hbox (badness 10000) in paragraph at lines 2333--2335
 
  []
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 2325--2327
+Underfull \hbox (badness 10000) in paragraph at lines 2347--2349
 
  []
 
 
-LaTeX Warning: Reference `eq:' on page 38 undefined on input line 2354.
+LaTeX Warning: Reference `eq:' on page 38 undefined on input line 2376.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2368--2369
-
- []
-
-[38]
 Underfull \hbox (badness 10000) in paragraph at lines 2390--2391
 
  []
 
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 2412--2413
+
+ []
+
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 2418--2419
+Underfull \hbox (badness 10000) in paragraph at lines 2440--2441
 
  []
 
 [40] [41]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2581.
+(hyperref)                removing `math shift' on input line 2605.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\rho' on input line 2581.
+(hyperref)                removing `\rho' on input line 2605.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2581.
+(hyperref)                removing `math shift' on input line 2605.
 
 [42]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2642.
+(hyperref)                removing `math shift' on input line 2666.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 2642.
+(hyperref)                removing `\phi' on input line 2666.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2642.
+(hyperref)                removing `math shift' on input line 2666.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2644.
+(hyperref)                removing `math shift' on input line 2668.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 2644.
+(hyperref)                removing `\phi' on input line 2668.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2644.
+(hyperref)                removing `math shift' on input line 2668.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2687.
+(hyperref)                removing `math shift' on input line 2711.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 2687.
+(hyperref)                removing `\phi' on input line 2711.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2687.
+(hyperref)                removing `math shift' on input line 2711.
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 2741--2743
+Underfull \hbox (badness 10000) in paragraph at lines 2765--2767
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2767.
+(hyperref)                removing `math shift' on input line 2791.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\phi' on input line 2767.
+(hyperref)                removing `\phi' on input line 2791.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2767.
+(hyperref)                removing `math shift' on input line 2791.
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 2777--2779
+Underfull \hbox (badness 10000) in paragraph at lines 2801--2803
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2815--2817
+Underfull \hbox (badness 10000) in paragraph at lines 2839--2841
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2832--2834
+Underfull \hbox (badness 10000) in paragraph at lines 2856--2858
 
  []
 
 [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2860--2862
+Underfull \hbox (badness 10000) in paragraph at lines 2884--2886
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2891--2893
+Underfull \hbox (badness 10000) in paragraph at lines 2915--2917
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2914--2916
+Underfull \hbox (badness 10000) in paragraph at lines 2938--2940
 
  []
 
 [46]
-Underfull \hbox (badness 10000) in paragraph at lines 2933--2935
+Underfull \hbox (badness 10000) in paragraph at lines 2957--2959
 
  []
 
 [47]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2977.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2977.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3001.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3001.
  (/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2977.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2977.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3001.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3001.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 9FEC6145523D3903B071369F0611AE33;8437.
 
@@ -2894,25 +2851,25 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2977.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3001.
  ) 
 Here is how much of TeX's memory you used:
- 30530 strings out of 493014
- 555600 string characters out of 6133352
- 717607 words of memory out of 5000000
- 33043 multiletter control sequences out of 15000+600000
- 34822 words of font info for 105 fonts, out of 8000000 for 9000
+ 30546 strings out of 493014
+ 555898 string characters out of 6133352
+ 718757 words of memory out of 5000000
+ 33051 multiletter control sequences out of 15000+600000
+ 35508 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,22n,54p,10445b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:xxx} has been referenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/cm-super/sfxc1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on "/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.pdf" (49 pages, 2473607 bytes).
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
+lic/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
+Output written on "/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.pdf" (49 pages, 2812615 bytes).
 PDF statistics:
- 1600 PDF objects out of 1728 (max. 8388607)
- 1454 compressed objects within 15 object streams
- 507 named destinations out of 1000 (max. 500000)
- 905 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1627 PDF objects out of 1728 (max. 8388607)
+ 1478 compressed objects within 15 object streams
+ 512 named destinations out of 1000 (max. 500000)
+ 915 words of extra memory for PDF output out of 10000 (max. 10000000)
 

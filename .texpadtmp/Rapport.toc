@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.1}Le mod\IeC {\`e}le d'Ising 2D}{4}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Transitions de phase}{5}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}D\IeC {\'e}finition et classification}{5}{subsubsection.1.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2}Transitions du second ordre : d\IeC {\'e}finition des exposants critiques}{6}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2}Transitions du second ordre : d\IeC {\'e}finition des exposants critiques, universalit\IeC {\'e}}{6}{subsubsection.1.2.2}
 \contentsline {subsubsection}{\numberline {1.2.3}Objectif g\IeC {\'e}n\IeC {\'e}ral : importance de la fonction de partition}{6}{subsubsection.1.2.3}
 \contentsline {subsection}{\numberline {1.3}Formalisme de m\IeC {\'e}canique statistique des champs}{7}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}La notion de champ}{7}{subsubsection.1.3.1}
@@ -18,19 +18,19 @@
 \contentsline {subsection}{\numberline {2.2}Le groupe de renormalisation non perturbatif (NPRG)}{11}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Int\IeC {\'e}gration continue : le r\IeC {\'e}gulateur}{11}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Diff\IeC {\'e}rence avec le RG : potentiel de Gibbs}{11}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}\IeC {\'E}quation fondamentale : \IeC {\'e}quation de flot}{12}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3}\IeC {\'E}quation fondamentale : \IeC {\'e}quation de flot}{11}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}Approximation BMW de l'\IeC {\'e}quation fondamentale du NPRG (pour $\mathbb {Z}_2$)}{12}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}D\IeC {\'e}termination de la temp\IeC {\'e}rature critique : notion de point fixe}{13}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}D\IeC {\'e}termination de la temp\IeC {\'e}rature critique : notion de point fixe}{12}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}R\IeC {\'e}sum\IeC {\'e} de la m\IeC {\'e}thode}{13}{subsection.2.5}
 \contentsline {section}{\numberline {3}Le mod\IeC {\`e}le continu $O(N)$}{14}{section.3}
 \contentsline {subsection}{\numberline {3.1}Hamiltonien de la th\IeC {\'e}orie $\boldsymbol { \varphi }^4$ : \\ mod\IeC {\`e}le continu}{14}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Syst\IeC {\`e}me d'\IeC {\'e}quations BMW continu}{14}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}R\IeC {\'e}gulateur pour BMW continu}{15}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}R\IeC {\'e}gulateur pour BMW continu}{14}{subsection.3.3}
 \contentsline {section}{\numberline {4}M\IeC {\'e}thodes num\IeC {\'e}riques pour la r\IeC {\'e}solution de BMW continu}{15}{section.4}
 \contentsline {subsection}{\numberline {4.1}Travail r\IeC {\'e}alis\IeC {\'e}}{15}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Structure de l'algorithme}{15}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Discr\IeC {\'e}tisation en champ}{15}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Discr\IeC {\'e}tisation en impulsion}{16}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}Discr\IeC {\'e}tisation en moment}{16}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Expression des coefficients}{16}{subsubsection.4.4.1}
 \contentsline {subsubsection}{\numberline {4.4.2}M\IeC {\'e}thode de Clenshaw}{16}{subsubsection.4.4.2}
 \contentsline {subsection}{\numberline {4.5}Calcul des int\IeC {\'e}grales}{16}{subsection.4.5}
@@ -38,23 +38,23 @@
 \contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{17}{subsection.4.6}
 \contentsline {section}{\numberline {5}Resulats : $O(N)$ continu}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}Pour $N = 1$ ($\mathbb {Z}_2$), $d=2$}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Pour $N = 2$ ou $N=3$, $d=2$}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Pour $N = 2$ ou $N=3$, $d=2$}{17}{subsection.5.2}
 \contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{21}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}\IeC {\'E}tapes de la r\IeC {\'e}solution}{21}{subsection.6.3}
 \contentsline {subsubsection}{\numberline {6.3.1}Premi\IeC {\`e}re \IeC {\'e}tape}{21}{subsubsection.6.3.1}
 \contentsline {subsubsection}{\numberline {6.3.2}Deuxi\IeC {\`e}me \IeC {\'e}tape}{22}{subsubsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.3}Troisi\IeC {\`e}me \IeC {\'e}tape}{23}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3}Troisi\IeC {\`e}me \IeC {\'e}tape}{22}{subsubsection.6.3.3}
 \contentsline {section}{\numberline {7}M\IeC {\'e}thodes et outils num\IeC {\'e}riques pour la r\IeC {\'e}solution d'Ising 2D}{23}{section.7}
 \contentsline {subsection}{\numberline {7.1}Structure du code}{23}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{23}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions}{24}{subsection.7.3}
 \contentsline {subsection}{\numberline {7.4}Interpolation de Tchebytchev}{24}{subsection.7.4}
 \contentsline {subsubsection}{\numberline {7.4.1}D\IeC {\'e}composition}{24}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{25}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{24}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}D\IeC {\'e}composition m\IeC {\'e}thode 2}{25}{subsubsection.7.4.3}
-\contentsline {subsection}{\numberline {7.5}Le calcul des int\IeC {\'e}grales}{26}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.5}Le calcul des int\IeC {\'e}grales}{25}{subsection.7.5}
 \contentsline {subsubsection}{\numberline {7.5.1}Le choix de la quadrature}{26}{subsubsection.7.5.1}
 \contentsline {subsubsection}{\numberline {7.5.2}Calcul des int\IeC {\'e}grales $I$, $\mathaccentV {bar}016{I}$, $\mathaccentV {tilde}07E{I}$}{26}{subsubsection.7.5.2}
 \contentsline {subsubsection}{\numberline {7.5.3}Calcul des int\IeC {\'e}grales $J$,$\mathaccentV {bar}016{J}$,$\mathaccentV {tilde}07E{J}$ }{26}{subsubsection.7.5.3}
