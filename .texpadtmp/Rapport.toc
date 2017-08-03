@@ -33,16 +33,16 @@
 \contentsline {subsection}{\numberline {4.4}Discr\IeC {\'e}tisation en moment}{16}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Expression des coefficients}{16}{subsubsection.4.4.1}
 \contentsline {subsubsection}{\numberline {4.4.2}M\IeC {\'e}thode de Clenshaw}{16}{subsubsection.4.4.2}
-\contentsline {subsection}{\numberline {4.5}Calcul des int\IeC {\'e}grales}{16}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Calcul des d\IeC {\'e}riv\IeC {\'e}es}{17}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.4.3}Calcul des d\IeC {\'e}riv\IeC {\'e}es}{16}{subsubsection.4.4.3}
+\contentsline {subsection}{\numberline {4.5}Calcul des int\IeC {\'e}grales}{17}{subsection.4.5}
 \contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{17}{subsection.4.6}
-\contentsline {section}{\numberline {5}Resulats : $O(N)$ continu}{17}{section.5}
-\contentsline {subsection}{\numberline {5.1}Pour $N = 1$ ($\mathbb {Z}_2$), $d=2$}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Pour $N = 2$ ou $N=3$, $d=2$}{17}{subsection.5.2}
+\contentsline {section}{\numberline {5}R\IeC {\'e}sultats : mod\IeC {\`e}le continu $O(N)$}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}R\IeC {\'e}sultats pour $(N = 1, d=2)$}{17}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{18}{subsection.5.2}
 \contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{21}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}\IeC {\'E}tapes de la r\IeC {\'e}solution}{21}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Les 3 \IeC {\'e}tapes de la r\IeC {\'e}solution}{21}{subsection.6.3}
 \contentsline {subsubsection}{\numberline {6.3.1}Premi\IeC {\`e}re \IeC {\'e}tape}{21}{subsubsection.6.3.1}
 \contentsline {subsubsection}{\numberline {6.3.2}Deuxi\IeC {\`e}me \IeC {\'e}tape}{22}{subsubsection.6.3.2}
 \contentsline {subsubsection}{\numberline {6.3.3}Troisi\IeC {\`e}me \IeC {\'e}tape}{22}{subsubsection.6.3.3}
@@ -82,19 +82,17 @@
 \contentsline {subsection}{\numberline {B.2}Fonctions de corr\IeC {\'e}lation dans le calcul du NPRG}{34}{subsection.B.2}
 \contentsline {subsection}{\numberline {B.3}Ecriture du syst\IeC {\`e}me d'\IeC {\'e}quations BMW pour $\mathbb {Z}_2$}{34}{subsection.B.3}
 \contentsline {subsection}{\numberline {B.4}Mod\IeC {\'e}lisation du mod\IeC {\`e}le d'Ising 2D avec des champs}{35}{subsection.B.4}
-\contentsline {section}{\numberline {C}Propri\IeC {\'e}t\IeC {\'e}s des fonctions \IeC {\`a} discr\IeC {\'e}tiser}{37}{appendix.C}
-\contentsline {subsection}{\numberline {C.1}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions inconnues}{37}{subsection.C.1}
-\contentsline {subsection}{\numberline {C.2}R\IeC {\'e}gularit\IeC {\'e}}{38}{subsection.C.2}
-\contentsline {section}{\numberline {D}Complement des algorithmes}{40}{appendix.D}
-\contentsline {subsection}{\numberline {D.1}Formules de d\IeC {\'e}rivation \IeC {\`a} 5 points}{40}{subsection.D.1}
-\contentsline {subsection}{\numberline {D.2}Propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires des polyn\IeC {\^o}mes de Tchebytchev}{40}{subsection.D.2}
-\contentsline {subsection}{\numberline {D.3}Quadratures pour le calcul des int\IeC {\'e}grales \IeC {\`a} une dimension}{41}{subsection.D.3}
-\contentsline {subsubsection}{\numberline {D.3.1}Quadrature de Gauss-Legendre}{41}{subsubsection.D.3.1}
-\contentsline {subsubsection}{\numberline {D.3.2}Premi\IeC {\`e}re r\IeC {\`e}gle de Fejer}{41}{subsubsection.D.3.2}
-\contentsline {section}{\numberline {E}Equations du mod\IeC {\`e}le d'Ising 2D}{42}{appendix.E}
-\contentsline {subsection}{\numberline {E.1}Introduction}{42}{subsection.E.1}
-\contentsline {subsection}{\numberline {E.2}Les \IeC {\'e}quations BMW en $\rho $ dimensionn\IeC {\'e}es}{42}{subsection.E.2}
-\contentsline {subsection}{\numberline {E.3}Les \IeC {\'e}quations BMW en $\phi $}{43}{subsection.E.3}
-\contentsline {subsubsection}{\numberline {E.3.1}Les \IeC {\'e}quations BMW en $\phi $ dimensionn\IeC {\'e}es}{43}{subsubsection.E.3.1}
-\contentsline {subsubsection}{\numberline {E.3.2}Les \IeC {\'e}quations BMW en $\phi $ adimensionn\IeC {\'e}es en impulsion}{44}{subsubsection.E.3.2}
-\contentsline {subsubsection}{\numberline {E.3.3}Les \IeC {\'e}quations BMW en $\phi $ totalement adimensionn\IeC {\'e}es}{45}{subsubsection.E.3.3}
+\contentsline {section}{\numberline {C}Sym\IeC {\'e}trie des fonctions discr\IeC {\'e}tis\IeC {\'e}es}{37}{appendix.C}
+\contentsline {section}{\numberline {D}Complement des algorithmes}{39}{appendix.D}
+\contentsline {subsection}{\numberline {D.1}Formules de d\IeC {\'e}rivation \IeC {\`a} 5 points}{39}{subsection.D.1}
+\contentsline {subsection}{\numberline {D.2}Propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires des polyn\IeC {\^o}mes de Tchebytchev}{39}{subsection.D.2}
+\contentsline {subsection}{\numberline {D.3}Quadratures pour le calcul des int\IeC {\'e}grales \IeC {\`a} une dimension}{40}{subsection.D.3}
+\contentsline {subsubsection}{\numberline {D.3.1}Quadrature de Gauss-Legendre}{40}{subsubsection.D.3.1}
+\contentsline {subsubsection}{\numberline {D.3.2}Premi\IeC {\`e}re r\IeC {\`e}gle de Fejer}{40}{subsubsection.D.3.2}
+\contentsline {section}{\numberline {E}Equations du mod\IeC {\`e}le d'Ising 2D}{41}{appendix.E}
+\contentsline {subsection}{\numberline {E.1}Introduction}{41}{subsection.E.1}
+\contentsline {subsection}{\numberline {E.2}Les \IeC {\'e}quations BMW en $\rho $ dimensionn\IeC {\'e}es}{41}{subsection.E.2}
+\contentsline {subsection}{\numberline {E.3}Les \IeC {\'e}quations BMW en $\phi $}{42}{subsection.E.3}
+\contentsline {subsubsection}{\numberline {E.3.1}Les \IeC {\'e}quations BMW en $\phi $ dimensionn\IeC {\'e}es}{42}{subsubsection.E.3.1}
+\contentsline {subsubsection}{\numberline {E.3.2}Les \IeC {\'e}quations BMW en $\phi $ adimensionn\IeC {\'e}es en impulsion}{43}{subsubsection.E.3.2}
+\contentsline {subsubsection}{\numberline {E.3.3}Les \IeC {\'e}quations BMW en $\phi $ totalement adimensionn\IeC {\'e}es}{44}{subsubsection.E.3.3}

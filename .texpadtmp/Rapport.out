@@ -32,16 +32,16 @@
 \BOOKMARK [2][-]{subsection.4.4}{Discr\351tisation en moment}{section.4}% 32
 \BOOKMARK [3][-]{subsubsection.4.4.1}{Expression des coefficients}{subsection.4.4}% 33
 \BOOKMARK [3][-]{subsubsection.4.4.2}{M\351thode de Clenshaw}{subsection.4.4}% 34
-\BOOKMARK [2][-]{subsection.4.5}{Calcul des int\351grales}{section.4}% 35
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Calcul des d\351riv\351es}{subsection.4.5}% 36
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Calcul des d\351riv\351es}{subsection.4.4}% 35
+\BOOKMARK [2][-]{subsection.4.5}{Calcul des int\351grales}{section.4}% 36
 \BOOKMARK [2][-]{subsection.4.6}{Parall\351lisation}{section.4}% 37
-\BOOKMARK [1][-]{section.5}{Resulats : O\(N\) continu}{}% 38
-\BOOKMARK [2][-]{subsection.5.1}{Pour N = 1 \(Z2\), d=2}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.2}{Pour N = 2 ou N=3, d=2}{section.5}% 40
+\BOOKMARK [1][-]{section.5}{R\351sultats : mod\350le continu O\(N\)}{}% 38
+\BOOKMARK [2][-]{subsection.5.1}{R\351sultats pour \(N = 1, d=2\)}{section.5}% 39
+\BOOKMARK [2][-]{subsection.5.2}{R\351sultats pour \(N = 2,3, d=2\)}{section.5}% 40
 \BOOKMARK [1][-]{section.6}{Retour sur le mod\350le d'Ising 2D}{}% 41
 \BOOKMARK [2][-]{subsection.6.1}{Mod\351lisation avec des champs}{section.6}% 42
 \BOOKMARK [2][-]{subsection.6.2}{R\351gulateur}{section.6}% 43
-\BOOKMARK [2][-]{subsection.6.3}{\311tapes de la r\351solution}{section.6}% 44
+\BOOKMARK [2][-]{subsection.6.3}{Les 3 \351tapes de la r\351solution}{section.6}% 44
 \BOOKMARK [3][-]{subsubsection.6.3.1}{Premi\350re \351tape}{subsection.6.3}% 45
 \BOOKMARK [3][-]{subsubsection.6.3.2}{Deuxi\350me \351tape}{subsection.6.3}% 46
 \BOOKMARK [3][-]{subsubsection.6.3.3}{Troisi\350me \351tape}{subsection.6.3}% 47
@@ -81,19 +81,17 @@
 \BOOKMARK [2][-]{subsection.B.2}{Fonctions de corr\351lation dans le calcul du NPRG}{appendix.B}% 81
 \BOOKMARK [2][-]{subsection.B.3}{Ecriture du syst\350me d'\351quations BMW pour Z2}{appendix.B}% 82
 \BOOKMARK [2][-]{subsection.B.4}{Mod\351lisation du mod\350le d'Ising 2D avec des champs}{appendix.B}% 83
-\BOOKMARK [1][-]{appendix.C}{Propri\351t\351s des fonctions \340 discr\351tiser}{}% 84
-\BOOKMARK [2][-]{subsection.C.1}{Sym\351tries et p\351riodicit\351 des fonctions inconnues}{appendix.C}% 85
-\BOOKMARK [2][-]{subsection.C.2}{R\351gularit\351}{appendix.C}% 86
-\BOOKMARK [1][-]{appendix.D}{Complement des algorithmes}{}% 87
-\BOOKMARK [2][-]{subsection.D.1}{Formules de d\351rivation \340 5 points}{appendix.D}% 88
-\BOOKMARK [2][-]{subsection.D.2}{Propri\351t\351s \351l\351mentaires des polyn\364mes de Tchebytchev}{appendix.D}% 89
-\BOOKMARK [2][-]{subsection.D.3}{Quadratures pour le calcul des int\351grales \340 une dimension}{appendix.D}% 90
-\BOOKMARK [3][-]{subsubsection.D.3.1}{Quadrature de Gauss-Legendre}{subsection.D.3}% 91
-\BOOKMARK [3][-]{subsubsection.D.3.2}{Premi\350re r\350gle de Fejer}{subsection.D.3}% 92
-\BOOKMARK [1][-]{appendix.E}{Equations du mod\350le d'Ising 2D}{}% 93
-\BOOKMARK [2][-]{subsection.E.1}{Introduction}{appendix.E}% 94
-\BOOKMARK [2][-]{subsection.E.2}{Les \351quations BMW en \040dimensionn\351es}{appendix.E}% 95
-\BOOKMARK [2][-]{subsection.E.3}{Les \351quations BMW en }{appendix.E}% 96
-\BOOKMARK [3][-]{subsubsection.E.3.1}{Les \351quations BMW en \040dimensionn\351es}{subsection.E.3}% 97
-\BOOKMARK [3][-]{subsubsection.E.3.2}{Les \351quations BMW en \040adimensionn\351es en impulsion}{subsection.E.3}% 98
-\BOOKMARK [3][-]{subsubsection.E.3.3}{Les \351quations BMW en \040totalement adimensionn\351es}{subsection.E.3}% 99
+\BOOKMARK [1][-]{appendix.C}{Sym\351trie des fonctions discr\351tis\351es}{}% 84
+\BOOKMARK [1][-]{appendix.D}{Complement des algorithmes}{}% 85
+\BOOKMARK [2][-]{subsection.D.1}{Formules de d\351rivation \340 5 points}{appendix.D}% 86
+\BOOKMARK [2][-]{subsection.D.2}{Propri\351t\351s \351l\351mentaires des polyn\364mes de Tchebytchev}{appendix.D}% 87
+\BOOKMARK [2][-]{subsection.D.3}{Quadratures pour le calcul des int\351grales \340 une dimension}{appendix.D}% 88
+\BOOKMARK [3][-]{subsubsection.D.3.1}{Quadrature de Gauss-Legendre}{subsection.D.3}% 89
+\BOOKMARK [3][-]{subsubsection.D.3.2}{Premi\350re r\350gle de Fejer}{subsection.D.3}% 90
+\BOOKMARK [1][-]{appendix.E}{Equations du mod\350le d'Ising 2D}{}% 91
+\BOOKMARK [2][-]{subsection.E.1}{Introduction}{appendix.E}% 92
+\BOOKMARK [2][-]{subsection.E.2}{Les \351quations BMW en \040dimensionn\351es}{appendix.E}% 93
+\BOOKMARK [2][-]{subsection.E.3}{Les \351quations BMW en }{appendix.E}% 94
+\BOOKMARK [3][-]{subsubsection.E.3.1}{Les \351quations BMW en \040dimensionn\351es}{subsection.E.3}% 95
+\BOOKMARK [3][-]{subsubsection.E.3.2}{Les \351quations BMW en \040adimensionn\351es en impulsion}{subsection.E.3}% 96
+\BOOKMARK [3][-]{subsubsection.E.3.3}{Les \351quations BMW en \040totalement adimensionn\351es}{subsection.E.3}% 97
