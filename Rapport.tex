@@ -759,7 +759,7 @@ On peut alors définir une grandeur associée $\eta_k^*$ à $\tilde{\Gamma}^{* (
 Abordons maintenant la première étude que nous avons réalisé, portant sur la recherche des exposants critiques des systèmes possédant une symétrie $O(N)$.
 
 
-\subsection{Hamiltonien de la théorie $\varphiv^4$ : \\ modèle continu}
+\subsection[Modèle continu]{Hamiltonien de la théorie $\varphiv^4$ : \\ modèle continu}
 
 Il a été montré \cite{Bellac2012} que lorsque l'on cherche à déterminer les exposants critiques, et que l'on s'intéresse uniquement à ce qu'il peut se passer au voisinage de la température critique alors il suffit d'étudier les premiers ordres du hamiltonien du système isolé autour de $\varphiv \sim 0$, qui, pour respecter les symétries, dans le modèle $O(N)$ a nécessairement la forme 
 \begin{equation}
@@ -884,6 +884,35 @@ Enfin il pourrait sembler étrange d'utiliser une discrétisation en champ d'ord
 
 %\vspace*{11pt}
 
+
+\subsection{Calcul des intégrales}
+
+Le plus gros problème rencontré dans la formulation discrétisée du problème a été le calcul des intégrales $\tJ$. 
+Grâce aux symétries des fonctions que l'on intègre on peut développer une expression de ces intégrales telle que la dimension $d$ devienne un simple paramètre. En effet calculer l'intégrale $\tJ$ revient à calculer une intégrale de la forme 
+\begin{equation}
+K = \int_{\R^d} f(\tqv^2)g((\tpv+\tqv)^2) \, \dd \, \tqv \, ,
+\end{equation}
+où $f$ et $g$ sont deux fonctions. Et il en est de même pour les intégrales $\tI$ en prenant $\pv = 0$ dans l'expression précédente. On pose alors $\tqv = \tq_1 \uv + \tqv_2$, où $\uv = \tpv/\|\tpv\|$ et $\tqv_2$ est orthogonal à $\uv$. Il vient alors
+
+\begin{equation}
+K = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2)
+\end{equation}
+En posant
+\begin{equation}
+h (\tp, \tq_1, \tq_2) \equiv f(\tq_1^2 + \tq_2^2) g(\tp^2 + \tq_1^2 + \tq_2^2 + 2\tp\tq_1)
+\end{equation}
+
+Le coefficient $S_{d-1}$ est un pré-facteur réel. De ce fait, le calcul d'une intégrale à $d$ dimensions se ramène au calcul de deux intégrales seulement, qui peut être fait chacun sans problèmes avec une interpolation de Gauss-Legendre (\refann{Quad}). En pratique, les intégrales étant coupées par le régulateur nous réalisons l'intégration jusqu'à une borne $\tq_{max}$ telle que $\|\tqv\|_2 < \tq_{max} < \tp_{max}$ (où $\tp_{max}$ est la borne supérieure de la discrétisation en moments). Comme on fait l'hypothèse vraisemblable selon laquelle les inconnues de notre système à résoudre son régulières on peut réaliser l'intégration efficacement en utilisant un quadrature de Gauss-Legendre. En notant, $\{\xi_i\}_{i \in \bbrac{1, n_{gl}}}$ les points de la quadrature de Gauss-Legendre et $\{w_i\}_i$ les poids associées nous calculons 
+\begin{equation}
+\begin{split}
+K \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \) \right]^{d-2} \\
+\times \sum_{j=1}^{n_{gl}} w_j h\(\tp,\frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \), \frac{\tq_{max}}{\sqrt{2}} \xi_j \)
+\end{split}
+\end{equation}
+
+
+\vspace*{11pt}
+
 \subsection{Discrétisation en moment}
 
 
@@ -892,7 +921,7 @@ Enfin il pourrait sembler étrange d'utiliser une discrétisation en champ d'ord
 
 \label{sec:ExprCoeff}
 
-Pour la discrétisation en moments nous avons choisi d'utiliser des polynômes de Tchebytchev. Dans \cite{Tchebychev} il est démontré les propriétés suivantes : \\
+Pour la discrétisation en moments, afin de calculer, entre autre, les intégrales précédentes, nous avons choisi d'utiliser des polynômes de Tchebytchev. Dans \cite{Tchebychev} il est démontré les propriétés suivantes : \\
 
 \noindent 
 \textbf{Décomposition sur une base de Tchebytchev}. {\itshape 
@@ -932,7 +961,7 @@ La présence du régulateur à été introduite dans le NPRG pour permettre de g
 \indent
 On pose $n \in \N$. On note $(t_0, t_1, .. t_n, ..)$ l'ensemble des temps discrets utilisés dans le schéma d'Euler. On note $\tY_{k_n}$ la fonction $\tY_k$ au temps discret $t_n$. Nous avons montré que, sous certaines hypothèses cohérentes avec ce que l'on souhaite obtenir, la fonction $\tY_{k_n}$ est une fonction régulière (au moins de classe $\Cc^1$) sur $[0, +\infty[^2$ et donc sur $[0, \tp_{max}]$. Ceci justifie alors l'utilisation des polynômes de Tchebytchev pour l'interpolation des fonctions dépendant d'un moment. On utilise donc les propriétés précédentes pour $a=0$ et $b = \tp_{max}$. 
 
- \vspace*{11pt}
+ %\vspace*{11pt}
 
 
 
@@ -990,33 +1019,8 @@ Cette méthode \cite{clenshaw1955note} est plus robuste et légèrement plus rap
 Un autre avantage d'exprimer les fonctions sous une décomposition en série de polynôme de Tchebytchev pour la variable de moment $\tp$ est qu'il devient facile d'en calculer les dérivées par rapport à $p$ en tout point de la boite $[0, \tp_{max}]$ de discrétisation. En effet il existe une relation simple entre les coefficients de la décomposition d'une fonction $f$ et ceux de sa dérivée $\partial_{\tp} f$. Cette relation se trouve en \refann{Der5}. \\
 
 
-\subsection{Calcul des intégrales}
-
-Le plus gros problème rencontré dans la formulation discrétisée du problème a été le calcul des intégrales $\tJ$. 
-Grâce aux symétries des fonctions que l'on intègre on peut développer une expression de ces intégrales telle que la dimension $d$ devienne un simple paramètre. En effet calculer l'intégrale $\tJ$ revient à calculer une intégrale de la forme 
-\begin{equation}
-K = \int_{\R^d} f(\tqv^2)g((\tpv+\tqv)^2) \, \dd \, \tqv \, ,
-\end{equation}
-où $f$ et $g$ sont deux fonctions. Et il en est de même pour les intégrales $\tI$ en prenant $\pv = 0$ dans l'expression précédente. On pose alors $\tqv = \tq_1 \uv + \tqv_2$, où $\uv = \tpv/\|\tpv\|$ et $\tqv_2$ est orthogonal à $\uv$. Il vient alors
-
-\begin{equation}
-K = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2)
-\end{equation}
-En posant
-\begin{equation}
-h (\tp, \tq_1, \tq_2) \equiv f(\tq_1^2 + \tq_2^2) g(\tp^2 + \tq_1^2 + \tq_2^2 + 2\tp\tq_1)
-\end{equation}
-
-Le coefficient $S_{d-1}$ est un pré-facteur réel. De ce fait, le calcul d'une intégrale à $d$ dimensions se ramène au calcul de deux intégrales seulement, qui peut être fait chacun sans problèmes avec une interpolation de Gauss-Legendre (\refann{Quad}). En pratique, les intégrales étant coupées par le régulateur nous réalisons l'intégration jusqu'à une borne $\tq_{max}$ telle que $\|\tqv\|_2 < \tq_{max} < \tp_{max}$ (où $\tp_{max}$ est la borne supérieure de la discrétisation en moments). Comme on fait l'hypothèse vraisemblable selon laquelle les inconnues de notre système à résoudre son régulières on peut réaliser l'intégration efficacement en utilisant un quadrature de Gauss-Legendre. En notant, $\{\xi_i\}_{i \in \bbrac{1, n_{gl}}}$ les points de la quadrature de Gauss-Legendre et $\{w_i\}_i$ les poids associées nous calculons 
-\begin{equation}
-\begin{split}
-K \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \) \right]^{d-2} \\
-\times \sum_{j=1}^{n_{gl}} w_j h\(\tp,\frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \), \frac{\tq_{max}}{\sqrt{2}} \xi_j \)
-\end{split}
-\end{equation}
 
 
-\vspace*{11pt}
 
 
 
@@ -2270,7 +2274,7 @@ Avec, en posant $\tilde{\mu} = \mu/(2J)$ et $\tilde{\beta} = 2\beta J$,
 
 \pagebreak
 
-\section{Symétrie des fonctions discrétisées}
+\section{Symétries et périodicités}
 
 \label{ann:Sym}
 

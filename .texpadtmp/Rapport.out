@@ -22,18 +22,18 @@
 \BOOKMARK [2][-]{subsection.2.4}{D\351termination de la temp\351rature critique : notion de point fixe}{section.2}% 22
 \BOOKMARK [2][-]{subsection.2.5}{R\351sum\351 de la m\351thode}{section.2}% 23
 \BOOKMARK [1][-]{section.3}{Le mod\350le continu O\(N\)}{}% 24
-\BOOKMARK [2][-]{subsection.3.1}{Hamiltonien de la th\351orie bold0mu mumu \040 Delamotte2012 \040 \0404 : \040mod\350le continu}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.1}{Mod\350le continu}{section.3}% 25
 \BOOKMARK [2][-]{subsection.3.2}{Syst\350me d'\351quations BMW continu}{section.3}% 26
 \BOOKMARK [2][-]{subsection.3.3}{R\351gulateur pour BMW continu}{section.3}% 27
 \BOOKMARK [1][-]{section.4}{M\351thodes num\351riques pour la r\351solution de BMW continu}{}% 28
 \BOOKMARK [2][-]{subsection.4.1}{Travail r\351alis\351}{section.4}% 29
 \BOOKMARK [2][-]{subsection.4.2}{Structure de l'algorithme}{section.4}% 30
 \BOOKMARK [2][-]{subsection.4.3}{Discr\351tisation en champ}{section.4}% 31
-\BOOKMARK [2][-]{subsection.4.4}{Discr\351tisation en moment}{section.4}% 32
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Expression des coefficients}{subsection.4.4}% 33
-\BOOKMARK [3][-]{subsubsection.4.4.2}{M\351thode de Clenshaw}{subsection.4.4}% 34
-\BOOKMARK [3][-]{subsubsection.4.4.3}{Calcul des d\351riv\351es}{subsection.4.4}% 35
-\BOOKMARK [2][-]{subsection.4.5}{Calcul des int\351grales}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.4}{Calcul des int\351grales}{section.4}% 32
+\BOOKMARK [2][-]{subsection.4.5}{Discr\351tisation en moment}{section.4}% 33
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Expression des coefficients}{subsection.4.5}% 34
+\BOOKMARK [3][-]{subsubsection.4.5.2}{M\351thode de Clenshaw}{subsection.4.5}% 35
+\BOOKMARK [3][-]{subsubsection.4.5.3}{Calcul des d\351riv\351es}{subsection.4.5}% 36
 \BOOKMARK [2][-]{subsection.4.6}{Parall\351lisation}{section.4}% 37
 \BOOKMARK [1][-]{section.5}{R\351sultats : mod\350le continu O\(N\)}{}% 38
 \BOOKMARK [2][-]{subsection.5.1}{R\351sultats pour \(N = 1, d=2\)}{section.5}% 39
@@ -81,7 +81,7 @@
 \BOOKMARK [2][-]{subsection.B.2}{Fonctions de corr\351lation dans le calcul du NPRG}{appendix.B}% 81
 \BOOKMARK [2][-]{subsection.B.3}{Ecriture du syst\350me d'\351quations BMW pour Z2}{appendix.B}% 82
 \BOOKMARK [2][-]{subsection.B.4}{Mod\351lisation du mod\350le d'Ising 2D avec des champs}{appendix.B}% 83
-\BOOKMARK [1][-]{appendix.C}{Sym\351trie des fonctions discr\351tis\351es}{}% 84
+\BOOKMARK [1][-]{appendix.C}{Sym\351tries et p\351riodicit\351s}{}% 84
 \BOOKMARK [1][-]{appendix.D}{Complement des algorithmes}{}% 85
 \BOOKMARK [2][-]{subsection.D.1}{Formules de d\351rivation \340 5 points}{appendix.D}% 86
 \BOOKMARK [2][-]{subsection.D.2}{Propri\351t\351s \351l\351mentaires des polyn\364mes de Tchebytchev}{appendix.D}% 87

@@ -23,22 +23,22 @@
 \contentsline {subsection}{\numberline {2.4}D\IeC {\'e}termination de la temp\IeC {\'e}rature critique : notion de point fixe}{12}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}R\IeC {\'e}sum\IeC {\'e} de la m\IeC {\'e}thode}{13}{subsection.2.5}
 \contentsline {section}{\numberline {3}Le mod\IeC {\`e}le continu $O(N)$}{14}{section.3}
-\contentsline {subsection}{\numberline {3.1}Hamiltonien de la th\IeC {\'e}orie $\boldsymbol { \varphi }^4$ : \\ mod\IeC {\`e}le continu}{14}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Mod\IeC {\`e}le continu}{14}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Syst\IeC {\`e}me d'\IeC {\'e}quations BMW continu}{14}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}R\IeC {\'e}gulateur pour BMW continu}{14}{subsection.3.3}
 \contentsline {section}{\numberline {4}M\IeC {\'e}thodes num\IeC {\'e}riques pour la r\IeC {\'e}solution de BMW continu}{15}{section.4}
 \contentsline {subsection}{\numberline {4.1}Travail r\IeC {\'e}alis\IeC {\'e}}{15}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Structure de l'algorithme}{15}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Discr\IeC {\'e}tisation en champ}{15}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Discr\IeC {\'e}tisation en moment}{16}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Expression des coefficients}{16}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}M\IeC {\'e}thode de Clenshaw}{16}{subsubsection.4.4.2}
-\contentsline {subsubsection}{\numberline {4.4.3}Calcul des d\IeC {\'e}riv\IeC {\'e}es}{16}{subsubsection.4.4.3}
-\contentsline {subsection}{\numberline {4.5}Calcul des int\IeC {\'e}grales}{17}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.4}Calcul des int\IeC {\'e}grales}{15}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Discr\IeC {\'e}tisation en moment}{16}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {4.5.1}Expression des coefficients}{16}{subsubsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.2}M\IeC {\'e}thode de Clenshaw}{16}{subsubsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.3}Calcul des d\IeC {\'e}riv\IeC {\'e}es}{17}{subsubsection.4.5.3}
 \contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{17}{subsection.4.6}
 \contentsline {section}{\numberline {5}R\IeC {\'e}sultats : mod\IeC {\`e}le continu $O(N)$}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}R\IeC {\'e}sultats pour $(N = 1, d=2)$}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{17}{subsection.5.2}
 \contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{21}{subsection.6.2}
@@ -82,7 +82,7 @@
 \contentsline {subsection}{\numberline {B.2}Fonctions de corr\IeC {\'e}lation dans le calcul du NPRG}{34}{subsection.B.2}
 \contentsline {subsection}{\numberline {B.3}Ecriture du syst\IeC {\`e}me d'\IeC {\'e}quations BMW pour $\mathbb {Z}_2$}{34}{subsection.B.3}
 \contentsline {subsection}{\numberline {B.4}Mod\IeC {\'e}lisation du mod\IeC {\`e}le d'Ising 2D avec des champs}{35}{subsection.B.4}
-\contentsline {section}{\numberline {C}Sym\IeC {\'e}trie des fonctions discr\IeC {\'e}tis\IeC {\'e}es}{37}{appendix.C}
+\contentsline {section}{\numberline {C}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e}s}{37}{appendix.C}
 \contentsline {section}{\numberline {D}Complement des algorithmes}{39}{appendix.D}
 \contentsline {subsection}{\numberline {D.1}Formules de d\IeC {\'e}rivation \IeC {\`a} 5 points}{39}{subsection.D.1}
 \contentsline {subsection}{\numberline {D.2}Propri\IeC {\'e}t\IeC {\'e}s \IeC {\'e}l\IeC {\'e}mentaires des polyn\IeC {\^o}mes de Tchebytchev}{39}{subsection.D.2}
