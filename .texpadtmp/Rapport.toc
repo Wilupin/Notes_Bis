@@ -58,12 +58,12 @@
 \contentsline {subsubsection}{\numberline {7.5.1}Le choix de la quadrature}{26}{subsubsection.7.5.1}
 \contentsline {subsubsection}{\numberline {7.5.2}Calcul des int\IeC {\'e}grales $I$, $\mathaccentV {bar}016{I}$, $\mathaccentV {tilde}07E{I}$}{26}{subsubsection.7.5.2}
 \contentsline {subsubsection}{\numberline {7.5.3}Calcul des int\IeC {\'e}grales $J$,$\mathaccentV {bar}016{J}$,$\mathaccentV {tilde}07E{J}$ }{26}{subsubsection.7.5.3}
-\contentsline {subsection}{\numberline {7.6}D\IeC {\'e}riv\IeC {\'e}es num\IeC {\'e}riques en champ }{27}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.6}D\IeC {\'e}riv\IeC {\'e}es num\IeC {\'e}riques en champ }{26}{subsection.7.6}
 \contentsline {section}{\numberline {8}Resultats : Ising 2D}{27}{section.8}
 \contentsline {subsection}{\numberline {8.1}Complexit\IeC {\'e} algorithmique et parall\IeC {\'e}lisation - probl\IeC {\`e}me de rapidit\IeC {\'e}}{27}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Probl\IeC {\`e}me de pr\IeC {\'e}cision des int\IeC {\'e}grales}{28}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Estimation de la temp\IeC {\'e}rature critique et de l'exposant critique $\eta $}{28}{subsection.8.3}
-\contentsline {section}{\numberline {9}Conclusion}{29}{section.9}
+\contentsline {section}{\numberline {9}Conclusion}{28}{section.9}
 \contentsline {section}{\numberline {A}Outils pour le d\IeC {\'e}veloppement des \IeC {\'e}quations}{31}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Notations des normes}{31}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Transform\IeC {\'e}e de Fourier}{31}{subsection.A.2}

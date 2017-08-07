@@ -666,7 +666,7 @@ Quand $k$ varie de $\Lambda$ vers $0$, $t$ varie de $0$ vers $-\infty$, c'est do
 	\Gamma_\Lambda [\phiv] = H[\phiv] \, .
 	\label{eq:initFlotBMW}
 \end{equation}
-Nous avons une équation différentielle avec une condition initiale $\Gamma_\Lambda$ connue permettant d'accéder à $\Gamma_{k \to 0} = \Gamma$. Notons que l'on mélange dans cette équation les notations $t$ et $k$ par convention.\\
+Nous avons une équation différentielle avec une condition initiale $\Gamma_\Lambda$ connue permettant d'accéder à $\Gamma_{k \to 0} = \Gamma$. Notons que l'on mélange dans cette équation les notations équivalentes $t$ et $k$ par convention. \\
 
 
 
@@ -713,7 +713,7 @@ Notons que les intégrales dans cette équation de flot sont tronquées par la f
 
 Cette équation est soluble numériquement. Sa condition initiale vient de \refeq{initFlotBMW},  
 \begin{equation}
-	\Gamma^{(2)}_\Lambda(\pv, \phi) = \left. \derd{H[\phi]}{\phi(-\pv)\phi(\pv)} \right|_{\phi \text{ unif.}}
+	\Gamma^{(2)}_\Lambda(\pv, \phi) = \left. \derd{^{(2)}H[\phi]}{\phi(-\pv)\delta\phi(\pv)} \right|_{\phi \text{ unif.}}
 	\label{eq:initBMW}
 \end{equation}
 Nous n'avons cependant pas de conditions aux bord pour l'équation de flot BMW en $\pv$ et $\phi$. Ceci ne pose pas de problème et pourra tout de même être traité numériquement. On fait l'hypothèse physique qu'il existe une solution et une seule à ces équations. Enfin, pour conserver une précision maximale dans l'approximation cette équation pourra être couplée à l'équation de flot du potentiel effectif $V_k$ qui fait intervenir $\Gamma_k^{(2)}(\pv, \phi)$ que nous pouvons maintenant calculer.
@@ -732,6 +732,7 @@ Sans entrer dans le détail, pour trouver une telle solution on réécrit l'équ
 Trouver une solution de point fixe se traduit, dans notre cas, par trouver une solution de l'équation de flot BMW adimensionnée $\tilde{\Gamma}^{*(2)}_k$ telle que
 \begin{equation}
 \lim\limits_{k \to 0} \partial_t \tilde{\Gamma}^{*(2)}_k = 0,
+\label{eq:ptFixe}
 \end{equation}
 Pour trouver la température critique d'un système on cherche donc une solution ayant cette propriété en faisant varier la température dans la condition initiale\footnote{Cette recherche ne se fait pas aléatoirement et peut être réalisée à l'aide d'une dichotomie.}. C'est donc plus exactement $\Gamma^{*(2)} = \tilde{\Gamma}^{*(2)}_{k \to 0}$, correspondant à un système soumis à sa température critique, qui nous permet de donner une valeur à $\eta$ et $\nu$. \\
 
@@ -812,13 +813,13 @@ L'équation de flot BMW (cf. \refann{BMWON}), couplée à l'équation du potenti
 \begin{equation}
 	\tY_\Lambda(\tp, \trho) = 0 \quad  \text{et} \quad \tW_\Lambda(\trho) = \tilde{r}_0 + \tilde{u}_0\trho
 \end{equation}
-où $\tilde{r}_0$ et $\tilde{u}_0$ viennent de $r_0$ et $u_0$ (c.f. \refeq{hamiltCont}). Les intégrales $\tI$ et $\tJ$ sont de la même forme que $I_n$ et $J_n$ introduites en \refeq{JI} : $\tJ_n(\tp, \trho) \propto J_n(\pv, \rho)$ et donc $\tI_n \propto I_n$ aussi. La fonction $\tilde{u}_k$ est définie en \refann{BMWON}. On rappelle que $\partial_t ... = k \partial_k ...$. Nous faisons l'hypothèse physique selon laquelle il existe une solution et une seule à ce problème.\\
+où $\tilde{r}_0$ et $\tilde{u}_0$ viennent de $r_0$ et $u_0$ (c.f. \refeq{hamiltCont}). Les intégrales $\tI$ et $\tJ$ sont de la même forme que $I_n$ et $J_n$ introduites en \refeq{JI} : $\tJ_n(\tp, \trho) \propto J_n(\pv, \rho)$ et donc $\tI_n \propto I_n$ aussi. La fonction $\tilde{u}_k$ est définie en \refann{BMWON}. On rappelle que $t = \ln(k/\Lambda)$ et $\partial_t ... = k \partial_k ...$. Nous faisons l'hypothèse physique selon laquelle il existe une solution et une seule à ce problème.\\
 
-Pour chercher la température critique du système on cherche une solution de point fixe. C'est à dire que l'on résout le système différentiel précédent pour différentes valeurs de $\tilde{r}_0$. Pour cela on teste plusieurs $\tilde{r}_0$ avec une dichotomie et avec des valeurs initiales prises aléatoirement jusqu'à ce que l'on trouve une solution $(\tY_k^*, \tW_k^*)$ telle que $\lim_{k\to 0} \partial_t \tW_k^* = 0$ et $\lim_{k\to 0} \partial_t \tY_k^* = 0$. Cette condition correspond, avec la définition de $\tY$ et $\tW$, à la définition d'un solution de point fixe $\tilde{\Gamma}_k^{*(2)}$. \\
+Pour chercher la température critique du système on cherche une solution de point fixe. C'est à dire que l'on résout le système différentiel précédent pour différentes valeurs de $\tilde{r}_0$. Pour cela on teste plusieurs $\tilde{r}_0$ avec une dichotomie et avec des valeurs initiales prises aléatoirement jusqu'à ce que l'on trouve la solution $(\tY_k^*, \tW_k^*)$ telle que $\lim_{k\to 0} \partial_t \tW_k^* = 0$ et $\lim_{k\to 0} \partial_t \tY_k^* = 0$. Cette condition correspond, avec la définition de $\tY$ et $\tW$, à la définition d'un solution de point fixe $\tilde{\Gamma}_k^{*(2)}$ (c.f. \refeq{ptFixe}). \\
 
 On peut aussi montrer qu'avec la définition donnée de $\eta_k$, si l'on à l'on a introduit la température critique comme température dans la condition initiale alors on retrouve l'exposant critique $\eta$ avec
 \begin{equation}
-	\lim_{k \to 0} \eta_k^ = \eta	
+	\lim_{k \to 0} \eta_k = \eta	
 \end{equation}
 
 
@@ -864,9 +865,9 @@ Pour la discrétisation en "temps" $t$, nous sommes dans l'obligation d'utiliser
 
 Ensuite nous différencions la dépendance en champ (i.e. en $\trho$) à celle en moment (i.e. $\tp$) des fonctions inconnues. Pour ce qui est de la dépendance en champ, il suffit de prendre une grille fixe finie de points $\{ \trho_i \}_i$ régulièrement espacés dans $[0, \trho_{max}]$, où $\trho_{max}$ est choisi suffisamment grand. Les dérivées selon cette variable se calculent alors par des schémas différences finis d'ordre 5. \\
 
-Enfin pour la dépendance en moment la discrétisation se fait dans une boite $[0, \tp_{max}]$ où $\tp_{max}$ est choisi aussi suffisamment grand. Cependant les choses sont plus compliquées car il faut à la fois pouvoir facilement calculer des dérivées selon $\tp$, mais aussi intégrer selon cette même variable afin d'obtenir les intégrales $\tI$ et $\tJ$.  Le calcul des intégrales $\tJ(\tp, \trho)$ pour tout $\tp$ et $\trho$ de la discrétisation est ce qui demande le plus de temps dans l'exécution du code. Dans ces premières versions la discrétisation était faite sur une grille fixe de points régulièrement espacés et les intégrales étaient calculées par des méthodes de Simpson. Cependant cela s'est avéré ne pas être assez précis dans certaines configurations, les algorithmes n'étaient pas robustes. Pour palier à ce problème et pour calculer correctement $\tilde J_3$ c'est une décomposition pseudo spectrale de la partie en impulsion des fonctions inconnues qui a été mise en place. Plus précisément, la dépendance en moment des fonctions inconnues est exprimée par une décomposition en série de polynômes de Tchebytchev. 
+Enfin pour la dépendance en moment la discrétisation se fait dans une boite $[0, \tp_{max}]$ où $\tp_{max}$ est choisi aussi suffisamment grand. Cependant les choses sont plus compliquées car il faut à la fois pouvoir facilement calculer des dérivées selon $\tp$, mais aussi intégrer selon cette même variable afin d'obtenir les intégrales $\tI$ et $\tJ$.  Le calcul des intégrales $\tJ(\tp, \trho)$ pour tout $\tp$ et $\trho$ de la discrétisation est ce qui demande le plus de temps dans l'exécution du code. Dans ces premières versions la discrétisation était faite sur une grille fixe de points régulièrement espacés et les intégrales étaient calculées par des méthodes de Simpson. Cependant cela s'est avéré ne pas être assez précis dans certaines configurations, les algorithmes n'étaient pas robustes. Pour palier à ce problème et pour calculer correctement $\tilde J_3$ c'est une décomposition pseudo spectrale de la partie en impulsion des fonctions inconnues qui a été mise en place dans la version sur laquelle nous avons commencé à travailler. Plus précisément, la dépendance en moment des fonctions inconnues est exprimée par une décomposition en série de polynômes de Tchebytchev. 
 
-La décomposition pseudo-spectrale signifie alors qu'à chaque pas de temps de la résolution on calcule et conserve en mémoire pour le pas de temps suivant la valeur de la fonction au point d'interpolation ainsi que les coefficients de sa décomposition en série de polynôme de Tchebytchev. Les intégrales peuvent alors être calculées par une quadrature de Gauss-Legendre. \\
+La décomposition pseudo-spectrale signifie alors qu'à chaque pas de temps $t=\ln(k/\Lambda)$ de la résolution on calcule et conserve en mémoire pour le pas de temps suivant la valeur de la fonction au point d'interpolation ainsi que les coefficients de sa décomposition en série de polynôme de Tchebytchev. Les intégrales peuvent alors être calculées par une quadrature de Gauss-Legendre. \\
 
 Nous détaillons alors les différents aspects numériques des discrétisations que nous avons utilisé.
 
@@ -911,7 +912,7 @@ K \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq
 \end{equation}
 
 
-\vspace*{11pt}
+%\vspace*{11pt}
 
 \subsection{Discrétisation en moment}
 
@@ -921,7 +922,7 @@ K \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq
 
 \label{sec:ExprCoeff}
 
-Pour la discrétisation en moments, afin de calculer, entre autre, les intégrales précédentes, nous avons choisi d'utiliser des polynômes de Tchebytchev. Dans \cite{Tchebychev} il est démontré les propriétés suivantes : \\
+Pour la discrétisation en moments, afin de pouvoir calculer, entre autre, les intégrales précédentes, nous avons choisi d'utiliser des polynômes de Tchebytchev. Dans \cite{Tchebychev} il est démontré les propriétés suivantes : \\
 
 \noindent 
 \textbf{Décomposition sur une base de Tchebytchev}. {\itshape 
@@ -957,7 +958,7 @@ On écrit, pour $n$ suffisamment grand, $f \simeq S_n[f]$. \\
 }
 
 
-La présence du régulateur à été introduite dans le NPRG pour permettre de gagner en régularité dans les équations et pouvoir effectuer des calculs de manière continue (contrairement au RG, où l'on procède par itérations successives). Avec le régulateur $\Cc^\infty$ que nous avons choisi, on peut supposer que la solution $(\tY, \tW)$ du système est couple de fonctions extrêmement régulières. Nous pouvons au moins, pour appuyer ce propos, étudier la régularité des fonctions du schéma semi-discrétisé en temps. \\
+La présence du régulateur à été introduite dans le NPRG pour permettre de gagner en régularité dans les équations et pouvoir effectuer des calculs de manière continue (contrairement au RG, où l'on procède par itérations successives). Avec le régulateur $\Cc^\infty$ que nous avons choisi, on peut supposer que la solution $(\tY, \tW)$ du système est un couple de fonctions extrêmement régulières. Nous pouvons au moins, pour appuyer ce propos, étudier la régularité des fonctions du schéma semi-discrétisé en temps. \\
 \indent
 On pose $n \in \N$. On note $(t_0, t_1, .. t_n, ..)$ l'ensemble des temps discrets utilisés dans le schéma d'Euler. On note $\tY_{k_n}$ la fonction $\tY_k$ au temps discret $t_n$. Nous avons montré que, sous certaines hypothèses cohérentes avec ce que l'on souhaite obtenir, la fonction $\tY_{k_n}$ est une fonction régulière (au moins de classe $\Cc^1$) sur $[0, +\infty[^2$ et donc sur $[0, \tp_{max}]$. Ceci justifie alors l'utilisation des polynômes de Tchebytchev pour l'interpolation des fonctions dépendant d'un moment. On utilise donc les propriétés précédentes pour $a=0$ et $b = \tp_{max}$. 
 
@@ -972,11 +973,11 @@ Afin de calculer la fonction aux points d'interpolation lorsque cela est nécess
 
 \noindent
 \textbf{Algorithme de Clenshaw}. {\itshape
-Soit, de manière générale, une suite de polynômes $\{\Pc_m\}_{m \in \N}$ liés par la relation
+Soit, une suite de polynômes $\{\Pc_m\}_{m \in \N}$ liés par la relation, pour tout $x \in [-1,1]$, 
 \begin{equation}
-  \forall x \in [-1, 1] \quad \Pc_{m+1}(x) = u_m(x)\Pc_m(x) + v_m(x)\Pc_{m-1}(x)
+ \Pc_{m+1}(x) = u_m(x)\Pc_m(x) + v_m(x)\Pc_{m-1}(x)
 \end{equation}
-On souhaite calculer, pour $x \in [-1, 1]$ donné, 
+On souhaite calculer, pour $x \in [-1, 1]$ et $\{a_l\}_l$ donnés, 
 \begin{equation}
   S = \sum_{l=0}^{n} a_l \Pc_l(x)
 \end{equation}
@@ -1011,7 +1012,7 @@ Ainsi, pour calculer $f(x)$ pour $x \in [a,b]$, pour une décomposition en séri
   \end{algorithmic}
 \end{algorithm}
 
-Cette méthode \cite{clenshaw1955note} est plus robuste et légèrement plus rapide que celle qui consisterait à calculer directement la somme de la série de polynômes. En effet, on passe d'un algorithme avec $\sim 4n$ opérations à une algorithme avec $\sim 3n$ opérations en utilisant cette technique pour des polynômes de Tchebytchev. Le gain est faible mais cela sera peut être plus particulièrement utile en dimension 2 pour le modèle d'Ising 2D (c.f. \refsec{NumIsing}). \\
+Cette méthode \cite{clenshaw1955note} est plus robuste et légèrement plus rapide que celle qui consisterait à calculer directement la somme de la série de polynômes. En effet, on passe d'un algorithme avec $\sim 4n$ opérations à une algorithme avec $\sim 3n$ opérations en utilisant cette technique pour des polynômes de Tchebytchev. Le gain est faible mais cela sera peut être utile en dimension 2 pour le modèle d'Ising 2D (c.f. \refsec{NumIsing}). \\
 
 
 \subsubsection{Calcul des dérivées}
@@ -1043,11 +1044,11 @@ Les systèmes ayant les mêmes propriétés de symétries et la même dimension 
 
 Nous avons tout d'abord réussi à retrouver les résultats qui été connus à l'aide du code de simulation, avant que nous le réorganisions, pour $(N=1, d=2)$. En effet l'avantage majeur de la dernière versions créée du code avait été de donner des résultats corrects pour cette configuration.
 
-La \refig{etakd2} montre l'évolution de $\eta_k$ pour plusieurs conditions initiales $\tilde{r}_0$ et donc pour plusieurs valeurs de la température à laquelle est soumise le système. On remarque que pour des temps $t<-5$, correspondant à $k < \Lambda \exp(-5)$ nous avons des courbes passant par un "quasi-plateau". Ce quasi-plateau est le signe que nous sommes tout près d'un point fixe du RG donnant $\eta_k \simeq \eta$ et donc d'une condition initiale correspondant à une température proche de la température critique su modèle $\varphiv^4$. Ainsi, sur ce plateau $k$ est alors suffisamment faible pour que l'on puisse écrire $\eta = \lim_{k\to 0} \eta_k \simeq \eta_{k<\Lambda\exp(-5)}$. 
+La \refig{etakd2} montre l'évolution de $\eta_k$ pour plusieurs conditions initiales $\tilde{r}_0$ et donc pour plusieurs valeurs de la température à laquelle est soumise le système. On remarque que pour des temps $t<-5$, correspondant à $k = \Lambda\exp(t)< \Lambda \exp(-5)$ nous avons des courbes passant par un "quasi-plateau". Ce quasi-plateau est le signe que nous sommes tout près d'un point fixe du RG donnant $\eta_k \simeq \eta$ et donc d'une condition initiale correspondant à une température proche de la température critique su modèle $\varphiv^4$. Ainsi, sur ce plateau $k$ est alors suffisamment faible pour que l'on puisse écrire $\eta = \lim_{k\to 0} \eta_k \simeq \eta_{k<\Lambda\exp(-5)}$. 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.95\columnwidth]{etakd2.pdf}
-		\caption{(La courbe se lit de gauche à droite) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$. En pointillés noirs nous avons représenté la valeur exacte attendue $\eta = 0.25$. }
+		\caption{(La courbe se lit de droite à gauche) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$. En pointillés noirs nous avons représenté la valeur exacte attendue $\eta = 0.25$. }
 		\label{fig:etakd2}
 	\end{center}
 \end{figure}
@@ -1077,14 +1078,14 @@ Pour $N=2$ nous avons eu le même problème avec l'observation de quasi-plateaux
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.95\columnwidth]{etakd21.pdf}
-		\caption{(La courbe se lit de gauche à droite) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$ pour $d=2.1$, $N=2$. Cette courbe a été obtenue après modification du calcul des intégrales. Cette courbe ne semble pas parfaite mais on peut supposer qu'elle est proche de posséder un pseudo-plateau cohérent avec ce que l'on attend $\eta \sim 0.22$. Ce pseudo-plateau n'en est peut être pas vraiment un tout de même à cause de l'effet bosselé que l'on observe en début de courbe..}
+		\caption{(La courbe se lit de droite à gauche) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$ pour $d=2.1$, $N=2$. Cette courbe a été obtenue après modification du calcul des intégrales. Cette courbe ne semble pas parfaite mais on peut supposer qu'elle est proche de posséder un pseudo-plateau cohérent avec ce que l'on attend $\eta \sim 0.22$. Ce pseudo-plateau n'en est peut être pas vraiment un tout de même à cause de l'effet bosselé que l'on observe en début de courbe..}
 		\label{fig:etakd21}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.95\columnwidth]{etakd21Bis.pdf}
-		\caption{(La courbe se lit de gauche à droite) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$ pour $d=2.1$, $N=2$. Cette courbe a été obtenue avant modification du code. On pourrait croire avoir un pseudo-plateau cependant celui ci n'est pas réaliste, la valeur $\eta = 0.194$ qu'il nous donnerait semble trop loin de ce qui est attendu pour $d=2.1$.}
+		\caption{(La courbe se lit de droite à gauche) Évolution de $\eta_k$ en fonction de $t= \ln(k/\Lambda)$ pour différentes étapes de la dichotomie sur $\tilde{r}_0$ pour $d=2.1$, $N=2$. Cette courbe a été obtenue avant modification du code. On pourrait croire avoir un pseudo-plateau cependant celui ci n'est pas réaliste, la valeur $\eta = 0.194$ qu'il nous donnerait semble trop loin de ce qui est attendu pour $d=2.1$.}
 		\label{fig:etakd21Bis}
 	\end{center}
 \end{figure}
@@ -1222,7 +1223,7 @@ L'équation \refeq{flotBMW} donne alors les trois jeux d'équations BMW pour le 
 En écrivant le système d'équation BMW \textit{dimensionné}, directement issu de \refeq{flotBMW} toutes les fonctions inconnues sont $2\pi$ périodiques selon les composantes des moments (ce qui ne serait plus le cas dans un système dimensionné). Cette propriété permet de s'affranchir de certaines approximations numériques dans le calcul des intégrales $J_n$ apparaissant dans les équations BMW. Il est donc préférable de commencer par résoudre ce système, que l'on note $(\Ec_1)$, sans réaliser d'adimensionnement pour $k$ variant de $\Lambda$ à $k_a$ (où $k_a \in ]0, 1]$ est une valeur que l'on va décrire plus loin). Le problème BMW ($\Pc_1$) à résoudre est donc \\
 
 \noindent
-{\itshape Trouver $(\Delta_k$, $X_k)$, solution de $\Ec_1$, i.e tels que pour tout $p_x \in [-\pi, \pi]$, $p_y \in [-\pi, \pi]$, $\phi \in \R$, $k\in [k_a, \Lambda]$}
+{\itshape Trouver $(\Delta_k$, $X_k)$, solution de $(\Ec_1)$, i.e tels que pour tout $p_x \in [-\pi, \pi]$, $p_y \in [-\pi, \pi]$, $\phi \in \R$, $k\in [k_a, \Lambda]$}
 
 
 \begin{align}
@@ -1276,7 +1277,7 @@ On peut alors définir enfin $k_a$ de manière à ce que $(k,\tqv) \to \partial_
 
 
 \noindent
-{\itshape Trouver $(\bDelta_k$, $\bX_k)$, solution de $\Ec_2$, i.e tels que pour tout $\tp_x \in [-\tp_{max}, \tp_{max}]$, $\tp_y \in [-\tp_{max}, \tp_{max}]$, $\phi \in \R$, $k\in [k_b, k_a]$}
+{\itshape Trouver $(\bDelta_k$, $\bX_k)$, solution de $(\Ec_2)$, i.e tels que pour tout $\tp_x \in [-\tp_{max}, \tp_{max}]$, $\tp_y \in [-\tp_{max}, \tp_{max}]$, $\phi \in \R$, $k\in [k_b, k_a]$}
 
 \begin{align}
 	\partial_t  \bDelta_k (\tp_x, \tp_y, \phi) & = 
@@ -1395,7 +1396,7 @@ Ces propriétés se transmettent aux fonctions inconnues des systèmes $(\Ec_2)$
 De cette manière on ne considère que $\phi \text{ (ou } \tphi) \in [0, \infty[$ ainsi que des moments définies sur une zone restreinte de $[-\pi, \pi]^2$ pour les fonctions inconnues de ($\Pc_1$), ou de $[-\tp_{max}, \tp_{max}]^2$ pour celles de ($\Pc_2$) ou ($\Pc_3$). On détaille plus précisément en \refig{SurfUtile} quelles sont ces zones. \\
 
 
- Enfin mentionnons que puisque $\eo$ est une fonction $2\pi$-périodique alors $\Delta_{k_n}$ l'est aussi pour tout $n\in\N$ par rapport au variables $p_x$ et $p_y$. Cette propriété qui justifie le découpage en trois des équations est perdu pour les fonctions $\bDelta_{k_n}$ et $\tY_{k_n}$.
+ Enfin mentionnons que puisque $\eo$ est une fonction $2\pi$-périodique alors $\Delta_{k_n}$ l'est aussi pour tout $n\in\N$ par rapport au variables $p_x$ et $p_y$. Cette propriété est perdu pour les fonctions $\bDelta_{k_n}$ et $\tY_{k_n}$.
 
 
 
@@ -1457,7 +1458,7 @@ avec la notation
   \end{cases}
 \end{align}
 
-Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients de $((c_{ij}))_{i,j}$ cela demande un algorithme de complexité évoluant en $\mathcal{O}(n_c^2)$. En outre pour ensuite obtenir $f(x,y)$ en tout point $(x,y) \in [a,b]^2$, il faut utiliser un algorithme qui est aussi de complexité $\mathcal{O}(n_c^2)$. Afin d'obtenir de meilleurs temps de calcul sur les interpolations à précision fixée nous avons implémenté la deuxième méthode suivante.
+Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients de $((c_{ij}))_{i,j}$ cela demande un algorithme demandant $\mathcal{O}(n_c^2)$. En outre pour ensuite obtenir $f(x,y)$ en tout point $(x,y) \in [a,b]^2$, il faut utiliser un algorithme demandant $\sim 9 n_c^2$  opérations. Afin d'obtenir de meilleurs temps de calcul sur les interpolations à précision fixée nous avons implémenté la deuxième méthode suivante.
 
 
 \vspace*{11pt}
@@ -1468,11 +1469,11 @@ Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients d
 
 Il existe une méthode plus astucieuse que celle développée précédemment, inspirée de ce qui est mis en place dans le paquet \textit{chebfun} \cite{driscoll2014chebfun} permettant justement de traiter les interpolations de Tchebytchev sous Matlab. Cette méthode est développée dans \cite{TownsendThesis}. 
 
-Au lieu de faire directement une décomposition sur une base tensorielle de polynômes de Chebychev on commence par réaliser une approximation de rang faible de la fonction que l'on souhaite approximer. Plus précisément, on considère les ensembles des racines de Tchebytchev $\left\{x_m\right\}_{0\le m \le n_c-1}$ et $\left\{y_n\right\}_{0\le m \le n_c-1}$. Alors on peut former la matrice 
+Au lieu de faire directement une décomposition sur une base tensorielle de polynômes de Chebychev on commence par réaliser une approximation de rang faible de la fonction que l'on souhaite approximer. Plus précisément, on considère les ensembles des racines de Tchebytchev noté $\left\{x_m\right\}_{0\le m \le n_c-1}$ ou $\left\{y_n\right\}_{0\le m \le n_c-1}$. On forme la matrice 
 \begin{equation}
 	\mat{F} = \( \(  f\(\frac{a+b}{2} + x_m\frac{b-a}{2}, \frac{a+b}{2} + y_n\frac{b-a}{2}\)     \)  \)_{m,n}
 \end{equation}
-et faire de cette matrice une approximation de rang faible par élimination Gaussienne avec l'algorithme suivant, en $\varepsilon$ de l'ordre de la précision machine.
+et on peut faire de cette matrice une approximation de rang faible par élimination Gaussienne avec l'algorithme suivant, en $\varepsilon$ de l'ordre de la précision machine.
 
 \begin{algorithm}[H]
   \begin{algorithmic}[1]
@@ -1494,10 +1495,10 @@ Comme nous ne connaissons exactement la fonctions $f$ discrétisée qu'aux point
 \begin{equation}
 f(x,y) \simeq \sum_{j=1}^Q d_jc^j(y)r^j(x)
 \end{equation}
-On peut alors décomposer les fonctions $c_j$ et $r_j$ sur une base de polynômes de Tchebytchev comme on peut le faire pour toute fonction d'une seule variable. \\
+On peut alors décomposer les fonctions $c_j$ et $r_j$ sur une base de polynômes de Tchebytchev comme on peut le faire pour toute fonction d'une seule variable suffisamment régulière. \\
 
 
-Afin de récupérer la valeur de $f$ en un point quelconque $(x,y) \in [a,b]^2 $ nous utilisons simplement la méthode de Clenshaw à une variable sur les fonctions $c^j$ et $r^j$ déjà mentionnée en \refsec{NumContinu}. Ainsi l'algorithme de décomposition possède une complexité en $\mathcal{O}(Q n_c)$ et il en est de même pour le calcul de $f$ en $(x,y) \in [a,b]^2$. Le gain a eu son importance pour permettre d'atteindre des résultats convenables en des temps raisonnables. En effet nous avons pour une grande partie de la résolution $Q < n_c$ de par la régularité des fonctions et nous avons observé de manière générale que cette méthode de décomposition est plus rapide et plus pratique pour calculer des dérivées en moments. \\
+Afin de récupérer la valeur de $f$ en un point quelconque $(x,y) \in [a,b]^2 $ nous utilisons simplement la méthode de Clenshaw à une variable sur les fonctions $c^j$ et $r^j$ déjà mentionnée en \refsec{NumContinu}. Ainsi l'algorithme de décomposition possède une complexité en $\mathcal{O}(Q n_c)$ et le calcul de $f$ en $(x,y) \in [a,b]^2$ demande $\sim 6Qn_c$ opérations ($< 9n_c^2$). Le gain a eu son importance pour permettre d'atteindre des résultats convenables en des temps raisonnables. En effet nous avons pour une grande partie de la résolution $Q < n_c$ de par la régularité des fonctions et nous avons observé de manière générale que cette méthode de décomposition est plus rapide et plus pratique pour calculer des dérivées en moments. \\
 
 
 
@@ -1508,11 +1509,12 @@ Pour calculer numériquement les différentes intégrales nous nous servons des 
 
 \subsubsection{Le choix de la quadrature}
 
-On interpole la partie en moment des fonctions avec des polynômes de Tchebytchev et on utilise toujours une méthode pseudo-specrtrale\footnote{c'est à dire que l'on connait à chaque pas de temps la valeur de la fonction aux points d'interpolation de Tchebythchev, ainsi que les coefficients de son développement en série de polynômes de Tchebytchev}. Il semble donc naturel de se demander si la quadrature de Gauss-Legendre est vraiment la mieux adaptée. En effet, pour gagner du temps et utiliser directement la connaissance de la fonction aux points d'interpolation nous avons pensé au calcul d'intégrale par la \emph{première règle de Fejer} \cite{waldvogel2006fast} (\refann{Quad}) qui permet cela. Les points de quadrature de cette méthode sont identiques à ceux de l'interpolation de Tchebytchev. Ainsi on s'affranchi des calculs d'interpolation.
- 
-Cependant cette méthode s'est avérée être inefficace puisque il faut de manière générale plus de points pour obtenir la même précision qu'une quadrature de Gauss Legendre. De plus le passage le plus long du code est le calcul des intégrales $J_3$, $\bJ_3$, $\tJ_3$ et cette quadrature ne permet pas de réaliser ce calcul plus vite. En effet pour calculer ces intégrales il faut évaluer les fonctions $\Delta_k$, $\bDelta_k$, $\tY_k$ en des points $(p_x+q_x, p_y+q_y,\phi)$, ce qui, à cause de la somme des impulsion nécessite, d'interpoler. Et ce, avec n'importe quelle discrétisation en impulsion faite sur une grille de points non régulièrement espacés. \\
+On interpole la partie en moment des fonctions avec des polynômes de Tchebytchev et on utilise toujours une méthode pseudo-specrtrale\footnote{c'est à dire que l'on connait à chaque pas de temps la valeur de la fonction aux points d'interpolation de Tchebythchev, ainsi que les coefficients de son développement en série de polynômes de Tchebytchev}. Il semble donc naturel de se demander si la quadrature de Gauss-Legendre est vraiment la mieux adaptée. En effet, pour gagner du temps et utiliser directement la connaissance des fonctions aux points d'interpolation nous avons pensé au calcul d'intégrale par la \emph{première règle de Fejer} \cite{waldvogel2006fast} (\refann{Quad}) qui permet cela. %Les points de quadrature de cette méthode sont identiques à ceux de l'interpolation de Tchebytchev comme nous l'avons réalisée. Ainsi pour intégrer $f$ on s'affranchi du calcul par interpolation de $f(x_i)$ pour $\{x_i\}$ les points déintégrations de Gauss-Legendre.
+ Cependant cette méthode s'est avérée être inefficace puisque il faut de manière générale plus de points pour obtenir la même précision qu'une quadrature de Gauss Legendre. De plus le passage le plus long du code est le calcul de $J_3$ (et ainsi que les versions adimensionnées $\bJ_3$ et $\tJ_3$) et cette quadrature ne permet pas de réaliser ce calcul plus vite.% En effet pour calculer ces intégrales il faut évaluer les fonctions $\Delta_k$, en des points $(p_x+q_x, p_y+q_y,\phi)$, ce qui, à cause de la somme des composantes des moments, nécessite d'interpoler.\\
 
-Une alternative complètement différente aurait alors consisté justement à ne pas utiliser une discrétisation en impulsion sur une base de polynôme de Tchebytechv mais plutôt une discrétisation en impulsion sur une grille de points régulièrement espacés. Il est alors possible d'écrire en deux dimensions une quadrature qui ne demande de connaitre la fonction à intégrer qu'aux points de discrétisations (en effet si  $p_x$ et $q_x$ appartiennent à la grille de discrétisation alors $p_x+q_x$ aussi\footnote{En utilisant la périodicité des fonctions on se ramène encore à un point de la grille quand $p_x+q_x$ en dépasse ou alors on extrapole}). Cependant les quadratures alors testées (basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis) demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en comparaison de la quadrature de Gauss-Legendre et elles sont moins pratiques que les méthodes d'interpolations. 
+Une alternative complètement différente aurait alors consisté %justement 
+à ne pas utiliser une discrétisation en impulsion sur une base de polynôme de Tchebytchev mais plutôt une discrétisation en impulsion sur une grille de points régulièrement espacés. Il est alors possible d'écrire en deux dimensions une quadrature qui ne demande de connaitre la fonction à intégrer qu'aux points de discrétisations %(en effet si  $p_x$ et $q_x$ appartiennent à la grille de discrétisation alors $p_x+q_x$ aussi\footnote{En utilisant la périodicité des fonctions on se ramène encore à un point de la grille quand $p_x+q_x$ en dépasse ou alors on extrapole}). 
+Cependant les quadratures alors testées (basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis) demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en comparaison de la quadrature de Gauss-Legendre et elles étaient moins pratiques que les méthodes d'interpolations. 
 
 
 
@@ -1571,7 +1573,7 @@ Soit $a>0$. Soit $(b,c) \in [0,a]^2$. Soit maintenant $g$ et $h$ deux fonctions 
 \end{split}
 \end{equation}
 
-Et on adopte encore la même quadrature que pour les intégrales $I$, $\bI$, $\tI$. Cependant remarquons que ce calcul impose de connaitre les valeurs de $u$ en des points $(x \pm b, y\pm c)$ qui sont en dehors du carré $[0, a]^2$. Or, à cause de la discrétisation, $u$ est une fonction que l'on connait par sa décomposition en série de polynômes de Tchebytchev sur $[0,a]^2$, ainsi, on ne peut pas connaitre la valeur de $u$ en tout $(x\pm b, y\pm c)$. Lorsque l'on s'intéresse au calcul de $J$ cela ne pose pas de problèmes car on peut utiliser la périodicité des fonctions (raison pour laquelle nous résolvons en premier lieu le système $(\Ec_1)$ dimensionné). En revanche pour $\bJ$ et $\tJ$, la périodicité est brisée dans les équations et nous sommes obligé d'extrapoler $u$ en dehors de $[0,a]^2$
+Et on adopte encore la même quadrature que pour les intégrales $I$, $\bI$, $\tI$. Cependant remarquons que ce calcul impose de connaitre les valeurs de $u$ en des points $(x \pm b, y\pm c)$ qui sont en dehors du carré $[0, a]^2$. Or, à cause de la discrétisation, $u$ est une fonction que l'on connait par sa décomposition en série de polynômes de Tchebytchev sur $[0,a]^2$ : on ne connait pas, a priori, la valeur de $u$ en tout $(x\pm b, y\pm c)$. Lorsque l'on s'intéresse au calcul de $J$ cela ne pose pas de problèmes car on peut utiliser la périodicité des fonctions (raison pour laquelle nous résolvons en premier lieu le système $(\Ec_1)$ dimensionné). En revanche pour $\bJ$ et $\tJ$, la périodicité est brisée dans les équations et nous sommes obligé d'extrapoler $u$ en dehors de $[0,a]^2$
 
 
 
@@ -1616,7 +1618,7 @@ Comme pour le modèle continu $\varphiv^4$ il est possible de paralléliser le c
 \begin{center}
 	\includegraphics[width=0.95\columnwidth]{Scalabilite.pdf}
 \end{center}
-\caption{Évolution du temps de calcul $\tau_c$ d'un pas de temps de la résolution avec le nombre $n_{proc}$ de processeurs utilisés. (points verts). Ce temps est déterminé en faisant une moyenne sur  plusieurs pas de temps de la résolution. En exécutant le code sur les ordinateurs du laboratoires limités, pour ceux que nous avons pu utiliser, à 10 ou 12 cœurs. (losanges verts). En exécutant le code sur le calculateur Mesu. Les courbes continues rouges représentent la décroissance idéale en $1/n_{proc}$. Nous pouvons remarquer que sans même paralléliser sur un nombre de cœur plus important le calcul est plus rapide sur Mesu.}
+\caption{Évolution du temps de calcul $\tau_c$ d'un pas de temps de la résolution avec le nombre $n_{proc}$ de processeurs utilisés. Ce temps est déterminé en faisant une moyenne sur  plusieurs pas de temps de la résolution. (points verts) En exécutant le code sur les ordinateurs du laboratoires limités, pour ceux que nous avons pu utiliser, à 10 ou 12 cœurs. (losanges verts) En exécutant le code sur le calculateur Mesu. Les courbes continues rouges représentent la décroissance idéale en $1/n_{proc}$. Nous pouvons remarquer que sans même paralléliser sur un nombre de cœur plus important le calcul est plus rapide sur Mesu.}
 \label{fig:timeScal}
 \end{figure}
 
@@ -1634,7 +1636,7 @@ Le nombre de processeurs sur lesquels peut être parallélisé efficacement le p
 \subsection{Problème de précision des intégrales}
 
 
-A cause de la complexité des algorithmes il n'est pas possible de choisi $n_c$ et $n_{gl}$ aussi grand qu'on le souhaite pour obtenir la precision voulue. Au début nous pensions qu'un nombre faible de points suffirait mais il s'avère que ce n'est pas spécialement le cas. En effet nous avons dû utiliser le calculateur Mesu \cite{ wiki:xxx} de l'université Pierre et Marie Curie pour pouvoir paralléliser notre programme sur un nombre de coeurs supérieur à $20$ et pouvoir augmenter $n_c$ et $n_{gl}$ sans dépasser les 72 heures permises pour une simulation sur la machine. Nous avons comparé les résultats obtenus pour différentes simulations en fixant $n_c = n_{gl} = n$ (Il s'avère que prendre $n_c \neq n_{gl}$ ne change pas vraiment en mieux les résultats). L'influence de $n$ est en \refig{etaErr}.
+A cause de la complexité des algorithmes il n'est pas possible de choisi $n_c$ et $n_{gl}$ aussi grand qu'on le souhaite pour obtenir la precision voulue. Au début nous pensions qu'un nombre faible de points suffirait mais il s'avère que ce n'est pas spécialement le cas. En effet nous avons dû utiliser le calculateur Mesu \cite{ wiki:xxx} de l'université Pierre et Marie Curie pour pouvoir paralléliser notre programme sur un nombre de coeurs supérieur à $20$ et pouvoir augmenter $n_c$ et $n_{gl}$ sans dépasser les 72 heures permises pour une simulation sur la machine. Nous avons comparé les résultats obtenus pour différentes simulations en fixant $n_c = n_{gl} = n$. L'influence de $n$ est en \refig{etaErr}.
 
 \begin{figure}[H]
 \begin{center}
@@ -1718,7 +1720,7 @@ On définit les notations utilisée pour les normes. Soit $d \in \N^*$. Soit un 
 \end{equation}
 Soit maintenant $\Omega \subset \R^d$. Soit $f \in \Cc^0(\Omega)$, on note
 \begin{equation}
-{\| f \|}_\infty =  \underset{x \in \Omega}{\text{Sup}}{|f|} \, .
+{\| f \|}_\infty =  \underset{x \in \Omega}{\text{sup}}{|f|} \, .
 \end{equation} 
 
 
