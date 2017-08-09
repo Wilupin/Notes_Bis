@@ -48,17 +48,17 @@
 \contentsline {subsubsection}{\numberline {6.3.3}Troisi\IeC {\`e}me \IeC {\'e}tape}{22}{subsubsection.6.3.3}
 \contentsline {section}{\numberline {7}M\IeC {\'e}thodes et outils num\IeC {\'e}riques pour la r\IeC {\'e}solution d'Ising 2D}{23}{section.7}
 \contentsline {subsection}{\numberline {7.1}Structure du code}{23}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{23}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{24}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions}{24}{subsection.7.3}
 \contentsline {subsection}{\numberline {7.4}Interpolation de Tchebytchev}{24}{subsection.7.4}
 \contentsline {subsubsection}{\numberline {7.4.1}D\IeC {\'e}composition}{24}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{24}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{25}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}D\IeC {\'e}composition m\IeC {\'e}thode 2}{25}{subsubsection.7.4.3}
-\contentsline {subsection}{\numberline {7.5}Le calcul des int\IeC {\'e}grales}{25}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.5}Le calcul des int\IeC {\'e}grales}{26}{subsection.7.5}
 \contentsline {subsubsection}{\numberline {7.5.1}Le choix de la quadrature}{26}{subsubsection.7.5.1}
 \contentsline {subsubsection}{\numberline {7.5.2}Calcul des int\IeC {\'e}grales $I$, $\mathaccentV {bar}016{I}$, $\mathaccentV {tilde}07E{I}$}{26}{subsubsection.7.5.2}
 \contentsline {subsubsection}{\numberline {7.5.3}Calcul des int\IeC {\'e}grales $J$,$\mathaccentV {bar}016{J}$,$\mathaccentV {tilde}07E{J}$ }{26}{subsubsection.7.5.3}
-\contentsline {subsection}{\numberline {7.6}D\IeC {\'e}riv\IeC {\'e}es num\IeC {\'e}riques en champ }{26}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.6}D\IeC {\'e}riv\IeC {\'e}es num\IeC {\'e}riques en champ }{27}{subsection.7.6}
 \contentsline {section}{\numberline {8}Resultats : Ising 2D}{27}{section.8}
 \contentsline {subsection}{\numberline {8.1}Complexit\IeC {\'e} algorithmique et parall\IeC {\'e}lisation - probl\IeC {\`e}me de rapidit\IeC {\'e}}{27}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Probl\IeC {\`e}me de pr\IeC {\'e}cision des int\IeC {\'e}grales}{28}{subsection.8.2}

@@ -813,7 +813,7 @@ L'équation de flot BMW (cf. \refann{BMWON}), couplée à l'équation du potenti
 \begin{equation}
 	\tY_\Lambda(\tp, \trho) = 0 \quad  \text{et} \quad \tW_\Lambda(\trho) = \tilde{r}_0 + \tilde{u}_0\trho
 \end{equation}
-où $\tilde{r}_0$ et $\tilde{u}_0$ viennent de $r_0$ et $u_0$ (c.f. \refeq{hamiltCont}). Les intégrales $\tI$ et $\tJ$ sont de la même forme que $I_n$ et $J_n$ introduites en \refeq{JI} : $\tJ_n(\tp, \trho) \propto J_n(\pv, \rho)$ et donc $\tI_n \propto I_n$ aussi. La fonction $\tilde{u}_k$ est définie en \refann{BMWON}. On rappelle que $t = \ln(k/\Lambda)$ et $\partial_t ... = k \partial_k ...$. Nous faisons l'hypothèse physique selon laquelle il existe une solution et une seule à ce problème.\\
+où $\tilde{r}_0$ et $\tilde{u}_0$ viennent de $r_0$ et $u_0$ (c.f. \refeq{hamiltCont}). Les intégrales $\tI_n$ et $\tJ_n$ sont de la même forme que $I_n$ et $J_n$ introduites en \refeq{JI} : $\tJ_n(\tp, \trho) \propto J_n(\pv, \rho)$ et donc $\tI_n \propto I_n$ aussi. La fonction $\tilde{u}_k$ est définie en \refann{BMWON}. On rappelle que $t = \ln(k/\Lambda)$ et $\partial_t ... = k \partial_k ...$. Nous faisons l'hypothèse physique selon laquelle il existe une solution et une seule à ce problème.\\
 
 Pour chercher la température critique du système on cherche une solution de point fixe. C'est à dire que l'on résout le système différentiel précédent pour différentes valeurs de $\tilde{r}_0$. Pour cela on teste plusieurs $\tilde{r}_0$ avec une dichotomie et avec des valeurs initiales prises aléatoirement jusqu'à ce que l'on trouve la solution $(\tY_k^*, \tW_k^*)$ telle que $\lim_{k\to 0} \partial_t \tW_k^* = 0$ et $\lim_{k\to 0} \partial_t \tY_k^* = 0$. Cette condition correspond, avec la définition de $\tY$ et $\tW$, à la définition d'un solution de point fixe $\tilde{\Gamma}_k^{*(2)}$ (c.f. \refeq{ptFixe}). \\
 
@@ -865,7 +865,7 @@ Pour la discrétisation en "temps" $t$, nous sommes dans l'obligation d'utiliser
 
 Ensuite nous différencions la dépendance en champ (i.e. en $\trho$) à celle en moment (i.e. $\tp$) des fonctions inconnues. Pour ce qui est de la dépendance en champ, il suffit de prendre une grille fixe finie de points $\{ \trho_i \}_i$ régulièrement espacés dans $[0, \trho_{max}]$, où $\trho_{max}$ est choisi suffisamment grand. Les dérivées selon cette variable se calculent alors par des schémas différences finis d'ordre 5. \\
 
-Enfin pour la dépendance en moment la discrétisation se fait dans une boite $[0, \tp_{max}]$ où $\tp_{max}$ est choisi aussi suffisamment grand. Cependant les choses sont plus compliquées car il faut à la fois pouvoir facilement calculer des dérivées selon $\tp$, mais aussi intégrer selon cette même variable afin d'obtenir les intégrales $\tI$ et $\tJ$.  Le calcul des intégrales $\tJ(\tp, \trho)$ pour tout $\tp$ et $\trho$ de la discrétisation est ce qui demande le plus de temps dans l'exécution du code. Dans ces premières versions la discrétisation était faite sur une grille fixe de points régulièrement espacés et les intégrales étaient calculées par des méthodes de Simpson. Cependant cela s'est avéré ne pas être assez précis dans certaines configurations, les algorithmes n'étaient pas robustes. Pour palier à ce problème et pour calculer correctement $\tilde J_3$ c'est une décomposition pseudo spectrale de la partie en impulsion des fonctions inconnues qui a été mise en place dans la version sur laquelle nous avons commencé à travailler. Plus précisément, la dépendance en moment des fonctions inconnues est exprimée par une décomposition en série de polynômes de Tchebytchev. 
+Enfin pour la dépendance en moment la discrétisation se fait dans une boite $[0, \tp_{max}]$ où $\tp_{max}$ est choisi aussi suffisamment grand. Cependant les choses sont plus compliquées car il faut à la fois pouvoir facilement calculer des dérivées selon $\tp$, mais aussi intégrer selon cette même variable afin d'obtenir les intégrales $\tI$ et $\tJ$.  Le calcul des intégrales $\tJ(\tp, \trho)$ pour tout $\tp$ et $\trho$ de la discrétisation est ce qui demande le plus de temps dans l'exécution du code. Dans ces premières versions la discrétisation était faite sur une grille fixe de points régulièrement espacés et les intégrales étaient calculées par des méthodes de Simpson. Cependant cela s'est avéré ne pas être assez précis dans certaines configurations, les algorithmes n'étaient pas robustes. Pour palier à ce problème et pour calculer correctement $\tilde J_3$ c'est une décomposition pseudo spectrale de la partie en moment des fonctions inconnues qui a été mise en place dans la version sur laquelle nous avons commencé à travailler. Plus précisément, la dépendance en moment des fonctions inconnues est exprimée par une décomposition en série de polynômes de Tchebytchev. 
 
 La décomposition pseudo-spectrale signifie alors qu'à chaque pas de temps $t=\ln(k/\Lambda)$ de la résolution on calcule et conserve en mémoire pour le pas de temps suivant la valeur de la fonction au point d'interpolation ainsi que les coefficients de sa décomposition en série de polynôme de Tchebytchev. Les intégrales peuvent alors être calculées par une quadrature de Gauss-Legendre. \\
 
@@ -889,25 +889,23 @@ Enfin il pourrait sembler étrange d'utiliser une discrétisation en champ d'ord
 \subsection{Calcul des intégrales}
 
 Le plus gros problème rencontré dans la formulation discrétisée du problème a été le calcul des intégrales $\tJ$. 
-Grâce aux symétries des fonctions que l'on intègre on peut développer une expression de ces intégrales telle que la dimension $d$ devienne un simple paramètre. En effet calculer l'intégrale $\tJ$ revient à calculer une intégrale de la forme 
+Grâce aux symétries des fonctions que l'on intègre on peut développer une expression de ces intégrales telle que la dimension $d$ devienne un simple paramètre. En effet calculer l'intégrale $\tJ_n$ revient à calculer 
 \begin{equation}
-K = \int_{\R^d} f(\tqv^2)g((\tpv+\tqv)^2) \, \dd \, \tqv \, ,
+\tJ_n(\tp,\trho) = \int_{\R^d} f(\tqv^2,\trho)g((\tpv+\tqv)^2,\trho) \, \dd \, \tqv \, ,
 \end{equation}
 où $f$ et $g$ sont deux fonctions. Et il en est de même pour les intégrales $\tI$ en prenant $\pv = 0$ dans l'expression précédente. On pose alors $\tqv = \tq_1 \uv + \tqv_2$, où $\uv = \tpv/\|\tpv\|$ et $\tqv_2$ est orthogonal à $\uv$. Il vient alors
-
 \begin{equation}
-K = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2)
+\tJ_n(\tp, \rho) = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2, \rho) \, ,
 \end{equation}
-En posant
+en posant
 \begin{equation}
-h (\tp, \tq_1, \tq_2) \equiv f(\tq_1^2 + \tq_2^2) g(\tp^2 + \tq_1^2 + \tq_2^2 + 2\tp\tq_1)
+h (\tp, \tq_1, \tq_2, \trho) \equiv f(\tq_1^2 + \tq_2^2, \trho) g(\tp^2 + \tq_1^2 + \tq_2^2 + 2\tp\tq_1, \trho) \, .
 \end{equation}
-
 Le coefficient $S_{d-1}$ est un pré-facteur réel. De ce fait, le calcul d'une intégrale à $d$ dimensions se ramène au calcul de deux intégrales seulement, qui peut être fait chacun sans problèmes avec une interpolation de Gauss-Legendre (\refann{Quad}). En pratique, les intégrales étant coupées par le régulateur nous réalisons l'intégration jusqu'à une borne $\tq_{max}$ telle que $\|\tqv\|_2 < \tq_{max} < \tp_{max}$ (où $\tp_{max}$ est la borne supérieure de la discrétisation en moments). Comme on fait l'hypothèse vraisemblable selon laquelle les inconnues de notre système à résoudre son régulières on peut réaliser l'intégration efficacement en utilisant un quadrature de Gauss-Legendre. En notant, $\{\xi_i\}_{i \in \bbrac{1, n_{gl}}}$ les points de la quadrature de Gauss-Legendre et $\{w_i\}_i$ les poids associées nous calculons 
 \begin{equation}
 \begin{split}
-K \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \) \right]^{d-2} \\
-\times \sum_{j=1}^{n_{gl}} w_j h\(\tp,\frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \), \frac{\tq_{max}}{\sqrt{2}} \xi_j \)
+\tJ_n(\tp, \trho) \simeq S_{d-1}\frac{\tq_{max}^2}{2} \sum_{i = 1}^{n_{gl}} w_i \left[ \frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \) \right]^{d-2} \\
+\times \sum_{j=1}^{n_{gl}} w_j h\(\tp,\frac{\tq_{max}}{2\sqrt{2}}\( 1+ \xi_i \), \frac{\tq_{max}}{\sqrt{2}} \xi_j , \trho\)
 \end{split}
 \end{equation}
 
@@ -1066,7 +1064,7 @@ Ces résultats sont ceux qui avaient déjà été trouvé avec le même code (qu
 \subsection{Résultats pour $(N = 2,3, d=2)$}
 
 
-Nous nous sommes par la suite intéressé au cas $N>1$. Nous savions que le code donnaient de bons résultats pour les configurations $N = 2$ et $N=3$ à $d=3$. Nous nous sommes donc ensuite plus particulièrement intéressé au cas $N = 2$ et $N=3$ pour $d = 2$. Nous savions que le code ne fonctionnait, en revanche, pas avec ces paramètres. Nous avons essayé de trouver et résoudre les problèmes. Pour cela, à $N=2,3$ fixé, nous avons repris les conditions initiales de l'équations menant à un quasi-plateau pour $d=3$ et nous avons cherché un quasi-plateau en $d= 2.9$ en utilisant des conditions initiales très proches. Nous avons ensuite utilisé le résultat obtenu avec $d = 2.9$ pour une valeur de $d < 2.9$ et ainsi de suite nous avons fait descendre $d$ par petits pas jusqu'à trouver des irrégularités. \\
+Nous nous sommes par la suite intéressé au cas $N>1$. Nous savions que le code donnait de bons résultats pour les configurations $N = 2$ et $N=3$ à $d=3$. Nous nous sommes donc ensuite plus particulièrement intéressé au cas $N = 2$ et $N=3$ pour $d = 2$. Nous savions que le code ne fonctionnait, en revanche, pas avec ces paramètres. Nous avons essayé de trouver et résoudre les problèmes. Pour cela, à $N=2,3$ fixé, nous avons repris les conditions initiales de l'équations menant à un quasi-plateau pour $d=3$ et nous avons cherché un quasi-plateau en $d= 2.9$ en utilisant des conditions initiales très proches. Nous avons ensuite utilisé le résultat obtenu avec $d = 2.9$ pour une valeur de $d < 2.9$ et ainsi de suite nous avons fait descendre $d$ par petits pas jusqu'à trouver des irrégularités. \\
 
  La première difficulté que nous avons rencontré lors de ces simulations a été la présence probable d'un pôle dans l'expression du propagateur $G_k(q, \rho)$ en $(q = 0, \rho = 0)$ qui se trouve être intégré dans les expressions de $\tI$ et $\tJ$. En effet il semblerait que plus on descend en dimension (i.e. plus on se rapproche de $d=2$) plus la discrétisations numériques de $G_k(q, \rho)$ se rapproche de ce pole à partir d'une certaine étape de la résolution. Ce pôle n'apparait cependant que pour certaines conditions initiales (i.e. $\tilde{r}_0, \tilde{u}_0$) mais il provoque des instabilités qui peuvent nous empêché d'observer un quasi-plateau de $\eta_k$. La deuxième difficulté à été le temps à partir duquel il était possible d'apercevoir un quasi-plateau. En effet ce temps augmentait pour des valeurs de $d$ inférieures à $2.5$ - $2.4$ (alors que pour $d=3$ il fallait attendre $t<-5$ il fallait ici attendre $t<-8$ ou moins). \\
  
@@ -1253,7 +1251,7 @@ Les conditions initiales de ce problème viennent de la condition initiale gén�
 
 
 
-Dans un second temps, alors que $k$ devient relativement faible (i.e. inférieur à la valeur $k_a<1$ introduite précédemment), malgré la mise à profit de la périodicité des fonctions, nous rencontrons des problèmes de précision dans le calcul des intégrales numériques $I_n$ et $J_n$ qui apparaissent dans le système $(\Ec_1)$. Or $k$ n'est alors pas assez faible à ce moment de la résolution pour pouvoir passez à un système totalement adimensionné car cela nécessite d'autres approximations que l'on ne peut pas faire.  On utilise alors un nouveau système d'équations $(\Ec_2)$ dans lequel nous avons adimensionné les moments. En fait ceci correspond seulement à écrire les équations en fonction de $\tilde{\pv} = \pv/k$ (ou $\tqv = \qv/k$) au lieu de $\pv$ (ou $\qv$). Ces nouvelles équations prennent pour conditions initiales le résultats de la résolution numérique de $(\Ec_1)$ en $k = k_a$. \\
+Dans un second temps, alors que $k$ devient relativement faible (i.e. inférieur à la valeur $k_a<1$ introduite précédemment), malgré la mise à profit de la périodicité des fonctions, nous rencontrons des problèmes de précision dans le calcul des intégrales numériques $I_n$ et $J_n$ qui apparaissent dans le système $(\Ec_1)$. Or $k$ n'est alors pas assez faible à ce moment de la résolution pour pouvoir passez à un système totalement adimensionné car cela nécessite d'autres approximations que l'on ne peut pas faire.  On utilise alors un nouveau système d'équations $(\Ec_2)$ dans lequel nous avons adimensionné les moments. En fait ceci correspond seulement à écrire les équations en fonction de $\tilde{\pv} = (\tp_x, \tp_y) = \pv/k = (p_x/k, p_y/k)$ (ou $\tqv = \qv/k$) au lieu de $\pv$ (ou $\qv$). Ces nouvelles équations prennent pour conditions initiales le résultats de la résolution numérique de $(\Ec_1)$ en $k = k_a$. \\
 
 \begin{figure}[H]
 \begin{center}
@@ -1337,26 +1335,34 @@ On pourra ici aussi se référer à \refann{Ising2D} pour les différentes notat
  
 De même que dans les équations du modèles $\varphiv^4$ si l'on trouver une solution de point fixe alors $\eta_k^*$ associée vérifie $\eta = \eta_{k \to 0}^*$ et on détermine l'exposant $\eta$ recherché ainsi. \\
 
-En conclusion l'important ici est cette résolution numérique des équations que l'on découpe en trois problèmes $(\Pc_1)$,  $(\Pc_2)$ et $(\Pc_3)$ distincts pour conserver une précision maximale lors de la résolution numérique. On remarque aussi que comme dans le modèle continu $\varphiv^4$, l'équation de flot BMW \refeq{flotBMW} ne possédant pas de conditions au bords, nos équations n'en possèdent pas non plus.
+En conclusion l'important ici est cette résolution numérique des équations que l'on découpe en trois problèmes $(\Pc_1)$,  $(\Pc_2)$ et $(\Pc_3)$ distincts (associés au systèmes d'équations $(\Ec_1)$,  $(\Ec_2)$ et $(\Ec_3)$) pour conserver une précision maximale lors de la résolution numérique. On remarque aussi que comme dans le modèle continu $\varphiv^4$, l'équation de flot BMW \refeq{flotBMW} ne possédant pas de conditions au bords, nos équations n'en possèdent pas non plus.\\
 
-\vspace*{11pt}
+
 
 \section{Méthodes et outils numériques pour la résolution d'Ising 2D}
 
 \label{sec:NumIsing}
-Nous allons passer en revue et justifier ici les principales méthodes numériques que nous avons mises en œuvre pour tenter de résoudre les systèmes d'équations précédents. En grande partie nous avons repris la méthodologie générale utilisée pour la résolution du modèle continu.
+Nous allons passer en revue et justifier ici les principales méthodes numériques que nous avons mises en œuvre pour tenter de résoudre les systèmes d'équations précédents. En grande partie nous avons repris la méthodologie générale utilisée pour la résolution du modèle continu $\varphiv^4$.
 
 
 \subsection{Structure du code}
 
-La différence principale entre les équations du modèle continu $\varphiv^4$ et ces nouvelles équations est qu'ici pour les dimensions de moments les fonctions ne dépendent plus seulement de $p$ (i.e. la norme de $\pv$) mais de ces deux composantes $p_x$ et $p_y$. Ainsi nous avons conservé le choix de réaliser des intégrations avec la méthode de Gauss-Legendre tout en discrétisant selon les variables de moment avec une méthode pseudo-spectrale de Tchebytchev pour des raisons détaillées dans les prochaines sections. La difficulté a alors résidé en la réécriture des méthodes à une dimension (i.e. pour des fonctions d'une variable de moment) déjà utilisées dans le modèle $ \varphiv^4$ en des méthodes à deux dimensions, pour des fonctions de deux variables de moment. Le plus gros défit dans la simulation est ici aussi de calculer les intégrales $J, \bJ, \tJ$. \\
+Pour la discrétisation en \textit{temps du RG} $t$ le plus simple a été de conserver un schéma d'Euler explicite à cause de la non-linéarité des équations. Nous n'avons pas utilisé de schéma de Rung-Kutta car de manière générale le schéma d'Euler s'est avéré efficace.\\
 
-Pour la discrétisation en champ nous avons privilégié la variable $\phi$ dans les équations et non pas $\rho = \phi^2/2$ que nous avions utilisé pour le modèle continu $\varphiv^4$ à cause de différents problèmes numériques. Nous avons toutefois conservés sur une discrétisation par une grille fixe et des calculs de dérivées par rapport à $\phi$ à l'aide de schémas aux différences finies à 5 points. \\
+La différence principale entre les équations du modèle continu $\varphiv^4$ et ces nouvelles équations est qu'ici pour les dimensions de moments les fonctions ne dépendent plus seulement de $p$ (i.e. la norme de $\pv$) mais de ses deux composantes $p_x$ et $p_y$. Le plus gros défit dans la simulation est en fait de calculer les intégrales $J, \bJ, \tJ$ apparaissant respectivement dans $(\Ec_1)$, $(\Ec_2)$ et $(\Ec_3)$. En effet, pour $n\in\N^*$ $J_n$, par exemple, s'exprime comme 
+\begin{equation}
+	J_n(p_x, p_y, \phi) = \int_\qv u(q_x+p_x, q_y+p_y, \phi) h(q_x,q_y, \phi) \, ,
+\end{equation}
+où $u$ et $h$ sont des fonctions de $\Delta_k$ et $X_k$. Les sommes $p_x+q_x$ et $p_y+q_y$ sont un gros problème pour l'intégration numérique. En effet il est nécessaire de calculer l'intégrale, à tout pas de temps $t$, pour tout $\phi$ et pour tout $p_x$ et $p_y$ de la discrétisation en moments. De plus il faut pouvoir trouver une quadrature réalisant ce calcul avec précision. Ainsi nous avons conservé le choix de réaliser des intégrations avec la méthode de Gauss-Legendre. Ceci nécessite de discrétiser les fonctions inconnues $\Delta_k$, $\bDelta_k$,$X_k$, ... selon les variables de moment avec une méthode d'interpolation pseudo-spectrale. Nous avons utilisé une méthode d'interpolation sur les polynômes de Tchebytchev. La difficulté a résidé en la réécriture des méthodes à une dimension (i.e. pour des fonctions d'une variable de moment $p$) déjà utilisées dans le modèle $ \varphiv^4$ en des méthodes à deux dimensions, pour des fonctions de deux variables de moment $(p_x, p_y)$. 
+
+Une alternative aurait été d'utiliser une discrétisation des variables de moment $(p_x, p_y)$ sur une grille en deux dimensions de points régulièrement espacés. Il est alors possible d'écrire une quadrature qui permet de calculer $J$, $\bJ_3$ et $\tJ_3$ avec des algorithmes de faible complexité (en comparaison de la méthode par interpolation de Tchebytchev et quadrature de Gauss-Legendre). Cependant les quadratures alors testées\footnote{basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis} demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en des temps de calculs raisonnables et elles restaient, de manière générale, moins pratiques que la méthodes d'interpolation. \\
 
 
-Enfin, pour la discrétisation en \textit{temps du RG} $t$ le plus simple a été de conserver un schéma d'Euler explicite à cause de la non-linéarité des équations. Nous n'avons pas utilisé de schéma de Rung-Kutta car de manière générale le schéma d'Euler s'est avéré efficace.\\
+Enfin, pour la discrétisation en champ nous avons privilégié la variable $\phi$ dans les équations et non pas $\rho = \phi^2/2$ que nous avions utilisé pour le modèle continu $\varphiv^4$ à cause de différents problèmes numériques. Nous avons toutefois conservés sur une discrétisation par une grille fixe et des calculs de dérivées par rapport à $\phi$ à l'aide de schémas aux différences finies à 5 points. \\
 
-Ce nouveau code est donc structuré de la même manière que le code du modèle continu $\varphiv^4$. En effet, avoir réécrit le code de la simulation du modèle continu $\varphiv^4$ en C++ de façon modulable à l'aide de classes nous a permis, de manière générale, de reprendre ou d'adapter beaucoup des fonctions numériques. Pour avoir une vue générale de la structure il est donc possible de se reporter encore à la figure \refig{org}. Nous détaillons, maintenant dans la prochaine section les problèmes que l'on a pu rencontrer dans l'écriture des codes de simulations ainsi que les techniques retenues qui ont fonctionné et leurs avantages comparés à celles qui ont échoué. \\
+
+
+Ce nouveau code est donc structuré de la même manière que le code du modèle continu $\varphiv^4$. En effet, avoir réécrit le code de la simulation du modèle continu $\varphiv^4$ en C++ de façon modulable à l'aide de classes nous a permis, de manière générale, de reprendre ou d'adapter beaucoup des fonctions numériques. Pour avoir une vue générale de la structure il est donc possible de se reporter encore à la figure \refig{org}. Nous détaillons, maintenant dans la prochaine section les problèmes que l'on a pu rencontrer dans l'écriture des codes de simulations ainsi que les techniques retenues qui ont fonctionné et leurs avantages comparés à celles qui ont échoué. Nous présentons ensuite les différentes techniques plus en détails. 
 
 
 
@@ -1366,20 +1372,24 @@ Ce nouveau code est donc structuré de la même manière que le code du modèle 
 
 \label{sec:Problemes}
 
-Tout d'abord nous avions écrit les équations en utilisant la variable $\rho = \phi^2/2$ pour résoudre $(\Pc_1)$. Cependant nous avons pu observer des instabilités dans le calcul des dérivées en $\rho$ pour $\rho = \rho_{max}$ (avec $\rho_{max}$ la limite supérieure de la grille de discrétisation en $\rho$). Nous avons réussi à résoudre le problème en descendant en ordre dans les schémas de calcul des dérivées en passant d'un ordre 5 à l'ordre 3. Cependant nous avons ensuite rencontré des instabilités au niveau du calcul des dérives $\partial_{\rho}$ autour de $\rho = 0$. Pour régler le problème nous avons alors utilisé la variable $\phi$. En effet il apparait alors des propriétés de parité des fonctions qui nous ont permis de donner des valeurs exactes aux dérivées en $\phi = 0$ (i.e. $\rho = 0$) et résoudre le problème. En outre la variable $\phi$ nous a aussi permis de repasser avec des dérivées en champs à 5 points sans difficultés pour $\phi = \phi_{max}$. \\
+Tout d'abord nous avions écrit les équations en utilisant la variable $\rho = \phi^2/2$ pour résoudre $(\Pc_1)$. Cependant nous avons pu observer des instabilités dans le calcul des dérivées en $\rho$ pour $\rho = \rho_{max}$ (avec $\rho_{max}$ la limite supérieure de la grille de discrétisation en $\rho$). Nous avons réussi à résoudre le problème en descendant en ordre dans les schémas de calcul des dérivées en passant d'un ordre 5 à l'ordre 3. Cependant nous avons ensuite rencontré des instabilités au niveau du calcul des dérives $\partial_{\rho}$ autour de $\rho = 0$. Pour régler le problème nous avons alors utilisé la variable $\phi$. En effet il apparait alors des propriétés de parité des fonctions qui nous ont permis de donner des valeurs exactes aux dérivées en $\phi = 0$ (i.e. $\rho = 0$) et résoudre le problème. En outre la variable $\phi$ nous a aussi permis de repasser avec des dérivées en champs à 5 points sans difficultés pour $\phi = \phi_{max}$. 
 
-Le deuxième type de problème que nous avons rencontré a été la précision de l'interpolation et du calcul des intégrales. En effet, pour trouver un point fixe il faut regarder la solution des équations BMW pour des $k$ très proches de 0. Or le découpage en trois des équations pour conserver un maximum de précision dans nos calculs ne peut pas se faire n'importe comment. Il s'avère que pour résoudre $(\Pc_1$) nous avons rencontré des problèmes de précisions dans le calcul des intégrales avant de pouvoir passer à $(\Pc_2)$. Ceci nous a imposé d'utiliser un nombre de point d'interpolation et d'intégration supérieur à ce que nous utilisions en premier lieu et de trouver de meilleures techniques pour cela. \\
+Le deuxième type de problème que nous avons rencontré a été la précision de l'interpolation et du calcul des intégrales. En effet, pour trouver un point fixe il faut regarder la solution des équations BMW pour des $k$ très proches de 0. Or le découpage en trois des équations pour conserver un maximum de précision dans nos calculs ne peut pas se faire n'importe comment. Il s'avère que pour résoudre $(\Pc_1$) nous avons rencontré des problèmes de précisions dans le calcul des intégrales avant de pouvoir passer à $(\Pc_2)$. Ceci nous a imposé d'utiliser un nombre de point d'interpolation et d'intégration supérieur à ce que nous utilisions en premier lieu et de trouver de meilleures techniques pour cela. 
 
 
 
 \subsection{Symétries et périodicité des fonctions}
 
+\label{sec:Sym}
 
-Commençons par étudier les symétries du problème. En effet les différents jeux d'équations permettent de déterminer les symétries des fonctions inconnues.
-
-
-
-On note $(t_1, t_2, ..., t_n, ...)$ les temps de discrétisation de la résolution par la méthode d'Euler du système $(\Ec_1)$. Considérons le schéma semi-discrétisé en temps associé. On note $\Delta_{k_n}$ la fonction $\Delta_k$ au pas de discrétisation en temps $n$ ($t_n = \ln(k_n/\Lambda)$, et de même $X_{k_n}$. Alors, par les symétries de la relation de dispersion et du potentiel $U$ initial (\refann{Sym}), la fonction $\Delta_{k_n}$ est paire selon toutes ses variables (par exemple, $\Delta_{k_n}(-p_x, p_y, \phi) = \Delta_{k_n}(p_x, p_y, \phi)$. De plus il y aussi la symétrie supplémentaire $\Delta_{k_n}(p_y, p_x, \phi) = \Delta_{k_n} (p_x, p_y, \phi)$. En outre, $X_{k_n}$ est aussi une fonction paire. 
+Commençons par étudier les symétries du problème. On note $(t_1, t_2, ..., t_n, ...)$ les temps discrets de la résolution par la méthode d'Euler. Considérons le schéma semi-discrétisé en temps associé de $(\Ec_1)$  :
+\begin{equation}
+	\begin{split}
+	\frac{\Delta_{k_{n+1}} - \Delta_{k_{n}}}{\delta t}	& =  - \frac{1}{2} I_2(\phi) \partial_{\phi}^2 \Delta_{k_n}(p_x, p_y, \phi)  +  ... \\
+	\frac{X_{k_{n+1}} - X_{k_{n}}}{\delta t} & = \frac{1}{2} \partial_{\phi}^2 I_1(\phi) \, .
+	\end{split}
+\end{equation}
+On note $\delta t$ le pas de discrétisation en temps. On note $\Delta_{k_n}$ la fonction semi-discrétisée égale à $\Delta_k$ au temps discret $t_n$ ($k_n = \Lambda\exp(t_n)$), et de même $X_{k_n}$. Alors, par les symétries de la relation de dispersion et du potentiel $U$ initial (\refann{Sym}), la fonction $\Delta_{k_n}$ est paire selon toutes ses variables (par exemple, $\Delta_{k_n}(-p_x, p_y, \phi) = \Delta_{k_n}(p_x, p_y, \phi)$. De plus il y aussi la symétrie supplémentaire $\Delta_{k_n}(p_y, p_x, \phi) = \Delta_{k_n} (p_x, p_y, \phi)$. En outre, $X_{k_n}$ est aussi une fonction paire. 
 
 \begin{figure}[H]
 \begin{center}
@@ -1391,12 +1401,10 @@ On note $(t_1, t_2, ..., t_n, ...)$ les temps de discrétisation de la résoluti
 \end{figure}
 
 
-Ces propriétés se transmettent aux fonctions inconnues des systèmes $(\Ec_2)$ et $(\Ec_3)$ que sont $\bDelta_{k_n}$, $\tY_{k_n}$, $\bX_{k_n}$ et $\tX_{k_n}$ tout naturellement grâce aux conditions de raccordement.\\
-\indent
+Ces propriétés se transmettent aux fonctions inconnues des problèles $(\Pc_2)$ et $(\Pc_3)$ que sont $\bDelta_{k_n}$, $\tY_{k_n}$, $\bX_{k_n}$ et $\tX_{k_n}$ tout naturellement grâce aux conditions de raccordement.
 De cette manière on ne considère que $\phi \text{ (ou } \tphi) \in [0, \infty[$ ainsi que des moments définies sur une zone restreinte de $[-\pi, \pi]^2$ pour les fonctions inconnues de ($\Pc_1$), ou de $[-\tp_{max}, \tp_{max}]^2$ pour celles de ($\Pc_2$) ou ($\Pc_3$). On détaille plus précisément en \refig{SurfUtile} quelles sont ces zones. \\
-
-
- Enfin mentionnons que puisque $\eo$ est une fonction $2\pi$-périodique alors $\Delta_{k_n}$ l'est aussi pour tout $n\in\N$ par rapport au variables $p_x$ et $p_y$. Cette propriété est perdu pour les fonctions $\bDelta_{k_n}$ et $\tY_{k_n}$.
+\indent
+ Enfin mentionnons que puisque $\eo$ est une fonction $2\pi$-périodique alors $\Delta_{k_n}$ l'est aussi pour tout $n\in\N$ par rapport au variables $p_x$ et $p_y$. Cette propriété est utile pour le calcul des intégrales $J_n$ comme nous le détaillerons plus précisément en \refsec{IntJ} mais elle est perdue pour les fonctions $\bDelta_{k_n}$ et $\tY_{k_n}$. C'est elle qui justifie le passage par des équations dimensionnées et le problème $(\Pc_1)$ dans les trois étapes de la résolution.
 
 
 
@@ -1404,7 +1412,7 @@ De cette manière on ne considère que $\phi \text{ (ou } \tphi) \in [0, \infty[
 
 \subsection{Interpolation de Tchebytchev}
 
-Afin de pouvoir calculer avec précision les intégrales $J$, $\bJ$, $\tJ$ apparaissant dans les équations, nous avons choisi d'interpoler la partie dépendante de moment des fonctions inconnues. Comme annoncé, pour cela nous réutilisons encore une interpolation de Tchébytchev adaptée en dimension 2. 
+Nous souhaitons calculer avec précision les expressions $J$, $\bJ$, $\tJ$ qui sont des fonctions dépendant de moments $(p_x, p_y)$ ou ($(\tp_x, \tp_y)$) et qui s'expriment comme les intégrales sur $q_x$ et $q_y$ de $(q_x, q_y) \to u(q_x + p_{x}, q_y + p_{y})h(q_x, q_y)$, avec $u$ et $h$ des expressions dépendant de nos fonctions inconnues $\Delta_k, \bDelta_k, W_k$, etc. Pour cela avons choisi d'interpoler la partie dépendante des moments $(p_x, p_y)$ ou ($(\tp_x, \tp_y)$) des fonctions inconnues afin d'utiliser une quadrature précise des intégrales. Comme annoncé, pour cela nous réutilisons encore une interpolation de Tchébytchev adaptée en dimension 2. 
 
 \subsubsection{Décomposition}
 
@@ -1421,9 +1429,9 @@ f_n(x,y) = \sum_{i=0} ^{n} \sum_{j=0} ^{n} c_{ij} T_i\(\frac{2x-a-b}{b-a}\)T_j\(
 converge uniformément vers $f$ quand $n \rightarrow +\infty$.}\\
 
 
-Ce théorème et sa démonstrations se trouvent dans l'ouvrage \cite{Tchebychev, mason1980near} dans le cas $a=-1$, $b=1$. La généralisation à $a$ et $b$ ($b>a$) quelconques est immédiate. Par la présence du régulateur qui est $\Cc^\infty$ nous travaillons, comme dans le modèle $\varphiv^4$ continu avec des fonctions de que l'on suppose très régulières. On peut alors supposer que cette propriété s'applique à nos fonctions \cite{mason1980near}. On peut même, comme en \refsec{ExprCoeff} montrer que les fonctions semi-discrétisées en temps de RG $t$ dans le schéma d'Euler sont régulières (au moins $\Cc^1$) selon les variables $\phi$, $p_x$ et $p_y$ (ou leurs équivalents adimensionnés). 
+Ce théorème et sa démonstrations se trouvent dans l'ouvrage \cite{Tchebychev, mason1980near} dans le cas $a=-1$, $b=1$. La généralisation à $a$ et $b$ ($b>a$) quelconques est immédiate. Par la présence du régulateur qui est $\Cc^\infty$ nous travaillons, comme dans le modèle $\varphiv^4$ continu avec des fonctions de que l'on suppose très régulières. On peut alors supposer que cette propriété s'applique à nos fonctions \cite{mason1980near}. On peut, comme en \refsec{ExprCoeff} montrer que les fonctions semi-discrétisées en temps de RG $t$ du schéma d'Euler ($\Delta_{k_n}$, $X_{k_n}$, etc. introduites en \refsec{Sym}) sont régulières (au moins $\Cc^1$). 
 
-\vspace*{11pt}
+
 
 \subsubsection{Décomposition méthode 1}
 
@@ -1452,13 +1460,12 @@ avec la notation
   A_{ij} = 
   \begin{cases}
     1 \quad \text{si } i = j = 0 \\
-    2 \quad \text{si } i = 0 \text{ et } j \neq 0 \\
-    2 \quad \text{si } i \neq 0 \text{ et } j = 0 \\
+    2 \quad \text{si } i = 0 \text{ et } j \neq 0 \quad \text{ou } i \neq 0 \text{ et } j = 0 \\
     4 \quad \text{si } i \neq 0 \text{ et } j \neq 0 \\
   \end{cases}
 \end{align}
 
-Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients de $((c_{ij}))_{i,j}$ cela demande un algorithme demandant $\mathcal{O}(n_c^2)$. En outre pour ensuite obtenir $f(x,y)$ en tout point $(x,y) \in [a,b]^2$, il faut utiliser un algorithme demandant $\sim 9 n_c^2$  opérations. Afin d'obtenir de meilleurs temps de calcul sur les interpolations à précision fixée nous avons implémenté la deuxième méthode suivante.
+Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients de $((c_{ij}))_{i,j}$ cela demande un algorithme demandant $\mathcal{O}(n_c^2)$. En outre pour ensuite obtenir $f(x,y)$ en tout point $(x,y) \in [a,b]^2$, il faut utiliser un algorithme demandant $\sim 9 n_c^2$  opérations. Afin d'obtenir de meilleurs temps de calcul sur les interpolations à précision fixée nous avons utilisé une seconde méthode.
 
 
 \vspace*{11pt}
@@ -1470,10 +1477,10 @@ Cette méthode est coûteuse puisque pour calculer l'ensemble des coefficients d
 Il existe une méthode plus astucieuse que celle développée précédemment, inspirée de ce qui est mis en place dans le paquet \textit{chebfun} \cite{driscoll2014chebfun} permettant justement de traiter les interpolations de Tchebytchev sous Matlab. Cette méthode est développée dans \cite{TownsendThesis}. 
 
 Au lieu de faire directement une décomposition sur une base tensorielle de polynômes de Chebychev on commence par réaliser une approximation de rang faible de la fonction que l'on souhaite approximer. Plus précisément, on considère les ensembles des racines de Tchebytchev noté $\left\{x_m\right\}_{0\le m \le n_c-1}$ ou $\left\{y_n\right\}_{0\le m \le n_c-1}$. On forme la matrice 
-\begin{equation}
+\begin{equation*}
 	\mat{F} = \( \(  f\(\frac{a+b}{2} + x_m\frac{b-a}{2}, \frac{a+b}{2} + y_n\frac{b-a}{2}\)     \)  \)_{m,n}
-\end{equation}
-et on peut faire de cette matrice une approximation de rang faible par élimination Gaussienne avec l'algorithme suivant, en $\varepsilon$ de l'ordre de la précision machine.
+\end{equation*}
+dont on peut faire une approximation de rang faible par élimination Gaussienne avec l'algorithme suivant, en $\varepsilon$ de l'ordre de la précision machine :
 
 \begin{algorithm}[H]
   \begin{algorithmic}[1]
@@ -1486,48 +1493,60 @@ et on peut faire de cette matrice une approximation de rang faible par éliminat
     \ENDWHILE
   \end{algorithmic}
 \end{algorithm}
-
 Notons $Q$ ($Q \le n_c$) le rang de l'approximation obtenue. La matrice $\mat{F}$ peut être approximée, à la précision machine, par  
 \begin{equation}
-\mat{F} \simeq \tilde{\mat{F}} = \sum_{j=1}^Q d_j \mat{C}^j \mat{R}^j
+\mat{F} \simeq \tilde{\mat{F}} = \sum_{j=1}^Q d_j \mat{C}^j \mat{R}^j \, .
 \end{equation}
 Comme nous ne connaissons exactement la fonctions $f$ discrétisée qu'aux points d'interpolation cela revient au même que d'écrire que nous avons décomposé $f$ comme une somme de produits de fonctions à une variable,
 \begin{equation}
 f(x,y) \simeq \sum_{j=1}^Q d_jc^j(y)r^j(x)
 \end{equation}
-On peut alors décomposer les fonctions $c_j$ et $r_j$ sur une base de polynômes de Tchebytchev comme on peut le faire pour toute fonction d'une seule variable suffisamment régulière. \\
+et on peut décomposer les fonctions $c_j$ et $r_j$ sur une base de polynômes de Tchebytchev comme on peut le faire pour toute fonction d'une seule variable suffisamment régulière. \\
 
 
-Afin de récupérer la valeur de $f$ en un point quelconque $(x,y) \in [a,b]^2 $ nous utilisons simplement la méthode de Clenshaw à une variable sur les fonctions $c^j$ et $r^j$ déjà mentionnée en \refsec{NumContinu}. Ainsi l'algorithme de décomposition possède une complexité en $\mathcal{O}(Q n_c)$ et le calcul de $f$ en $(x,y) \in [a,b]^2$ demande $\sim 6Qn_c$ opérations ($< 9n_c^2$). Le gain a eu son importance pour permettre d'atteindre des résultats convenables en des temps raisonnables. En effet nous avons pour une grande partie de la résolution $Q < n_c$ de par la régularité des fonctions et nous avons observé de manière générale que cette méthode de décomposition est plus rapide et plus pratique pour calculer des dérivées en moments. \\
+Afin de récupérer la valeur de $f$ en un point quelconque $(x,y) \in [a,b]^2 $ nous utilisons simplement la méthode de Clenshaw à une variable sur les fonctions $c^j$ et $r^j$ déjà mentionnée en \refsec{NumContinu}. Ainsi l'algorithme de décomposition possède une complexité en $\mathcal{O}(Q n_c)$ et le calcul de $f$ en $(x,y) \in [a,b]^2$ demande $\sim 6Qn_c$ opérations ($< 9n_c^2$). Le gain a eu son importance pour permettre d'atteindre des résultats convenables en des temps raisonnables. En effet nous avons pour une grande partie de la résolution $Q < n_c$ de par la régularité des fonctions et nous avons observé que cette méthode de décomposition est, de manière générale, plus rapide et plus pratique pour calculer des dérivées en moments. \\
 
 
 
 \subsection{Le calcul des intégrales} 
 
-Pour calculer numériquement les différentes intégrales nous nous servons des propriétés de symétrie que nous avons détaillé des différentes fonctions. Cependant il s'est aussi posé le choix de la méthode à utiliser pour réaliser cette quadrature. Comme les intégrales sont à calculer sur une forme géométrique simple, un carré (ou la moitié d'un carré), nous avons opté pour une version "tensiorielle" d'une quadrature à une dimension de Gauss-Legendre. Cependant nous avions eu d'autres idées que nous n'avons pas retenues pour diverses raisons expliquées ci-dessous.
+Pour calculer numériquement les différentes intégrales nous nous servons des propriétés de symétrie que nous avons détaillé des fonctions inconnues. Cependant il s'est aussi posé le choix de la méthode à utiliser pour réaliser cette quadrature. Comme les intégrales sont à calculer sur une forme géométrique simple, un carré (ou la moitié d'un carré), nous avons opté pour une version "tensiorielle" d'une quadrature une dimension de Gauss-Legendre. Cependant nous avions eu d'autres idées que nous n'avons pas retenues pour diverses raisons expliquées ci-dessous.
 
 
 \subsubsection{Le choix de la quadrature}
 
-On interpole la partie en moment des fonctions avec des polynômes de Tchebytchev et on utilise toujours une méthode pseudo-specrtrale\footnote{c'est à dire que l'on connait à chaque pas de temps la valeur de la fonction aux points d'interpolation de Tchebythchev, ainsi que les coefficients de son développement en série de polynômes de Tchebytchev}. Il semble donc naturel de se demander si la quadrature de Gauss-Legendre est vraiment la mieux adaptée. En effet, pour gagner du temps et utiliser directement la connaissance des fonctions aux points d'interpolation nous avons pensé au calcul d'intégrale par la \emph{première règle de Fejer} \cite{waldvogel2006fast} (\refann{Quad}) qui permet cela. %Les points de quadrature de cette méthode sont identiques à ceux de l'interpolation de Tchebytchev comme nous l'avons réalisée. Ainsi pour intégrer $f$ on s'affranchi du calcul par interpolation de $f(x_i)$ pour $\{x_i\}$ les points déintégrations de Gauss-Legendre.
- Cependant cette méthode s'est avérée être inefficace puisque il faut de manière générale plus de points pour obtenir la même précision qu'une quadrature de Gauss Legendre. De plus le passage le plus long du code est le calcul de $J_3$ (et ainsi que les versions adimensionnées $\bJ_3$ et $\tJ_3$) et cette quadrature ne permet pas de réaliser ce calcul plus vite.% En effet pour calculer ces intégrales il faut évaluer les fonctions $\Delta_k$, en des points $(p_x+q_x, p_y+q_y,\phi)$, ce qui, à cause de la somme des composantes des moments, nécessite d'interpoler.\\
-
-Une alternative complètement différente aurait alors consisté %justement 
-à ne pas utiliser une discrétisation en impulsion sur une base de polynôme de Tchebytchev mais plutôt une discrétisation en impulsion sur une grille de points régulièrement espacés. Il est alors possible d'écrire en deux dimensions une quadrature qui ne demande de connaitre la fonction à intégrer qu'aux points de discrétisations %(en effet si  $p_x$ et $q_x$ appartiennent à la grille de discrétisation alors $p_x+q_x$ aussi\footnote{En utilisant la périodicité des fonctions on se ramène encore à un point de la grille quand $p_x+q_x$ en dépasse ou alors on extrapole}). 
-Cependant les quadratures alors testées (basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis) demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en comparaison de la quadrature de Gauss-Legendre et elles étaient moins pratiques que les méthodes d'interpolations. 
+On interpole la partie en moment des fonctions avec des polynômes de Tchebytchev et on utilise toujours une méthode pseudo-specrtrale\footnote{c'est à dire que l'on connait à chaque pas de temps la valeur de la fonction aux points d'interpolation de Tchebythchev, ainsi que les coefficients de son développement en série de polynômes de Tchebytchev}. Même si nous avons choisi une quadrature de Gauss-Legendre nous nous sommes demandé si c'était vraiment la plus adaptée. En effet, pour gagner du temps et utiliser directement la connaissance des fonctions aux points d'interpolation nous avons pensé au calcul d'intégrale par la \emph{première règle de Fejer} \cite{waldvogel2006fast} (\refann{Quad}) qui permet cela.
+ Cependant cette méthode s'est avérée être inefficace puisque il faut de manière générale plus de points pour obtenir la même précision qu'une quadrature de Gauss Legendre. De plus le passage le plus long du code est le calcul de $J_3$ (et ainsi que les versions adimensionnées $\bJ_3$ et $\tJ_3$) et cette quadrature ne permet pas de réaliser ce calcul plus rapidement.
 
 
-
-\vspace*{11pt}
-
-
+%\vspace*{11pt}
 
 \subsubsection{Calcul des intégrales $I$, $\bI$, $\tI$}
 
-Soit $a>0$ un réel. Soit $f$ une fonction de $[-a, a]^2$ à valeurs dans $\R$. On suppose que $f$ est symétrique par rapport à l'axe des $x=0$, à l'axe des $y=0$ et à l'axe $x=y$. Nous cherchons alors une quadrature pour integrer $f$ sur son domaine de définition. Pour commencer, en utilisant les deux premières symétries,
+Soit $a>0$ un réel. Soit $f :(x,y) \to f(x,y)$ une fonction de $[-a, a]^2$ à valeurs dans $\R$. On suppose que $f$ est symétrique par rapport à l'axe des $x=0$, à l'axe des $y=0$ et à l'axe $x=y$. Les intégrales $I$, $\bI$ et $\tI$ sont de la forme
 \begin{equation}
-\int_{-a}^{a} \int_{-a}^{a} f(x,y) \, \dd x \, \dd y = 4 \int_{0}^{a}  \int_{0}^{a} f(x,y) \, \dd x \, \dd y
+K = \int_{-a}^{a} \int_{-a}^{a} f(x,y) \, \dd x \, \dd y 
 \end{equation} 
+Pour réaliser le calcul numériquement on commence en utilisant les deux premières symétries de $f$,
+\begin{equation}
+K = 4 \int_{0}^{a}  \int_{0}^{a} f(x,y) \, \dd x \, \dd y \, .
+\end{equation} 
+Cette expression se calcule en utilisant une quadrature de Gauss-Legendre sur chaque dimension d'intégration : 
+\begin{equation}
+K \simeq 
+ a^2\sum_{i=0}^{n_{gl}}  \sum_{j=0}^{n_{gl}}w_i w_j f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_j+1\)) \, ,
+\end{equation}
+où $\{\xi_i\}_{i \in \bbrac {1, n_{gl}}}$ sont les points de la quadrature et  $\{w_i\}_{i \in \bbrac {1, n_{gl}}}$ les poids correspondants. Par construction, $((w_i w_j))_{i,j}$ est une matrice symétrique et par symétrie de $f$ par rapport à l'axe $x=y$ nous pouvons écrire, 
+\begin{equation}
+\begin{split}
+K \simeq a^2\sum_{i=0}^{n_{gl}} & w_i^2f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_i+1\)) \, + \\
+ a^2\sum_{i=0}^{n_{gl}} & \sum_{j=0}^{i-1}w_i w_j 2 f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_j+1\)) 
+\end{split}
+\end{equation}
+Ce qui permet de réduire le temps de calcul en réduisant légèrement le nombre d'opérations à effectuer.
+
+\vspace*{11pt}
+
 \commentout{
 On peut alors faire le changement de variable affine  $\(\tilde{x}, \tilde{y}\) \rightarrow \(2x/a -1, 2y/a -1\) $ donnant,  
 \begin{equation}
@@ -1536,44 +1555,24 @@ On peut alors faire le changement de variable affine  $\(\tilde{x}, \tilde{y}\) 
  \frac{a^2}{4} \int_{-1}^{1} & \int_{-1}^{1} f\(\frac{a}{2}\(\tilde{x}+1\),\frac{\pi}{2}\(\tilde{y}+1\)\) \, \dd \tilde{x}  \, \dd \tilde{y} 
 \end{split}
 \end{equation}
-Les intégrales sur le carré unité $[-1,1] \times [-1, 1]$ sont alors calculées avec une quadrature \textit{tensorielle} obtenue à partir d'une quadrature 1D :
-}
-
-Ce qui se calcule en utilisant une quadrature de Gauss-Legendre sur chaque dimension d'intégration, 
-\begin{equation}
-\begin{split}
- \int_{-a}^{a} \int_{-a}^{a} f(x,y) \,&  \dd x \, \dd y \simeq \\ 
- a^2\sum_{i=0}^{n_{gl}} & \sum_{j=0}^{n_{gl}}w_i w_j f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_j+1\))
-\end{split}
-\end{equation}
-
-Où $\{\xi_i\}_{i \in \bbrac {1, n_{gl}}}$ sont les points de la quadrature et  $\{w_i\}_{i \in \bbrac {1, n_{gl}}}$ les poids correspondants. Par construction, $((w_i w_j))_{i,j}$ est une matrice symétrique et par symétrie de $f$ par rapport à la première bissectrice nous pouvons alors réduire la double somme par, 
-\begin{equation}
-\begin{split}
- \int_{-a}^{a} \int_{-a}^{a} f(x,y) \,&  \dd x \, \dd y \simeq \\ 
- a^2\sum_{i=0}^{n_{gl}} & \sum_{j=0}^{i-1}w_i w_j 2 f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_j+1\)) \, + \\
-a^2\sum_{i=0}^{n_{gl}} & w_i^2f(\frac{a}{2}\(\xi_i+1\), \frac{a}{2}\(\xi_i+1\))
-\end{split}
-\end{equation}
-Ce qui permet de réduire le temps de calcul en réduisant légèrement le nombre d'opérations à effectuer.
-
-\vspace*{11pt}
-
-
+Les intégrales sur le carré unité $[-1,1] \times [-1, 1]$ sont alors calculées avec une quadrature \textit{tensorielle} obtenue à partir d'une quadrature 1D : }
 
 
 \subsubsection{Calcul des intégrales $J$,$\bJ$,$\tJ$ }
+\label{sec:IntJ}
 
-Soit $a>0$. Soit $(b,c) \in [0,a]^2$. Soit maintenant $g$ et $h$ deux fonctions de $\R^2$ dans $\R$ et  $g$ définie sur $[-a, a]^2$  par $g : (x,y) \rightarrow u(x+b, y+c)$. On suppose, comme précédemment, que $g$ et $h$ sont symétriques par rapport à l'axe $x=0$, à l'axe $y=0$ et à l'axe $x=y$. On fait aussi l'hypothèse qu'elles sont $2\pi$ periodiques. Nous cherchons alors une formule pour intégrer $g\times h$ sur $[-a, a]^2$. Pour cela remarquons que
+Soit $a>0$. Soit $(x_0,y_0) \in [0,a]^2$. Soit maintenant $u$ et $h$ deux fonctions de $\R^2$ dans $\R$ et  $g$ définie sur $[-a, a]^2$  par $g_{x_0, y_0} : (x,y) \rightarrow u(x+x_0, y+y_0)$. On suppose que $u$ et $h$ sont symétriques par rapport à l'axe $x=0$, à l'axe $y=0$ et à l'axe $x=y$. Les intégrales $J$, $\bJ$, $\tJ$ sont de la forme 
+\begin{equation}
+K(x_0,y_0) = \int_{-a}^{a} \int_{-a}^{a} g_{x_0, y_0}(x,y) h(x,y) \,  \dd x \, \dd y 	 \, .
+\end{equation}
+En utilisant les symétries de $u$ et $h$ nous montrons que
 \begin{equation}
 \begin{split}
- & \int_{-a}^{a} \int_{-a}^{a} g(x,y) h(x,y) \,  \dd x \, \dd y  = \\
- \int_{0}^{a} & \int_{0}^{a} [u(x+b, y+c) + u(x+b, y-c)] h(x,y) \, \dd x \, \dd y \, + \\ 
-\int_{0}^{a} & \int_{0}^{a} [u(x-b, y+c) + u(x-b, y-c)] h(x,y)  \, \dd x \, \dd y 
+& K(x_0,y_0) = \int_{0}^{a}  \int_{0}^{a}  \left[ u(x+x_0, y+y_0) + u(x+x_0, y-y_0) \right. \\
+ & +  \left. u(x-x_0, y+y_0) + u(x-x_0, y-y_0)\right] h(x,y)  \, \dd x \, \dd y 
 \end{split}
 \end{equation}
-
-Et on adopte encore la même quadrature que pour les intégrales $I$, $\bI$, $\tI$. Cependant remarquons que ce calcul impose de connaitre les valeurs de $u$ en des points $(x \pm b, y\pm c)$ qui sont en dehors du carré $[0, a]^2$. Or, à cause de la discrétisation, $u$ est une fonction que l'on connait par sa décomposition en série de polynômes de Tchebytchev sur $[0,a]^2$ : on ne connait pas, a priori, la valeur de $u$ en tout $(x\pm b, y\pm c)$. Lorsque l'on s'intéresse au calcul de $J$ cela ne pose pas de problèmes car on peut utiliser la périodicité des fonctions (raison pour laquelle nous résolvons en premier lieu le système $(\Ec_1)$ dimensionné). En revanche pour $\bJ$ et $\tJ$, la périodicité est brisée dans les équations et nous sommes obligé d'extrapoler $u$ en dehors de $[0,a]^2$
+Et on adopte encore pour le calcul la même quadrature que pour les intégrales $I$, $\bI$, $\tI$. Cependant remarquons que ce calcul impose de connaitre les valeurs de $u$ en des points $(x \pm x_0, y \pm y_0)$ qui sont en dehors du carré $[0, a]^2$. Or, à cause de la discrétisation, $u$ est une fonction que l'on connait par sa décomposition en série de polynômes de Tchebytchev sur $[0,a]^2$ : on ne connait pas, a priori, la valeur de $u$ en tout $(x\pm x_0, y\pm y_0)$. Lorsque l'on s'intéresse au calcul de $J$ cela ne pose pas de problèmes car on peut utiliser la périodicité des fonctions (raison pour laquelle nous résolvons en premier lieu le système $(\Ec_1)$ dimensionné). En revanche, pour $\bJ$ et $\tJ$ la périodicité est brisée dans et nous sommes obligé d'extrapoler $u$ en dehors de $[0,a]^2$. 
 
 
 
@@ -1602,7 +1601,10 @@ Bien que nos équations soient assez éloignées d'une simple équation d'advect
 \subsection{Complexité algorithmique et parallélisation - problème de rapidité} 
 
 
-Comme pour le modèle continu $\varphiv^4$ il est possible de paralléliser le code en utilisant de l'openMP \cite{openmp2002c++} grain fin sur les boucles en champ. En revanche, à cause de la quadrature précise que l'on a développé pour le calcul les intégrales $J$, le temps de calcul se trouve évoluer en $\mathcal{O}( Q_\text{max} \times n_c^3 \times n_{gl}^2 \times n_{\phi})$. Où $n_{\phi}$ est le nombre de point de discrétisation en champ, $n_c$ le nombre de points d'interpolation, $n_{{gl}}$ le nombre de points de la quadrature de Gauss-Legendre, et $Q_{\text{max}}$ est le rang maximal nécessaire dans tout le code lors de l'approximation de rang faible de \refsec{Decomp2}. Pour le vérifier nous avons tracé les points de la \refig{timeNc}.
+Comme pour le modèle continu $\varphiv^4$ il est possible de paralléliser le code en utilisant de l'openMP \cite{openmp2002c++} grain fin sur les boucles en champ. En revanche, à cause de la quadrature précise que l'on a développé pour le calcul les intégrales $J$, le temps de calcul se trouve évoluer en $\mathcal{O}( Q_\text{max} \times n_c^3 \times n_{gl}^2 \times n_{\phi})$. Où $n_{\phi}$ est le nombre de point de discrétisation en champ, $n_c$ le nombre de points d'interpolation, $n_{{gl}}$ le nombre de points de la quadrature de Gauss-Legendre, et $Q_{\text{max}}$ est le rang maximal de l'approximation de rang faible de \refsec{Decomp2}. Pour le vérifier nous avons tracé les points de la \refig{timeNc}.
+
+
+Ainsi nous pouvons constater l'évolution problématique du temps de calcul de cet algorithme de résolution. En revanche nous avons aussi étudié l'effet de la parallélisation sur les points de discrétisation en champ $\phi$. Pour un code pouvant être parallélisé au maximum sur 48 coeurs nous obtenons une décroissance en $\sim 1/n_{proc}$ où $n_{proc}$ est le nombre de processeur utilisé lorsque $n_{proc} \lesssim 30$. C'est donc au alentours de $30$ coeurs qu'il est préférable d'exécuter ce code. Le résultat est représenté en  \refig{timeScal}.
 
 
 \begin{figure}[H]
@@ -1614,6 +1616,7 @@ Comme pour le modèle continu $\varphiv^4$ il est possible de paralléliser le c
 \end{figure}
 
 
+
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[width=0.95\columnwidth]{Scalabilite.pdf}
@@ -1623,9 +1626,7 @@ Comme pour le modèle continu $\varphiv^4$ il est possible de paralléliser le c
 \end{figure}
 
 
-Ainsi nous pouvons constater l'évolution problématique du temps de calcul de cet algorithme de résolution. En revanche nous avons aussi étudié l'effet de la parallélisation sur les points de discrétisation en champ $\phi$. Pour un code pouvant être parallélisé au maximum sur 48 coeurs nous obtenons une décroissance en $\sim 1/n_{proc}$ où $n_{proc}$ est le nombre de processeur utilisé lorsque $n_{proc} \lesssim 30$. C'est donc au alentours de $30$ coeurs qu'il est préférable d'exécuter ce code. Le résultat est représenté dans les courbes de \refig{timeScal}.
-
-Le nombre de processeurs sur lesquels peut être parallélisé efficacement le programme est bridé par le nombre de points de la discrétisation en champ. Ainsi pour tenter d'augmenter la vitesse d'exécution nous avons réalisé une version du code avec une parallélisation MPI \cite{open2012open} de la boucle en champ et une parallélisation OpenMP des boucles de la quadrature de l'intégrale $J$, $\bJ$ ou $\tJ$. Il s'avère qu'alors il faut communiquer un nombre de données trop important entre les processeurs, le code s'en trouvait alors ralenti, voire inutilisable. 
+Le nombre de processeurs sur lesquels peut être parallélisé efficacement le programme est bridé par le nombre de points de la discrétisation en champ. Ainsi pour tenter d'augmenter la vitesse d'exécution nous avons réalisé une version du code avec une parallélisation MPI \cite{open2012open} de la boucle en champ et une parallélisation OpenMP des boucles de la quadrature de l'intégrale $J$, $\bJ$ ou $\tJ$. Il s'avère qu'alors il faut communiquer un nombre de données trop important entre les processeurs, le code s'en trouvait alors ralenti, voire inutilisable. \\
 
 
 
