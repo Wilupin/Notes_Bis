@@ -705,7 +705,7 @@ où l'on a introduit par concision,
 \begin{equation}
 \begin{split}
 	J_n(\pv,\phi) & = \int_\qv \partial_t \Rc_k(\qv) \,G_k(\pv+\qv, \phi) \,G_k^{n-1}(\qv, \phi) \, ,  \\
-	I_n(\pv,\phi) & = \int_\qv \partial_t \Rc_k(\qv) \,G_k^{n}(\qv, \phi) \, .
+	I_n(\phi) & = J_n(\pv = 0, \phi) = \int_\qv \partial_t \Rc_k(\qv) \,G_k^{n}(\qv, \phi) \, .
 \end{split}
 \label{eq:JI}
 \end{equation}
@@ -891,11 +891,11 @@ Enfin il pourrait sembler étrange d'utiliser une discrétisation en champ d'ord
 Le plus gros problème rencontré dans la formulation discrétisée du problème a été le calcul des intégrales $\tJ$. 
 Grâce aux symétries des fonctions que l'on intègre on peut développer une expression de ces intégrales telle que la dimension $d$ devienne un simple paramètre. En effet calculer l'intégrale $\tJ_n$ revient à calculer 
 \begin{equation}
-\tJ_n(\tp,\trho) = \int_{\R^d} f(\tqv^2,\trho)g((\tpv+\tqv)^2,\trho) \, \dd \, \tqv \, ,
+\tJ_n(\tpv,\trho) = \int_{\R^d} f(\tqv^2,\trho)g((\tpv+\tqv)^2,\trho) \, \dd \, \tqv \, ,
 \end{equation}
-où $f$ et $g$ sont deux fonctions. Et il en est de même pour les intégrales $\tI$ en prenant $\pv = 0$ dans l'expression précédente. On pose alors $\tqv = \tq_1 \uv + \tqv_2$, où $\uv = \tpv/\|\tpv\|$ et $\tqv_2$ est orthogonal à $\uv$. Il vient alors
+où $f$ et $g$ sont deux fonctions. Et il en est de même pour les intégrales $\tI$ en prenant $\tpv = 0$ dans l'expression précédente. On pose alors $\tqv = \tq_1 \uv + \tqv_2$, où $\uv = \tpv/\|\tpv\|$ et $\tqv_2$ est orthogonal à $\uv$. Il vient alors, avec $\tp = \|\tpv\|^2$,
 \begin{equation}
-\tJ_n(\tp, \rho) = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2, \rho) \, ,
+\tJ_n(\tp, \trho) = S_{d-1} \int_0^{+\infty} \dd\tq_2 \, \tq_2^{d-2} \int_{-\infty}^{+\infty} \dd\tq_1 \, h (\tp, \tq_1, \tq_2, \rho) \, ,
 \end{equation}
 en posant
 \begin{equation}
