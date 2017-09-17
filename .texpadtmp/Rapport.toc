@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {4.1}Travail r\IeC {\'e}alis\IeC {\'e}}{15}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Structure de l'algorithme}{15}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Discr\IeC {\'e}tisation en champ}{15}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Calcul des int\IeC {\'e}grales}{15}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}Calcul des int\IeC {\'e}grales}{16}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Discr\IeC {\'e}tisation en moment}{16}{subsection.4.5}
 \contentsline {subsubsection}{\numberline {4.5.1}Expression des coefficients}{16}{subsubsection.4.5.1}
 \contentsline {subsubsection}{\numberline {4.5.2}M\IeC {\'e}thode de Clenshaw}{16}{subsubsection.4.5.2}
@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{17}{subsection.4.6}
 \contentsline {section}{\numberline {5}R\IeC {\'e}sultats : mod\IeC {\`e}le continu $O(N)$}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}R\IeC {\'e}sultats pour $(N = 1, d=2)$}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{17}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{18}{subsection.5.2}
 \contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{21}{subsection.6.2}
