@@ -959,7 +959,7 @@ On écrit, pour $n$ suffisamment grand, $f \simeq S_n[f]$. \\
 
 La présence du régulateur à été introduite dans le NPRG pour permettre de gagner en régularité dans les équations et pouvoir effectuer des calculs de manière continue (contrairement au RG, où l'on procède par itérations successives). Avec le régulateur $\Cc^\infty$ que nous avons choisi, on peut supposer que la solution $(\tY, \tW)$ du système est un couple de fonctions extrêmement régulières. Nous pouvons au moins, pour appuyer ce propos, étudier la régularité des fonctions du schéma semi-discrétisé en temps. \\
 \indent
-On pose $n \in \N$. On note $(t_0, t_1, .. t_n, ..)$ l'ensemble des temps discrets utilisés dans le schéma d'Euler. On note $\tY_{k_n}$ la fonction $\tY_k$ au temps discret $t_n$. Nous avons montré que, sous certaines hypothèses cohérentes avec ce que l'on souhaite obtenir, la fonction $\tY_{k_n}$ est une fonction régulière (au moins de classe $\Cc^1$) sur $[0, +\infty[^2$ et donc sur $[0, \tp_{max}]$. Ceci justifie alors l'utilisation des polynômes de Tchebytchev pour l'interpolation des fonctions dépendant d'un moment. On utilise donc les propriétés précédentes pour $a=0$ et $b = \tp_{max}$. 
+On note $(t_0, t_1, .. t_n, ..)$ l'ensemble des temps discrets utilisés dans le schéma d'Euler. On note $\tY_{k_n}$ la fonction $\tY_k$ au temps discret $t_n$. Nous avons montré que, sous certaines hypothèses cohérentes avec ce que l'on souhaite obtenir, la fonction $\tY_{k_n}$ est une fonction régulière (au moins de classe $\Cc^1$) sur $[0, +\infty[^2$ et donc sur $[0, \tp_{max}]$. Ceci justifie alors l'utilisation des polynômes de Tchebytchev pour l'interpolation des fonctions dépendant d'un moment. On utilise donc les propriétés précédentes pour $a=0$ et $b = \tp_{max}$. 
 
  %\vspace*{11pt}
 
@@ -998,7 +998,7 @@ $S_1 = S_m +  b_{m+1}\Pc_{m+1}(x) + b_{m+2}v_{m+1}(x)\Pc_{m+2}(x)$\\
 Avec la notation $S_m = \sum_{l=0}^{m} a_l \Pc_l(x)$.} $S = S_1$. 
 } \\
 
-Ainsi, pour calculer $f(x)$ pour $x \in [a,b]$, pour une décomposition en série de polynômes de Tchebytchev nous obtenons l'algorithme
+Ainsi, pour calculer $f(x)$ pour $x \in [a,b]$, pour une décomposition en série de polynômes de Tchebytchev, nous obtenons l'algorithme
 
 \begin{algorithm}[H]
   \begin{algorithmic}[1]
@@ -1011,12 +1011,12 @@ Ainsi, pour calculer $f(x)$ pour $x \in [a,b]$, pour une décomposition en séri
   \end{algorithmic}
 \end{algorithm}
 
-Cette méthode \cite{clenshaw1955note} est plus robuste et légèrement plus rapide que celle qui consisterait à calculer directement la somme de la série de polynômes. En effet, on passe d'un algorithme avec $\sim 4n$ opérations à une algorithme avec $\sim 3n$ opérations en utilisant cette technique pour des polynômes de Tchebytchev. Le gain est faible mais cela sera peut être utile en dimension 2 pour le modèle d'Ising 2D (c.f. \refsec{NumIsing}). \\
+Cette méthode \cite{clenshaw1955note} est plus robuste et légèrement plus rapide que celle qui consisterait à calculer directement la somme de la série de polynômes. En effet, on passe d'un algorithme avec $\sim 4n$ opérations à une algorithme avec $\sim 3n$ opérations en utilisant cette technique pour des polynômes de Tchebytchev. \\
 
 
 \subsubsection{Calcul des dérivées}
 
-Un autre avantage d'exprimer les fonctions sous une décomposition en série de polynôme de Tchebytchev pour la variable de moment $\tp$ est qu'il devient facile d'en calculer les dérivées par rapport à $p$ en tout point de la boite $[0, \tp_{max}]$ de discrétisation. En effet il existe une relation simple entre les coefficients de la décomposition d'une fonction $f$ et ceux de sa dérivée $\partial_{\tp} f$. Cette relation se trouve en \refann{Der5}. \\
+Un autre avantage d'exprimer les fonctions sous une décomposition en série de polynôme de Tchebytchev pour la variable de moment $\tp$ est qu'il devient facile d'en calculer les dérivées par rapport à $\tp$ en tout point de la boite $[0, \tp_{max}]$ de discrétisation. En effet il existe une relation simple entre les coefficients de la décomposition de Tchebytchev d'une fonction $f$ et ceux de sa dérivée $\partial_{\tp} f$. Cette relation se trouve en \refann{Der5}. \\
 
 
 
@@ -1041,9 +1041,9 @@ Les systèmes ayant les mêmes propriétés de symétries et la même dimension 
 
 \subsection{Résultats pour $(N = 1, d=2)$}
 
-Nous avons tout d'abord réussi à retrouver les résultats qui été connus à l'aide du code de simulation, avant que nous le réorganisions, pour $(N=1, d=2)$. En effet l'avantage majeur de la dernière versions créée du code avait été de donner des résultats corrects pour cette configuration.
+Nous avons tout d'abord réussi à retrouver les résultats qui été connus à l'aide du code de simulation, avant que nous le réorganisions, pour $(N=1, d=2)$. En effet l'avantage majeur de la dernière version créée du code avait été de donner des résultats corrects pour cette configuration.
 
-La \refig{etakd2} montre l'évolution de $\eta_k$ pour plusieurs conditions initiales $\tilde{r}_0$ et donc pour plusieurs valeurs de la température à laquelle est soumise le système. On remarque que pour des temps $t<-5$, correspondant à $k = \Lambda\exp(t)< \Lambda \exp(-5)$ nous avons des courbes passant par un "quasi-plateau". Ce quasi-plateau est le signe que nous sommes tout près d'un point fixe du RG donnant $\eta_k \simeq \eta$ et donc d'une condition initiale correspondant à une température proche de la température critique su modèle $\varphiv^4$. Ainsi, sur ce plateau $k$ est alors suffisamment faible pour que l'on puisse écrire $\eta = \lim_{k\to 0} \eta_k \simeq \eta_{k<\Lambda\exp(-5)}$. 
+La \refig{etakd2} montre l'évolution de $\eta_k$ pour plusieurs conditions initiales $\tilde{r}_0$ et donc pour plusieurs valeurs de la température $T$ à laquelle est soumise le système. On remarque que pour des temps $t<-5$, correspondant à $k = \Lambda\exp(t)< \Lambda \exp(-5)$ nous avons des courbes passant par un "quasi-plateau". Ce quasi-plateau est le signe que nous sommes tout près d'un point fixe du RG donnant $\eta_k \simeq \eta$ et donc de d'une condition initiale correspondant à une température $T$ proche de la température critique $T_c$ du modèle $\varphiv^4$. Ainsi, sur ce plateau $k$ est suffisamment faible pour que l'on puisse écrire $\eta = \lim_{k\to 0} \eta_k \simeq \eta_{k<\Lambda\exp(-5)}$. 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=0.95\columnwidth]{etakd2.pdf}

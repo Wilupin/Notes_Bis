@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.6)  17 SEP 2017 12:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.6)  19 SEP 2017 12:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2007,7 +2007,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1042.
 
-<figures/etakd2.pdf, id=812, 244.915pt x 154.5775pt>
+<figures/etakd2.pdf, id=811, 244.915pt x 154.5775pt>
 File: figures/etakd2.pdf Graphic file (type pdf)
  <use figures/etakd2.pdf>
 Package pdftex.def Info: figures/etakd2.pdf used on input line 1049.
@@ -2035,17 +2035,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
 
  []
 
-<figures/etakd21.pdf, id=835, 244.915pt x 154.5775pt>
+<figures/etakd21.pdf, id=834, 244.915pt x 154.5775pt>
 File: figures/etakd21.pdf Graphic file (type pdf)
  <use figures/etakd21.pdf>
 Package pdftex.def Info: figures/etakd21.pdf used on input line 1079.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- <figures/etakd21Bis.pdf, id=836, 244.915pt x 154.5775pt>
+ <figures/etakd21Bis.pdf, id=835, 244.915pt x 154.5775pt>
 File: figures/etakd21Bis.pdf Graphic file (type pdf)
  <use figures/etakd21Bis.pdf>
 Package pdftex.def Info: figures/etakd21Bis.pdf used on input line 1086.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- [18 <./figures/etakd21.pdf> <./figures/etakd21Bis.pdf>] <Diagramme_Code_2.pdf, id=847, 1583.53963pt x 859.96777pt>
+ [18 <./figures/etakd21.pdf> <./figures/etakd21Bis.pdf>] <Diagramme_Code_2.pdf, id=846, 1583.53963pt x 859.96777pt>
 File: Diagramme_Code_2.pdf Graphic file (type pdf)
  <use Diagramme_Code_2.pdf>
 Package pdftex.def Info: Diagramme_Code_2.pdf used on input line 1097.
@@ -2075,7 +2075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1192--1193
 
  []
 
-<figures/RegIsing.pdf, id=890, 244.915pt x 154.5775pt>
+<figures/RegIsing.pdf, id=889, 244.915pt x 154.5775pt>
 File: figures/RegIsing.pdf Graphic file (type pdf)
  <use figures/RegIsing.pdf>
 Package pdftex.def Info: figures/RegIsing.pdf used on input line 1205.
@@ -2100,12 +2100,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1255--1256
 
  []
 
-[21 <./figures/RegIsing.pdf>] <figures/DerRegIsing.pdf, id=907, 244.915pt x 99.37125pt>
+[21 <./figures/RegIsing.pdf>] <figures/DerRegIsing.pdf, id=906, 244.915pt x 99.37125pt>
 File: figures/DerRegIsing.pdf Graphic file (type pdf)
  <use figures/DerRegIsing.pdf>
 Package pdftex.def Info: figures/DerRegIsing.pdf used on input line 1259.
 (pdftex.def)             Requested size: 238.38506pt x 96.72357pt.
- <figures/DerRegIsing2.pdf, id=908, 244.915pt x 122.4575pt>
+ <figures/DerRegIsing2.pdf, id=907, 244.915pt x 122.4575pt>
 File: figures/DerRegIsing2.pdf Graphic file (type pdf)
  <use figures/DerRegIsing2.pdf>
 Package pdftex.def Info: figures/DerRegIsing2.pdf used on input line 1260.
@@ -2164,7 +2164,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1362--1363
 Package multicol Warning: I moved some lines to the next page.
 (multicol)                Footnotes on page 23 might be wrong on input line 1372.
 
-[23] <figures/SurfUtile.pdf, id=945, 244.915pt x 154.5775pt>
+[23] <figures/SurfUtile.pdf, id=944, 244.915pt x 154.5775pt>
 File: figures/SurfUtile.pdf Graphic file (type pdf)
  <use figures/SurfUtile.pdf>
 Package pdftex.def Info: figures/SurfUtile.pdf used on input line 1397.
@@ -2248,17 +2248,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 
  []
 
-<figures/FacAmp.pdf, id=1007, 244.915pt x 99.37125pt>
+<figures/FacAmp.pdf, id=1006, 244.915pt x 99.37125pt>
 File: figures/FacAmp.pdf Graphic file (type pdf)
  <use figures/FacAmp.pdf>
 Package pdftex.def Info: figures/FacAmp.pdf used on input line 1593.
 (pdftex.def)             Requested size: 238.38506pt x 96.72357pt.
- <figures/ComplexiteTemps.pdf, id=1012, 244.915pt x 154.5775pt>
+ <figures/ComplexiteTemps.pdf, id=1011, 244.915pt x 154.5775pt>
 File: figures/ComplexiteTemps.pdf Graphic file (type pdf)
  <use figures/ComplexiteTemps.pdf>
 Package pdftex.def Info: figures/ComplexiteTemps.pdf used on input line 1613.
 (pdftex.def)             Requested size: 238.38506pt x 150.45888pt.
- <figures/Scalabilite.pdf, id=1013, 244.915pt x 154.5775pt>
+ <figures/Scalabilite.pdf, id=1012, 244.915pt x 154.5775pt>
 File: figures/Scalabilite.pdf Graphic file (type pdf)
  <use figures/Scalabilite.pdf>
 Package pdftex.def Info: figures/Scalabilite.pdf used on input line 1623.
@@ -2268,7 +2268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1630--1631
 
  []
 
-[27 <./figures/FacAmp.pdf> <./figures/ComplexiteTemps.pdf> <./figures/Scalabilite.pdf>] <figures/EtakErrMesu.pdf, id=1032, 244.915pt x 154.5775pt>
+[27 <./figures/FacAmp.pdf> <./figures/ComplexiteTemps.pdf> <./figures/Scalabilite.pdf>] <figures/EtakErrMesu.pdf, id=1031, 244.915pt x 154.5775pt>
 File: figures/EtakErrMesu.pdf Graphic file (type pdf)
  <use figures/EtakErrMesu.pdf>
 Package pdftex.def Info: figures/EtakErrMesu.pdf used on input line 1645.
@@ -2290,7 +2290,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1655.
 
-<figures/MesuRes.pdf, id=1035, 244.915pt x 154.5775pt>
+<figures/MesuRes.pdf, id=1034, 244.915pt x 154.5775pt>
 File: figures/MesuRes.pdf Graphic file (type pdf)
  <use figures/MesuRes.pdf>
 Package pdftex.def Info: figures/MesuRes.pdf used on input line 1674.
@@ -2533,10 +2533,10 @@ pdfTeX warning (dest): name{cite.wiki\\penalty\040\\@M\040\040:xxx} has been ref
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
 ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
 lic/cm-super/sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb>
-Output written on "/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.pdf" (48 pages, 2805511 bytes).
+Output written on "/Users/facchinettigaetan/Documents/Etudes/Master 2 AMS (Paris-Saclay)/Stage/Notes_Bis/.texpadtmp/Rapport.pdf" (48 pages, 2805293 bytes).
 PDF statistics:
- 1608 PDF objects out of 1728 (max. 8388607)
- 1460 compressed objects within 15 object streams
+ 1607 PDF objects out of 1728 (max. 8388607)
+ 1459 compressed objects within 15 object streams
  504 named destinations out of 1000 (max. 500000)
  899 words of extra memory for PDF output out of 10000 (max. 10000000)
 
