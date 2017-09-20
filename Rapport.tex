@@ -724,6 +724,8 @@ Nous n'avons cependant pas de conditions aux bord pour l'équation de flot BMW e
 \vspace*{11pt}
 \subsection{Détermination de la température critique : notion de point fixe}
 
+\label{sec:ptfixe}
+
 Le premier objectif de notre étude est de trouver la valeur des exposants critiques des systèmes que l'on étudie. Ces exposants sont définis par la fonctions de corrélation à deux points, qui est liée à $\Gamma^{(2)}$, mais ils ne sont définis qu'à la température critique que l'on ne connait pas a priori sur un système donné. Comme dans nos notations on inclus le terme $k_BT$ dans l'expression de l'hamiltonien $H$, la température à laquelle est soumise le système est contenue dans $H$ et la condition initiale de nos équations de flots dépend de $H$. Il faut donc trouver la température dans l'expression de $H$ qui correspond à $T_c$ pour avoir une chance de calculer $\eta$ et $\nu$. Le second objectif de notre étude se concentre même sur le calcul de $T_c$ pour un système particulier. 
 
 Une question se pose alors : comment sait-on si la température introduite est la température critique ? La température à laquelle est soumise le système est la température critique si l'on obtient une solution de \textit{point fixe} à notre équations de flot BMW. \\
@@ -833,7 +835,7 @@ Dans l'expression des intégrales $\tI_n$ et $\tJ_n$ apparait la fonction que l'
 	\forall q \in [0, \Lambda] \quad \Rc_k(q) = \alpha \frac{q^2}{\exp{(q^2/k^2)}-1}
 	\label{eq:RegExp}
 \end{equation}
-Avec $\alpha$ un réel positif que l'on prend de l'ordre de l'unité et que l'on peut faire varier mais qui n'est pas supposé changer les résultats des calculs. Le caractère régulier (au sens infiniment dérivable) de ce régulateur est nécessaire pour assurer des résolutions numériques stables dans les équations BMW.  
+Avec $\alpha$ un réel positif que l'on prend de l'ordre de l'unité et que l'on peut faire varier mais qui n'est pas supposé changer les résultats des calculs. Le caractère régulier (au sens infiniment dérivable) de ce régulateur est nécessaire pour assurer des résolutions numériques stables.  
 
 \commentout{
 Remarquons que l'on satisfait bien aux conditions aux limites imposées sur le régulateur car 
@@ -862,7 +864,7 @@ La première partie de notre travail a été de reprendre le développement de c
 
 Nous avons à résoudre ici un système d'équations intégro-différentielles non linéaires couplées et sans conditions au bords. Pour cela nous utilisons différentes techniques numériques. \\
 
-Pour la discrétisation en "temps" $t$, nous utilisons une grille de points régulièrement espacés $\{t_i\}_i$ avec $t_{i+1} - t_i = \delta t$. Pour exprimer la dérivée $\partial_t ...$ nous sommes dans l'obligation d'utiliser un schéma explicite à cause de la structure complexe des termes de gauche des équations. Il a été mis en évidence dans ce code qu'un schéma d'Euler explicite d'un pas de temps est suffisant pour obtenir une résolution stable, c'est donc ce qui est utilisé. On résout le système en partant de $t_0 = 0$ et on calcule par récurrence $t_1$ puis $t_2$, ... pour aller vers $t_n \to - \infty$.\\
+Pour la discrétisation en "temps" $t$ (on privilégie numériquement la variable $t$ à $k$), nous utilisons une grille de points régulièrement espacés $\{t_i\}_i$ avec $t_{i+1} - t_i = \delta t$. Pour exprimer la dérivée $\partial_t ...$ nous sommes dans l'obligation d'utiliser un schéma explicite à cause de la structure complexe des termes de gauche des équations. Il a été mis en évidence dans ce code qu'un schéma d'Euler explicite d'un pas de temps est suffisant pour obtenir une résolution stable, c'est donc ce qui est utilisé. On résout le système en partant de $t_0 = 0$ et on calcule par récurrence $t_1$ puis $t_2$, ... pour aller vers $t_n \to - \infty$.\\
 
 Ensuite nous différencions la dépendance en champ (i.e. en $\trho$) à celle en moment (i.e. $\tp$) des fonctions inconnues. Pour ce qui est de la dépendance en champ, il suffit de prendre une grille fixe finie de points $\{ \trho_i \}_i$ régulièrement espacés dans $[0, \trho_{max}]$, où $\trho_{max}$ est choisi suffisamment grand. Les dérivées selon cette variable se calculent alors par des schémas différences finis d'ordre 5. \\
 
@@ -1178,12 +1180,11 @@ avec les notations
 
 
 \noindent
-où $\tilde{\mu} = \mu/(2J)$ et $\tilde{\beta} = 2\beta J$. On retrouve ainsi la formulation d'un problème de théorie des champs que l'on peut résoudre avec le NPRG et l'approximation BMW. Concernant la mise en pratique, la seule différence avec tout ce qui a été étudié précédemment c'est qu'ici, par TFSD, les intégrales sur les moments ne sont plus calculées sur un domaine infini mais sur "la première zone de Brillouin", i.e. sur la surface $[-\pi, \pi]^2$. Comme le modèle d'Ising 2D possède une symétrie\footnote{en effet $H$ est invariant par l'échange de $\ev_z$ en $-\ev_z$ comme nous avons pu le voir dans l'introduction. \\
-On peut même voir que aussi directement que $\Hc_\mu[-\varphi] = \Hc_\mu[\varphi]$.} $\mathbb{Z}_2$, l'équation de flot BMW \refeq{flotBMW} pour la symétrie $\mathbb{Z}_2$ reste valable en prenant en compte cet ajustement.\\
+où $\tilde{\mu} = \mu/(2J)$ et $\tilde{\beta} = 2\beta J$. On retrouve ainsi la formulation d'un problème de théorie des champs que l'on peut résoudre avec le NPRG et l'approximation BMW. Concernant la mise en pratique, la seule différence avec tout ce qui a été étudié précédemment c'est qu'ici, par TFSD, les intégrales sur les moments ne sont plus calculées sur un domaine infini mais sur "la première zone de Brillouin", i.e. sur la surface $[-\pi, \pi]^2$. Comme le modèle d'Ising 2D possède une symétrie\footnote{en effet $H$ est invariant par l'échange de $\ev_z$ en $-\ev_z$ comme nous avons pu le voir dans l'introduction. On a $\Hc_\mu[-\varphi] = \Hc_\mu[\varphi]$.} $\mathbb{Z}_2$, l'équation de flot BMW \refeq{flotBMW} pour la symétrie $\mathbb{Z}_2$ reste valable en prenant en compte cet ajustement.\\
 
-La fonction $U$ représente ce que l'on appelle le potentiel du système dans l'approximation de champ moyen. Le potentiel effectif $V_k(\phi)$ prend en $k=\Lambda$ la valeur $V_\Lambda = U$. La fonction $\eo$ s'appelle la relation de dispersion. Dans le modèle continu $\varphiv^4$ il y avait de même une relation de dispersion que nous n'avions pas pris la peine d'expliciter car elle valait alors $\varepsilon(\pv) = \pv^2$.\\
+La fonction $U$ représente ce que l'on appelle le potentiel du système dans l'approximation de champ moyen. La fonction $\eo$ s'appelle la relation de dispersion. Dans le modèle continu $\varphiv^4$ il y avait de même une relation de dispersion que nous n'avions pas pris la peine d'expliciter car elle valait alors $\varepsilon(\pv) = \pv^2$.\\
  
-Enfin, la recherche de point fixe pour se système se fait en variant le paramètre directement lié à la température $\tilde{\beta}$ dans les conditions initiales. On cherche donc $\tilde{\beta}_c = 2d/(k_BT_c)$ pour lequel les équations dimensionnées écrites plus loin possèdent un point fixe. Un point fixe ne pouvant être trouvé qu'à la température critique, de cette manière, on obtient la température critique.\\
+Enfin, la recherche de la température critique se fait en variant le paramètre directement lié à la température $\tilde{\beta}$ qui intervient dans les conditions initiales des équations BMW. On cherche donc $\tilde{\beta}_c = 2d/(k_BT_c)$ pour lequel les équations BMW \textit{adimensionnées} possèdent une solution particulière dite de \textit{point fixe} (c.f. \refsec{ptfixe}). Si, pour $\tilde{\beta}$ introduit dans la condition initiale des équations BMW \textit{adimensionnées}, on obtient la solution de point fixe comme solution alors nous savons que $\tilde{\beta}=\tilde{\beta}_c$ (et que $T = 2d/(k_B\tilde{\beta})$ vaut $T_c$).\\
 
 
 
@@ -1205,15 +1206,15 @@ Avec $\varepsilon_k = \| \eo \|_\infty k^2$. Les expressions des dérivées de $
 
 \subsection{Les 3 étapes de la résolution}
 
-Pour des raisons pratiques nous avons décomposé la résolution numérique des systèmes d'équations BMW du modèle d'Ising en 3 étapes, en procédant à un adimensionnement\footnote{Rappelons que l'adimenssionnement est le passage à un système d'équation dans lequel variables et fonctions inconnues n'ont plus d'unité de longueur. Il doit être fait d'une manière très spécifique qui est propre à la méthode du NPRG.} progressif. L'adimensionnement est en effet nécessaire pour pouvoir trouver une solution de point fixe et déterminer la température critique avec précision. Cependant le caractère de \textit{solution de point fixe} est une notion asymptotique pour $k \to 0$ comme nous avons pu le voir. Il est donc possible de commencer par résoudre des équations non adimensionnées qui offrent des avantages pour le calcul numérique et de passer vers des équations adimensionnées seulement à partir d'un certain temps $t$ (i.e. d'un certain $k$). \\
+Pour des raisons pratiques nous avons décomposé la résolution numérique des systèmes d'équations BMW du modèle d'Ising en 3 étapes, en procédant à un adimensionnement\footnote{Rappelons que l'adimenssionnement est le passage à un système d'équation dans lequel variables et fonctions inconnues n'ont plus d'unité de longueur. Il doit être fait d'une manière très spécifique qui est propre à la méthode du NPRG pour donner un point fixe.} progressif. L'adimensionnement est en effet nécessaire pour pouvoir trouver une solution de point fixe et déterminer la température critique. Cependant le caractère de \textit{solution de point fixe} est une notion asymptotique pour $k \to 0$ (i.e. $t \to -\infty$), c.f. \refsec{ptfixe}. Rappelons que l'on utilise $t$ ou $k$ indifféremment (avec $k \propto e^t$). Il est alors possible de commencer par résoudre des équations non adimensionnées qui offrent des avantages pour le calcul numérique et de passer vers des équations adimensionnées seulement après un certain temps $t$.  \\
 \indent
-L'équation \refeq{flotBMW} donne alors les trois jeux d'équations BMW, pour le système Ising 2D, que nous avons cherché à résoudre. Explicitons maintenant, plus en détail, la procédure.
+De \refeq{flotBMW} on dérive les trois jeux d'équations BMW, que nous avons cherché à résoudre. Explicitons maintenant, plus en détail, la procédure.
 
 
 
 \subsubsection{Première étape}
 
-En écrivant le système d'équation BMW \textit{dimensionné}, directement issu de \refeq{flotBMW} toutes les fonctions inconnues sont $2\pi$ périodiques selon les composantes des moments (ce qui ne serait plus le cas dans un système adimensionné). Cette propriété permet de s'affranchir de certaines approximations numériques dans le calcul des intégrales $J_n$ apparaissant dans les équations BMW. Il est donc préférable de commencer par résoudre ce système, que l'on note $(\Ec_1)$, sans réaliser d'adimensionnement, pour $k$ variant de $\Lambda$ à $k_a$ (où $k_a \in ]0, 1]$ est une valeur que l'on va décrire plus loin). Le problème BMW ($\Pc_1$) à résoudre est donc \\
+En écrivant le système d'équation BMW \textit{dimensionné}, directement issu de \refeq{flotBMW} toutes les fonctions inconnues sont $2\pi$ périodiques selon les composantes des moments (ce qui ne serait plus le cas dans un système adimensionné). Cette propriété permet de s'affranchir de certaines approximations numériques dans le calcul des intégrales $J_3$ des équations BMW. Il est donc préférable de commencer par résoudre ce système, que l'on note $(\Ec_1)$, sans réaliser d'adimensionnement, pour $k$ variant de $\Lambda$ à $k_a$ (où $k_a \in ]0, 1]$ est une valeur que l'on va décrire plus loin)\footnote{Dans la pratique la résolution porte sur $t$ mais parler en terme de la variable $k$ ou de $t$ est équivalent.}. Le problème ($\Pc_1$) à résoudre est  \\
 
 \noindent
 {\itshape Trouver $(\Delta_k$, $X_k)$, solution de $(\Ec_1)$, i.e tels que pour tout $p_x \in [-\pi, \pi]$, $p_y \in [-\pi, \pi]$, $\phi \in \R$, $k\in [k_a, \Lambda]$}
@@ -1232,7 +1233,7 @@ En écrivant le système d'équation BMW \textit{dimensionné}, directement issu
 		& \frac{1}{2} \partial_{\phi}^2 I_1(\phi) \, ,
 	\end{aligned}
 \end{align}
-où l'on note $X_k(\phi) = \partial_{\phi}^2 V_k(\phi)$. Les notations $J_n$ et $I_n$ correspondent à celle du modèle $\varphiv^4$ et leurs expressions sont écrites en \refann{Ising2D}. \\
+où l'on note $X_k(\phi) = \partial_{\phi}^2 V_k(\phi)$. Les notations $J_n$ et $I_n$ correspondent à celle du modèle $\varphiv^4$ (c.f. \refann{Ising2D}). On rappelle que $\partial_t = k\partial_k$.\\
 \indent
 Les conditions initiales de ce problème viennent de la condition initiale générale des équations BMW \refeq{initFlotBMW} et de la relation $X_\Lambda(\phi) = \partial_\phi^2 U(\phi)$,
 \begin{equation}
@@ -1245,7 +1246,7 @@ Les conditions initiales de ce problème viennent de la condition initiale gén�
 
 
 
-Dans un second temps, alors que $k$ devient relativement faible (i.e. inférieur à la valeur $k_a<1$ introduite précédemment), malgré la mise à profit de la périodicité des fonctions, nous rencontrons des problèmes de précision dans le calcul des intégrales $I_n$ et $J_n$ qui apparaissent dans le système $(\Ec_1)$. Or $k$ n'est alors pas assez faible à ce moment de la résolution pour pouvoir passez à un système totalement adimensionné : cela nécessite encore d'autres approximations qui ne peuvent être réalisées qu'à des valeurs de $k$ encore plus faibles.  On utilise alors un nouveau système d'équations $(\Ec_2)$ dans lequel nous avons adimensionné les moments. En fait ceci correspond seulement à écrire les équations en fonction de $\tilde{\pv} = (\tp_x, \tp_y) = \pv/k = (p_x/k, p_y/k)$ (ou $\tqv = \qv/k$) au lieu de $\pv$ (ou $\qv$). Ces nouvelles équations prennent pour conditions initiales le résultats de la résolution numérique de $(\Ec_1)$ en $k = k_a$. \\
+Dans un second temps, alors que $k$ devient relativement faible (i.e. inférieur à la valeur $k_a$ introduite précédemment), malgré la mise à profit de la périodicité des fonctions, nous rencontrons des problèmes de précision dans le calcul des intégrales $I_n$ et $J_n$ qui apparaissent dans le système $(\Ec_1)$. Or $k$ n'est alors pas assez faible à ce moment de la résolution pour pouvoir passez à un système totalement adimensionné : cela nécessite ici des approximations qui ne peuvent être réalisées qu'à des valeurs de $k$ encore plus faibles.  On utilise alors un nouveau système d'équations $(\Ec_2)$ dans lequel nous avons adimensionné les moments. En fait ceci correspond seulement à écrire les équations en fonction de $\tilde{\pv} = (\tp_x, \tp_y) = \pv/k = (p_x/k, p_y/k)$ (ou $\tqv = \qv/k$) au lieu de $\pv$ (ou $\qv$). Ces nouvelles équations prennent pour conditions initiales le résultats de la résolution numérique de $(\Ec_1)$ en $k = k_a$. \\
 
 \begin{figure}[H]
 \begin{center}
@@ -1298,7 +1299,7 @@ Pour assurer la compatibilité entre les deux systèmes il faut alors respecter 
 
 \subsubsection{Troisième étape}
 
-On utilise enfin, dans un dernier temps, un nouveau système $(\Ec_3)$ adimensionnées qui va nous permettre de trouver une \textit{solution de point fixe} et par la même occasion de déterminer la température critique. Ce système met en jeu des approximations que nous ne pouvions pas réaliser sans avoir $k < k_b$ avec $k_b$ suffisamment faible. On prend comme condition initiale le résultat donné par la simulation de ($\Ec_2$) à $k = k_b$. Le problème se transforme en ($\Pc_3$), \\
+On utilise enfin, dans un dernier temps, un nouveau système $(\Ec_3)$ adimensionnées qui va nous permettre de trouver une \textit{solution de point fixe} et donc de déterminer la température critique. Ce système met en jeu des approximations que nous ne pouvions pas réaliser sans avoir $k < k_b$ avec $k_b$ suffisamment faible. On prend comme condition initiale le résultat donné par la simulation de ($\Ec_2$) à $k = k_b$. Le problème se transforme en ($\Pc_3$), \\
 
 \noindent
 {\itshape Trouver $(\tY_k$, $\tX_k)$, solution de $(\Ec_3)$, i.e tels que pour tout $\tp_x \in [-\tp_{max}, \tp_{max}]$, $\tp_y \in [-\tp_{max}, \tp_{max}]$, $\tphi \in \R$, $k\in ]0, k_b]$}
@@ -1341,7 +1342,7 @@ Nous allons passer en revue et justifier ici les principales méthodes numériqu
 
 \subsection{Structure du code}
 
-Pour la discrétisation en \textit{temps du RG} $t$ le plus simple a été de conserver une discrétisation sur une grille de points régulièrement espacés $\{t_i\}_i$ avec $ \delta t = t_{i+1} - t_i$ et de calculer $\partial_t ...$ à l'aide d'un schéma d'Euler explicite. Ceci à cause de la non-linéarité des équations. Dans la pratique on part de $t_i=0$ où la condition initiale est connu et on calcule les différentes grandeurs pour allers vers $t_n \to - \infty$ avec le schéma d'Euler. Nous n'avons pas utilisé de schéma de Rung-Kutta car de manière générale le schéma d'Euler s'est avéré efficace.
+Pour la discrétisation en \textit{temps du RG} $t$ (on privilégie numériquement la variable $t$ à $k$) le plus simple a été de conserver une discrétisation sur une grille de points régulièrement espacés $\{t_i\}_i$ avec $ \delta t = t_{i+1} - t_i$ et de calculer $\partial_t ...$ à l'aide d'un schéma d'Euler explicite. Ceci à cause de la non-linéarité des équations. Dans la pratique on part de $t_0=0$ (i.e. $k_0 = \Lambda$) où la condition initiale est connue et on calcule les différentes grandeurs pour allers vers $t_n \to - \infty$ (i.e $k_n \to 0$) avec le schéma d'Euler. Nous n'avons pas utilisé de schéma de Rung-Kutta car de manière générale le schéma d'Euler s'est avéré efficace.
 
 Pour la discrétisation en champ nous avons privilégié la variable $\phi$ dans les équations et non pas $\rho = \phi^2/2$ que nous avions utilisé pour le modèle continu $\varphiv^4$ à cause de différents problèmes numériques. Nous avons toutefois conservés sur une discrétisation par une grille de points régulièrement espacés $\{\phi_i\}_i$ avec $\delta \phi = \phi_{i+1} - \phi_i$ et des calculs de dérivées par rapport à $\phi$ à l'aide de schémas aux différences finies à 5 points. \\
 
@@ -1352,13 +1353,8 @@ Concernant les moments, contrairement au modèle continu $\varphiv^4$, ici les f
 \end{equation}
 où $u$ et $h$ sont des fonctions dépendant des inconnues $\Delta_k$ et $X_k$. Les sommes $p_x+q_x$ et $p_y+q_y$ sont un gros problème pour l'intégration numérique. En effet il est nécessaire de calculer l'intégrale, à tout pas de temps $t_i$, pour tout $\phi_i$ et pour tout $p_x$ et $p_y$ de la discrétisation en moments. De plus il faut pouvoir trouver une quadrature réalisant ce calcul avec précision pour ne pas avoir de problèmes de stabilité. Nous avons conservé pour cela le choix de réaliser des intégrations avec la quadrature de Gauss-Legendre, cependant ceci nécessite de discrétiser les fonctions inconnues $\Delta_k$, $\bDelta_k$, $X_k$, ... selon les moments avec une méthode d'interpolation. Nous avons utilisé une méthode d'interpolation sur les polynômes de Tchebytchev (comme cela était fait pour le modèle $\varphiv^4$). La difficulté a résidé en la réécriture des méthodes à une dimension (i.e. pour des fonctions d'une variable $p$) en des méthodes à deux dimensions, pour des fonctions de deux variables $(p_x, p_y)$. 
 
-Une alternative aurait été d'utiliser une discrétisation des moments $(p_x, p_y)$ sur un quadrillage régulier carré en deux dimensions. Il est alors possible d'écrire une quadrature qui permet de calculer $J_n$, $\bJ_n$ et $\tJ_n$ avec des algorithmes de faible complexité (en comparaison de la méthode par interpolation de Tchebytchev et quadrature de Gauss-Legendre). Cependant les quadratures alors testées (
-basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis )
- demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en des temps de calculs raisonnables et elles restaient moins pratiques que la méthode d'interpolation. \\
-
-
-
-
+Une alternative aurait été d'utiliser une discrétisation des moments $(p_x, p_y)$ sur un quadrillage régulier carré en deux dimensions. Il est alors possible d'écrire une quadrature qui permet de calculer $J_n$, $\bJ_n$ et $\tJ_n$ avec des algorithmes de faible complexité (en comparaison de la méthode par interpolation de Tchebytchev et quadrature de Gauss-Legendre). Cependant les quadratures alors testées (basées sur une triangulation régulière de l'espace et des descriptions des fonctions par éléments finis)
+ demandaient un nombre trop important de points de discrétisation pour obtenir des précisions suffisantes en des temps de calculs raisonnables et elles restaient moins pratiques que la méthode d'interpolation. 
 
 
 Ce nouveau code est donc structuré de la même manière que le code du modèle continu $\varphiv^4$. En effet, avoir réécrit le code de la simulation du modèle continu $\varphiv^4$ en C++ de façon modulable à l'aide de classes nous a permis, de manière générale, de reprendre ou d'adapter beaucoup des fonctions numériques. Pour avoir une vue générale de la structure on se reportera encore à la figure \refig{org}. 
