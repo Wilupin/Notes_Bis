@@ -37,7 +37,7 @@
 \BOOKMARK [2][-]{subsection.4.6}{Parall\351lisation}{section.4}% 37
 \BOOKMARK [1][-]{section.5}{R\351sultats : mod\350le continu O\(N\)}{}% 38
 \BOOKMARK [2][-]{subsection.5.1}{R\351sultats pour \(N = 1, d=2\)}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.2}{R\351sultats pour \(N = 2,3, d=2\)}{section.5}% 40
+\BOOKMARK [2][-]{subsection.5.2}{R\351sultats pour \(N \173 2,3\175 , d=2\)}{section.5}% 40
 \BOOKMARK [1][-]{section.6}{Retour sur le mod\350le d'Ising 2D}{}% 41
 \BOOKMARK [2][-]{subsection.6.1}{Mod\351lisation avec des champs}{section.6}% 42
 \BOOKMARK [2][-]{subsection.6.2}{R\351gulateur}{section.6}% 43
@@ -48,7 +48,7 @@
 \BOOKMARK [1][-]{section.7}{M\351thodes et outils num\351riques pour la r\351solution d'Ising 2D}{}% 48
 \BOOKMARK [2][-]{subsection.7.1}{Structure du code}{section.7}% 49
 \BOOKMARK [2][-]{subsection.7.2}{Probl\350mes rencontr\351s}{section.7}% 50
-\BOOKMARK [2][-]{subsection.7.3}{Sym\351tries et p\351riodicit\351 des fonctions}{section.7}% 51
+\BOOKMARK [2][-]{subsection.7.3}{Sym\351tries des fonctions inconnues}{section.7}% 51
 \BOOKMARK [2][-]{subsection.7.4}{Interpolation de Tchebytchev}{section.7}% 52
 \BOOKMARK [3][-]{subsubsection.7.4.1}{D\351composition}{subsection.7.4}% 53
 \BOOKMARK [3][-]{subsubsection.7.4.2}{D\351composition m\351thode 1}{subsection.7.4}% 54

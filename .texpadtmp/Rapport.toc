@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {4.6}Parall\IeC {\'e}lisation}{17}{subsection.4.6}
 \contentsline {section}{\numberline {5}R\IeC {\'e}sultats : mod\IeC {\`e}le continu $O(N)$}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}R\IeC {\'e}sultats pour $(N = 1, d=2)$}{17}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N = 2,3, d=2)$}{18}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}R\IeC {\'e}sultats pour $(N \in \{ 2,3\} , d=2)$}{17}{subsection.5.2}
 \contentsline {section}{\numberline {6}Retour sur le mod\IeC {\`e}le d'Ising 2D}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Mod\IeC {\'e}lisation avec des champs}{20}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}R\IeC {\'e}gulateur}{21}{subsection.6.2}
@@ -49,7 +49,7 @@
 \contentsline {section}{\numberline {7}M\IeC {\'e}thodes et outils num\IeC {\'e}riques pour la r\IeC {\'e}solution d'Ising 2D}{23}{section.7}
 \contentsline {subsection}{\numberline {7.1}Structure du code}{23}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Probl\IeC {\`e}mes rencontr\IeC {\'e}s}{24}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Sym\IeC {\'e}tries et p\IeC {\'e}riodicit\IeC {\'e} des fonctions}{24}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.3}Sym\IeC {\'e}tries des fonctions inconnues}{24}{subsection.7.3}
 \contentsline {subsection}{\numberline {7.4}Interpolation de Tchebytchev}{24}{subsection.7.4}
 \contentsline {subsubsection}{\numberline {7.4.1}D\IeC {\'e}composition}{24}{subsubsection.7.4.1}
 \contentsline {subsubsection}{\numberline {7.4.2}D\IeC {\'e}composition m\IeC {\'e}thode 1}{25}{subsubsection.7.4.2}
@@ -63,7 +63,7 @@
 \contentsline {subsection}{\numberline {8.1}Complexit\IeC {\'e} algorithmique et parall\IeC {\'e}lisation - probl\IeC {\`e}me de rapidit\IeC {\'e}}{27}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Probl\IeC {\`e}me de pr\IeC {\'e}cision des int\IeC {\'e}grales}{28}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Estimation de la temp\IeC {\'e}rature critique et de l'exposant critique $\eta $}{28}{subsection.8.3}
-\contentsline {section}{\numberline {9}Conclusion}{28}{section.9}
+\contentsline {section}{\numberline {9}Conclusion}{29}{section.9}
 \contentsline {section}{\numberline {A}Outils pour le d\IeC {\'e}veloppement des \IeC {\'e}quations}{31}{appendix.A}
 \contentsline {subsection}{\numberline {A.1}Notations des normes}{31}{subsection.A.1}
 \contentsline {subsection}{\numberline {A.2}Transform\IeC {\'e}e de Fourier}{31}{subsection.A.2}
